@@ -70,11 +70,11 @@ namespace XBee.Sample
             request.FrameId = 1;
 
 
-            
+            bee.Execute(request); 
 
             while (true)
             {
-                bee.Execute(request); 
+                
                 Thread.Sleep(2500);
                    
                     /*

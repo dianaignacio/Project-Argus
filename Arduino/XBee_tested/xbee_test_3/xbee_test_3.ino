@@ -9,11 +9,12 @@ This example is for Series 2 XBee
 // create the XBee object
 XBee xbee = XBee();
 
-uint8_t payload1[] = { "default" };
+uint8_t buffer[] = {"defaulttextgoeshere"};
 uint8_t payload2[] = { "message received" };
 
+      
 XBeeAddress64 addr64 = XBeeAddress64(0, 0);
-ZBTxRequest zbTx1 = ZBTxRequest(addr64, payload1, sizeof(payload1));
+ZBTxRequest zbTx1 = ZBTxRequest(addr64, buffer, sizeof(buffer));
 ZBTxRequest zbTx2 = ZBTxRequest(addr64, payload2, sizeof(payload2));
 ZBTxStatusResponse txStatus = ZBTxStatusResponse();
 ZBRxResponse zbRx = ZBRxResponse();
@@ -80,12 +81,18 @@ void loop() {
       //author: eli
 
       xbee.getResponse().getZBRxResponse(zbRx);
+
+/*
       for(int i = 0;i<zbRx.getDataLength(); i++)
       {
-        payload1[i] = *(zbRx.getData()) +1;
+        if(i<sizeof(buffer))
+          buffer[i] = zbRx.getData(i);
       }
+*/      
+      uint8_t *temp = zbRx.getData();
       
-      zbTx1 = ZBTxRequest(addr64, payload1, sizeof(payload1));
+      //zbTx1 = ZBTxRequest(addr64, temp, sizeof(temp));
+      zbTx1 = ZBTxRequest(addr64, temp, zbRx.getDataLength());
       xbee.send(zbTx1);
 
     }

@@ -144,10 +144,12 @@ namespace XBee
                 String temp = new string(t);
                 try
                 {
+                    /*
                     i = temp.LastIndexOf('\0');
                     temp = temp.Substring(0, i);
                     i = temp.LastIndexOf('\0');
                     temp = temp.Substring(i + 1, temp.Length - i - 1);
+                    */
                     Console.WriteLine("Received on PC: " + temp);
 
                 }
