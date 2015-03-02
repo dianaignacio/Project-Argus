@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using XBee.Frames;
+using System.Windows.Forms;
 
 namespace XBee.Sample
 {
@@ -8,9 +9,21 @@ namespace XBee.Sample
     {
         static void Main(string[] args)
         {
-            var bee = new XBee {ApiType = ApiTypeValue.Enabled};
-            bee.SetConnection(new SerialConnection("COM4", 9600));
+
+
+            Control_GUI_1 test = new Control_GUI_1();
+            Application.Run(test);
           
+            //Everything down below that is commented is for experimentation purposes
+            
+
+
+
+
+
+            //var bee = new XBee {ApiType = ApiTypeValue.Enabled};
+            //bee.SetConnection(new SerialConnection("COM4", 9600));
+
             /*  
             var request = new ATCommand(AT.ApiEnable) { FrameId = 1 };
             var frame = bee.ExecuteQuery(request, 1000);
@@ -41,6 +54,7 @@ namespace XBee.Sample
             //Thread.Sleep(2500);
             //Eli
             
+            /*
             XBeeNode n = new XBeeNode();
             n.Address16 = new XBeeAddress16(0xFFFE);
             //test 1
@@ -70,8 +84,9 @@ namespace XBee.Sample
             request.FrameId = 1;
 
 
-            bee.Execute(request); 
-
+            //bee.Execute(request); 
+            */
+            /*
             while (true)
             {
                 
@@ -85,10 +100,10 @@ namespace XBee.Sample
                     var frame = bee.ExecuteQuery(request, 250);
 
                     Console.WriteLine("This is PC");
-                    */
+              
                 
             }
-            
+            */
         }
     }
 }

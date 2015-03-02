@@ -9,9 +9,8 @@ This example is for Series 2 XBee
 // create the XBee object
 XBee xbee = XBee();
 
-uint8_t buffer[] = {"defaulttextgoeshere"};
 uint8_t payload2[] = { "message received" };
-
+uint8_t *buffer;
       
 XBeeAddress64 addr64 = XBeeAddress64(0, 0);
 ZBTxRequest zbTx1 = ZBTxRequest(addr64, buffer, sizeof(buffer));
@@ -39,11 +38,15 @@ void flashLed(int pin, int times, int wait) {
 }
 
 void setup() {
-//  pinMode(statusLed, OUTPUT);
-//  pinMode(errorLed, OUTPUT);
+  //initializes pin as output
+  pinMode(statusLed, OUTPUT);
+  pinMode(errorLed, OUTPUT);
 
   Serial.begin(9600);
   xbee.begin(Serial);
+  //controlLed(statusLed,0);
+  digitalWrite(statusLed,LOW);
+  
 
 }
 
@@ -73,15 +76,9 @@ void loop() {
   //detect incoming packet
   if (xbee.readPacket(500)) 
   {
-    // got a response!
-
-
     if(xbee.getResponse().getApiId() == ZB_RX_RESPONSE)
     {
-      //author: eli
-
       xbee.getResponse().getZBRxResponse(zbRx);
-
 /*
       for(int i = 0;i<zbRx.getDataLength(); i++)
       {
@@ -89,14 +86,10 @@ void loop() {
           buffer[i] = zbRx.getData(i);
       }
 */      
-      uint8_t *temp = zbRx.getData();
-      
-      //zbTx1 = ZBTxRequest(addr64, temp, sizeof(temp));
-      zbTx1 = ZBTxRequest(addr64, temp, zbRx.getDataLength());
+      buffer = zbRx.getData();
+      zbTx1 = ZBTxRequest(addr64, buffer, zbRx.getDataLength());
       xbee.send(zbTx1);
-
     }
-    
   } 
   else if (xbee.getResponse().isError()) 
   {
@@ -105,9 +98,18 @@ void loop() {
   } 
   else {
     // local XBee did not provide a timely TX Status Response -- should not happen
-    flashLed(errorLed, 10, 50);
+    //flashLed(errorLed, 10, 50);
   }
-
+  
+  
+  if(*buffer == 'H')
+  {
+    digitalWrite(13,HIGH);
+  }
+  else if(*buffer == 'L')
+  {
+   digitalWrite(13,LOW); 
+  }
 
 //delay(1000);
 }

@@ -9,7 +9,7 @@ namespace XBee
     public class SerialConnection : IXBeeConnection
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private readonly SerialPort serialPort;
+        private SerialPort serialPort;
         private IPacketReader reader;
 
         public SerialConnection(string port, int baudRate)
@@ -48,11 +48,34 @@ namespace XBee
         public void Close()
         {
             serialPort.Close();
+            serialPort.Dispose();
         }
 
         public void SetPacketReader(IPacketReader reader)
         {
             this.reader = reader;
+        }
+
+        // Dispose() calls Dispose(true)
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        // The bulk of the clean-up code is implemented in Dispose(bool)
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // free managed resources
+                if (serialPort != null)
+                {
+                    serialPort.Dispose();
+                    serialPort = null;
+                }
+            }
+            // free native resources if there are any.
         }
     }
 }
