@@ -4,7 +4,7 @@ C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\D
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.pdb
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csprojResolveAssemblyReference.cache
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.MainWindow.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Properties.Resources.resources
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csproj.GenerateResource.Cache
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Properties.Resources.resources
