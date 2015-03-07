@@ -121,7 +121,16 @@ namespace XBee
 
         public void FrameReceivedEvent(object sender, FrameReceivedArgs args)
         {
-            frameReceived = true;
+            lock (this)
+            {
+                frameReceived = true;
+                lastFrame = args.Response;
+                var data = lastFrame.ToString();
+                Console.WriteLine(args.Response);    
+            }
+            
+
+           /*
             if (!args.rxFrame)
             {
                 lastFrame = args.Response;
@@ -151,6 +160,7 @@ namespace XBee
                     Console.WriteLine("Bad Frame");
                 }
             }
+            * */
         }
 
         private void ReceiveData()

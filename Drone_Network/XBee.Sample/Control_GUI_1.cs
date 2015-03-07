@@ -35,30 +35,11 @@ namespace XBee.Sample
             //conn.Close();
             //bee.SetConnection(conn);
 
-            //search = new ManagementObjectSearcher("Select * from Win32_PnPEntity");
-            //search = new ManagementObjectSearcher("Select * from Win32_USBController");
-            //search = new ManagementObjectSearcher("Select * from Win32_POTSModemToSerialPort");
-            //search = new ManagementObjectSearcher("Select * from Win32_USBHub");
-            /*
-            search = new ManagementObjectSearcher("Select * from Win32_PnPDevice");
-            results = search.Get();
-            foreach(ManagementObject obj in results)
-            {
-                Console.WriteLine(obj["DeviceID"].ToString());
-                Console.WriteLine(obj["PNPDeviceID"].ToString());
-                Console.WriteLine(obj["Name"].ToString());
-                Console.WriteLine(obj["Description"].ToString());
-                
-
-            }
-            */
             ports = SerialPort.GetPortNames();
             ATCommand testCommand;
             testCommand = new ATCommand(AT.FirmwareVersion);
             testCommand.FrameId = 1;
             
-
-            ATCommandResponse testResponse;
             foreach (String s in ports)
             {                
                 SerialConnection conn = new SerialConnection(s, 9600);

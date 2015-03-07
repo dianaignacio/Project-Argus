@@ -113,6 +113,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.main_view)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondary_view)).EndInit();
             this.ResumeLayout(false);

@@ -89,6 +89,12 @@
   <ItemGroup>
     <None Include="Resources\test1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XBee_Interface\XBee_Interface.csproj">
+      <Project>{59eccc12-9152-43a7-b389-b655a765a645}</Project>
+      <Name>XBee_Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
