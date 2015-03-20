@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,15 +21,18 @@ namespace XBee_Interface
         XBeeNode n = new XBeeNode();
         TransmitDataRequest request;
         String[] ports;
+        public ArrayList nodes;
+
         
         public XBeeManager()
         {
             request = null;
             ports = null;
+            nodes = new ArrayList();
         }
 
         //Scan and set for XBee connections
-        public void Scan()
+        public void InitScan()
         {
             Boolean found = false;
             ports = SerialPort.GetPortNames();
@@ -36,27 +40,51 @@ namespace XBee_Interface
             testCommand = new ATCommand(AT.FirmwareVersion);
             testCommand.FrameId = 1;
             String correctPort = null;
-
-            foreach (String s in ports)
+            
+            //foreach (String s in ports)
+            String s;
+            for (int i = 0; i < ports.Length && !found; i++ )
             {
+                s = ports[i];
                 SerialConnection conn = new SerialConnection(s, 9600);
                 coordinator.SetConnection(conn);
 
 
                 coordinator.Execute(testCommand);
                 Thread.Sleep(500);
-                if (coordinator.lastFrame!=null && coordinator.lastFrame.GetCommandId() == XBeeAPICommandId.AT_COMMAND_RESPONSE)
+                lock (this)
                 {
-                    //valid connection is found; break from loop
-                    found = true;
-                    correctPort = s;
-                }
+                    if (coordinator.lastFrame != null && coordinator.lastFrame.GetCommandId() == XBeeAPICommandId.AT_COMMAND_RESPONSE)
+                    {
+                        byte[] temp = coordinator.lastFrame.data;
+                        byte[] coordResponse = { 17, 71 };
+                        if (temp != null && temp[0] == coordResponse[0] && temp[1] == coordResponse[1] && temp.Length == 2)
+                        {
+                            found = true;
+                            correctPort = s;
+                        }
 
+                        coordinator.frameReceived = false;
+                    }
+                }
                 conn.Close();
+                if(found)
+                {
+                    break;
+                }
             }
-            SerialConnection correct = new SerialConnection(correctPort, 9600);
-            coordinator.SetConnection(correct);
-           
+            
+            if (found)
+            {
+                SerialConnection correct = new SerialConnection(correctPort, 9600);
+                coordinator.SetConnection(correct);
+                Console.WriteLine("Coordinator on port: " + correctPort);
+            }
+            else
+            {
+                Console.WriteLine("Coordinator XBee not found.");
+            }
+            
         }
 
         //set XBee connections
@@ -96,6 +124,29 @@ namespace XBee_Interface
             return data;
         }
 
+        //receive last frame without parsing data
+        public XBeeFrame ReceiveFrame()
+        {
+            XBeeFrame data;
+            //waits until a frame is received
+            lock (this)
+            {
+                while (!coordinator.frameReceived) ;
+            
+                if (coordinator.lastFrame!= null)
+                {
+                    data = coordinator.lastFrame;
+                }
+                else
+                {
+                    data = null;
+                }
+            
+                coordinator.frameReceived = false;
+            }
+            return data;
+        }
+
         //parse string to byte array
         private Byte[] Parser(String s)
         {
@@ -108,6 +159,20 @@ namespace XBee_Interface
             }
 
             return t;
+        }
+
+        //node discovery function
+        public void NodeDiscover()
+        {
+            //add array list to call receive frames multiple times w/ multiple xbees? needs testing. code is convouted and may or may not already do this.
+            ATCommand getNode = new ATCommand(AT.NodeDiscover);
+            getNode.FrameId = 1;
+            coordinator.Execute(getNode);
+
+            ATCommandResponse response = (ATCommandResponse) ReceiveFrame();
+            nodes = response.discoveredNodes;
+
+            return;
         }
     }
 }

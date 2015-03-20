@@ -1,3 +1,4 @@
+using System.Collections;
 namespace XBee
 {
     public abstract class XBeeFrame
@@ -7,6 +8,7 @@ namespace XBee
         
         //Eli
         public byte[] data { get; set; }
+        public ArrayList nodes { get; set; }
 
         public XBeeAPICommandId GetCommandId()
         {
