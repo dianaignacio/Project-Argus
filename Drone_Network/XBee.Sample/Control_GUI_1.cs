@@ -11,6 +11,7 @@ using System.IO.Ports;
 using System.Management;
 
 using XBee.Frames;
+using XBee_Interface;
 
 namespace XBee.Sample
 {
@@ -48,8 +49,13 @@ namespace XBee.Sample
 
                 bee.Execute(testCommand);
                 Thread.Sleep(500);
-                //conn.Close();
+                conn.Close();
+                
             }
+
+            //coord discover is buggy with multiple xbee's connected to same computer
+            SerialConnection conn2 = new SerialConnection("COM4", 9600);
+            bee.SetConnection(conn2);
 
             n.Address16 = new XBeeAddress16(0xFFFE);
             n.Address64 = new XBeeAddress64(0x0013A20040C4555D);
@@ -90,6 +96,36 @@ namespace XBee.Sample
             request.SetRFData(t);
             request.FrameId = 1;
             bee.Execute(request); 
+        }
+
+        private void _btnSend_Click(object sender, EventArgs e)
+        {
+            String temp = _txtBoxMessage.Text;
+            if (temp.Length >= 16)
+            {
+                temp = temp.Remove(16);
+            }
+
+            Byte[] t = new Byte[temp.Length];
+            int i = 0;
+            foreach (char c in temp)
+            {
+                t[i] = Convert.ToByte(c);
+                i++;
+            }
+
+            request.SetRFData(t);
+            request.FrameId = 1;
+            bee.Execute(request); 
+
+            //poll for received data
+            do
+            {
+                if (bee.frameReceived && !bee.statusFrame)
+                {
+                    _txtBoxMessage.Text = bee.lastFrame.data.ToString();
+                }
+            } while (bee.statusFrame);
         }
     }
 }

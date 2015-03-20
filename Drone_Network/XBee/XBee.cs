@@ -26,6 +26,7 @@ namespace XBee
         private byte frameId = byte.MinValue;
 
         public bool frameReceived = false;
+        public bool statusFrame = false;
         public XBeeFrame lastFrame = null;
         private IPacketReader reader;
         private ApiTypeValue apiType;
@@ -125,6 +126,14 @@ namespace XBee
             lock (this)
             {
                 frameReceived = true;
+                if(!args.rxFrame)
+                {
+                    statusFrame = true;
+                }
+                else
+                {
+                    statusFrame = false;
+                }
                 lastFrame = args.Response;
                 var data = lastFrame.ToString();
                 Console.WriteLine(args.Response);    
