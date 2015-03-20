@@ -15,21 +15,27 @@ namespace XBee
 
         public void ReceiveData(byte[] data)
         {
-            try
+            lock (this)
             {
-                if (data.Length != 0)
+                try
                 {
-                    if (packetLength == 0 && data[0] == (byte)XBeeSpecialBytes.StartByte)
+                    if (data.Length != 0)
                     {
-                        Stream = new MemoryStream();
-                        packetLength = 0;
+                        if (packetLength == 0 && data[0] == (byte)XBeeSpecialBytes.StartByte)
+                        {
+                            Stream = new MemoryStream();
+                            packetLength = 0;
+                        }
+                        CopyAndProcessData(data);
                     }
-                    CopyAndProcessData(data);
+
                 }
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine("Out of bounds exception in Received Data.");
+                catch (Exception e)
+                {
+                    Console.WriteLine("Out of bounds exception in Received Data.");
+                    Console.WriteLine(e.Source.ToString());
+                    Console.WriteLine(e.Message.ToString());
+                }
             }
         }
 
@@ -56,9 +62,6 @@ namespace XBee
         protected virtual void ProcessReceivedData()
         {
             try {
-                //Eli - edited to only work with series 2 XBee
-                // was simply 'XBeeFrame' instead of ZigBeeReceivePacket
-                //ZigBeeReceivePacket frame = (ZigBeeReceivePacket)XBeePacketUnmarshaler.Unmarshal(Stream.ToArray());
                 XBeeFrame frame = XBeePacketUnmarshaler.Unmarshal(Stream.ToArray());
                 packetLength = 0;
                 if (FrameReceived != null)

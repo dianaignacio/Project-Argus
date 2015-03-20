@@ -187,3 +187,6 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+Arduino/ArduRover/Environment/ArduPilot-Arduino-1.0.3-windows/hardware/arduino/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR1/GCC/lib_ucr1_hd_wl_sta_intwpa_v2.7.0.a
+Arduino/ArduRover/Environment/ArduPilot-Arduino-1.0.3-windows/hardware/arduino/firmwares/wifishield/wifiHD/src/SOFTWARE_FRAMEWORK/COMPONENTS/WIFI/HD/v2.7.0/UCR2/GCC/lib_ucr2_hd_wl_sta_intwpa_v2.7.0.a
+Arduino/ArduRover/Environment/ArduPilot-Arduino-1.0.3-windows/hardware/arduino/firmwares/wifishield/wifi_dnld/src/SOFTWARE_FRAMEWORK/UTILS/LIBS/NEWLIB_ADDONS/libnewlib_addons-at32ucr2-speed_opt.a

@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using NLog;
 using XBee.Exceptions;
+using XBee.Frames;
 
 
 namespace XBee
@@ -127,6 +128,12 @@ namespace XBee
                 lastFrame = args.Response;
                 var data = lastFrame.ToString();
                 Console.WriteLine(args.Response);    
+
+                if(lastFrame.GetCommandId() == XBeeAPICommandId.AT_COMMAND_RESPONSE)
+                {
+                    lastFrame.data = ((ATLongValue)((ATCommandResponse)args.Response).Value).ToByteArray();
+                    lastFrame.nodes = ((ATCommandResponse)args.Response).discoveredNodes;
+                }
             }
             
 

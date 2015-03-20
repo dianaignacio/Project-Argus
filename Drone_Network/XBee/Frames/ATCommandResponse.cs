@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Collections;
 using XBee.Utils;
 
 namespace XBee.Frames
@@ -11,16 +12,20 @@ namespace XBee.Frames
         public AT Command { get; private set; }
         public ATValue Value { get; private set; }
         public byte CommandStatus { get; private set; }
+        public ArrayList discoveredNodes { get; set; }
+        
 
         public ATCommandResponse(PacketParser parser)
         {
             this.parser = parser;
             CommandId = XBeeAPICommandId.AT_COMMAND_RESPONSE;
+            discoveredNodes = new ArrayList();
         }
 
         public ATCommandResponse()
         {
             CommandId = XBeeAPICommandId.AT_COMMAND_RESPONSE;
+            discoveredNodes = new ArrayList();
         }
 
         public override byte[] ToByteArray()
@@ -35,7 +40,9 @@ namespace XBee.Frames
             CommandStatus = (byte)parser.ReadByte();
 
             if (Command == AT.NodeDiscover)
+            {
                 ParseNetworkDiscovery();
+            }
 
             var type = ((ATAttribute)Command.GetAttr()).ValueType;
 
@@ -59,15 +66,26 @@ namespace XBee.Frames
 
         private void ParseNetworkDiscovery()
         {
-            var source = new XBeeNode { Address16 = parser.ReadAddress16(), Address64 = parser.ReadAddress64() };
-            var nodeIdentifier = parser.ReadString();
-            var parentAddress = parser.ReadAddress16();
-            var type = (NodeIdentification.DeviceType) parser.ReadByte();
-            var status = parser.ReadByte();
-            var profileId = parser.ReadUInt16();
-            var manufacturerId = parser.ReadUInt16();
+            try
+            {
+                //discoveredNodes.Add(new XBeeNode { Address16 = parser.ReadAddress16(), Address64 = parser.ReadAddress64() });
+                var source = new XBeeNode { Address16 = parser.ReadAddress16(), Address64 = parser.ReadAddress64() };
+                var nodeIdentifier = parser.ReadString();
+                var parentAddress = parser.ReadAddress16();
+                var type = (NodeIdentification.DeviceType)parser.ReadByte();
+                var status = parser.ReadByte();
+                var profileId = parser.ReadUInt16();
+                var manufacturerId = parser.ReadUInt16();
 
-            Console.WriteLine(string.Format("source {0}, id {1}, status {2}", source.Address64, nodeIdentifier, status));
+                discoveredNodes.Add(source);
+
+                Console.WriteLine(string.Format("source {0}, id {1}, status {2}", source.Address64, nodeIdentifier, status));
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Source);
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
