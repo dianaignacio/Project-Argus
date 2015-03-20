@@ -41,7 +41,7 @@
       <HintPath>..\..\..\..\GitHub\MissionPlanner\ExtLibs\GMap.NET.WindowsForms\bin\Release\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
     <Reference Include="MissionPlanner.Controls">
-      <HintPath>..\..\..\..\GitHub\MissionPlanner\ExtLibs\Controls\bin\Debug\MissionPlanner.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\MissionPlanner\ExtLibs\Controls\bin\Debug\MissionPlanner.Controls.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
