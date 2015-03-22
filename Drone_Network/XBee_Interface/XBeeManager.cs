@@ -194,8 +194,6 @@ namespace XBee_Interface
                     nodes.Add(response.discoveredNodes[0]);
             }
 
-            //execute command to get node identifier and map as key/value with identifier/XBeeNode
-
             return;
         }
     }

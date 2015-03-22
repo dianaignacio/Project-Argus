@@ -66,25 +66,31 @@ namespace XBee.Frames
 
         private void ParseNetworkDiscovery()
         {
-            try
+            lock (this)
             {
-                //discoveredNodes.Add(new XBeeNode { Address16 = parser.ReadAddress16(), Address64 = parser.ReadAddress64() });
-                var source = new XBeeNode { Address16 = parser.ReadAddress16(), Address64 = parser.ReadAddress64() };
-                var nodeIdentifier = parser.ReadString();
-                var parentAddress = parser.ReadAddress16();
-                var type = (NodeIdentification.DeviceType)parser.ReadByte();
-                var status = parser.ReadByte();
-                var profileId = parser.ReadUInt16();
-                var manufacturerId = parser.ReadUInt16();
+                try
+                {
+                    //discoveredNodes.Add(new XBeeNode { Address16 = parser.ReadAddress16(), Address64 = parser.ReadAddress64() });
+                    var source = new XBeeNode { Address16 = parser.ReadAddress16(), Address64 = parser.ReadAddress64() };
+                    var nodeIdentifier = parser.ReadString();
+                    
 
-                discoveredNodes.Add(source);
+                    var parentAddress = parser.ReadAddress16();
+                    var type = (NodeIdentification.DeviceType)parser.ReadByte();
+                    var status = parser.ReadByte();
+                    var profileId = parser.ReadUInt16();
+                    var manufacturerId = parser.ReadUInt16();
 
-                Console.WriteLine(string.Format("source {0}, id {1}, status {2}", source.Address64, nodeIdentifier, status));
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Source);
-                Console.WriteLine(e.Message);
+                    source.NodeIdentifier = nodeIdentifier;
+                    discoveredNodes.Add(source);
+
+                    Console.WriteLine(string.Format("source {0}, id {1}, status {2}", source.Address64, nodeIdentifier, status));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Source);
+                    Console.WriteLine(e.Message);
+                }
             }
         }
     }

@@ -142,6 +142,7 @@ namespace XBee
                 {
                     lastFrame.data = ((ATLongValue)((ATCommandResponse)args.Response).Value).ToByteArray();
                     lastFrame.nodes = ((ATCommandResponse)args.Response).discoveredNodes;
+                    //lastFrame.raw = args.Response.
                 }
             }
             
