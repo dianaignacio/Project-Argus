@@ -82,6 +82,7 @@
             this.Controls.Add(this._btnOn);
             this.Name = "Control_GUI_1";
             this.Text = "Control_GUI_1";
+            this.Load += new System.EventHandler(this.Control_GUI_1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

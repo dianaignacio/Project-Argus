@@ -23,6 +23,8 @@ namespace XBee_Interface
         String[] ports;
         public ArrayList nodes;
 
+        private Timer timer;
+        
         
         public XBeeManager()
         {
@@ -125,26 +127,37 @@ namespace XBee_Interface
         }
 
         //receive last frame without parsing data
-        public XBeeFrame ReceiveFrame()
+        public ATCommandResponse ReceiveCommandResponse()
         {
-            XBeeFrame data;
-            //waits until a frame is received
+            ATCommandResponse data = new ATCommandResponse();
+            //waits until a frame is received            
             lock (this)
             {
-                while (!coordinator.frameReceived) ;
-            
-                if (coordinator.lastFrame!= null)
+                while (!coordinator.frameReceived && timer!= null) ;
+                if (coordinator.frameReceived)
                 {
-                    data = coordinator.lastFrame;
+                    if (coordinator.lastFrame != null)
+                    {
+                        data = (ATCommandResponse)coordinator.lastFrame;
+                    }
+                    else
+                    {
+                        data = null;
+                    }
                 }
-                else
-                {
-                    data = null;
-                }
-            
                 coordinator.frameReceived = false;
             }
             return data;
+        }
+
+        private void TimerProc(object state)
+        {
+            // The state object is the Timer object.
+            Timer t = (Timer)state;
+            t.Dispose();
+            timer.Dispose();
+            timer = null;
+            Console.WriteLine("The timer callback executes.");
         }
 
         //parse string to byte array
@@ -164,13 +177,24 @@ namespace XBee_Interface
         //node discovery function
         public void NodeDiscover()
         {
+            
+            
             //add array list to call receive frames multiple times w/ multiple xbees? needs testing. code is convouted and may or may not already do this.
             ATCommand getNode = new ATCommand(AT.NodeDiscover);
             getNode.FrameId = 1;
             coordinator.Execute(getNode);
 
-            ATCommandResponse response = (ATCommandResponse) ReceiveFrame();
-            nodes = response.discoveredNodes;
+            timer = new Timer(new TimerCallback(TimerProc));
+            //6000 ms is standard timeout of Node Discovery Backoff
+            timer.Change(6000, 0);
+            while (timer != null)
+            {
+                ATCommandResponse response = (ATCommandResponse)ReceiveCommandResponse();
+                if(response.discoveredNodes.Count != 0)
+                    nodes.Add(response.discoveredNodes[0]);
+            }
+
+            //execute command to get node identifier and map as key/value with identifier/XBeeNode
 
             return;
         }
