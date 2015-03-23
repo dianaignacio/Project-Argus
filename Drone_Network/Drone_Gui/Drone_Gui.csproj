@@ -90,6 +90,10 @@
     <None Include="Resources\test1.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XBee\XBee.csproj">
+      <Project>{026296ff-9939-49dc-ad87-7f8780d7e1b0}</Project>
+      <Name>XBee</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XBee_Interface\XBee_Interface.csproj">
       <Project>{59eccc12-9152-43a7-b389-b655a765a645}</Project>
       <Name>XBee_Interface</Name>

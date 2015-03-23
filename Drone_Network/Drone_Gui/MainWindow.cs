@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using XBee;
 using XBee_Interface;
 using System.Threading;
 
@@ -19,28 +21,38 @@ namespace Drone_Gui
     {
 
         XBeeManager comms;
+        ArrayList nodes;
         Thread recieveThread;
+
         //PUBLIC METHODS
         public MainWindow()
         {
             InitializeComponent();
             comms = new XBeeManager();
+            comms.InitScan();
+            comms.NodeDiscover();
+            nodes = comms.nodes;
+            
+            
             
         }
 
         //EVENTS / DELEGATES
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            //auto-connect to coord xbee
-            comms.InitScan();
 
-            //FOR LIZ:
             //read available nodes/connections and identify rovers/beacon
             //display in far left window
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                list_connections.Items.Add(new ListViewItem(((XBeeNode)nodes[i]).NodeIdentifier));
+            }
 
+            //FOR LIZ:
             //tie 'console' stream to 'console_window'
             recieveThread = new Thread(new ThreadStart(ReadConnection));
             recieveThread.Start();
+           
         }
 
         private void ReadConnection()
