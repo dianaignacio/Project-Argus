@@ -109,9 +109,11 @@ namespace XBee_Interface
         {
             if (dest16 != null && dest64 != null)
             {
+               
                 n.Address16 = dest16;
                 n.Address64 = dest64;
                 request = new TransmitDataRequest(n);
+                
                 request.SetRFData(Parser(data));
                 request.FrameId = 1;
                 coordinator.Execute(request);
@@ -127,7 +129,7 @@ namespace XBee_Interface
             while (!coordinator.frameReceived) ;
             if (coordinator.lastFrame.data != null)
             {
-                data = coordinator.lastFrame.data.ToString();
+                data = System.Text.Encoding.Default.GetString(coordinator.lastFrame.data);
             }
             else
             {

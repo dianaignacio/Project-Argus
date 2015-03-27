@@ -43,39 +43,27 @@ namespace XBee.Sample
 
         private void _btnOn_Click(object sender, EventArgs e)
         {
-            String temp = "H";
-            Byte[] t = new Byte[temp.Length];
-            int i = 0;
-            foreach (char c in temp)
-            {
-                t[i] = Convert.ToByte(c);
-                i++;
-            }
-
-           
-            
+            coms.SetTarget(0);
+            coms.SendData("H");
+            _txtBoxMessage.Text = coms.ReceiveData();
+            _txtBoxMessage.Text = coms.ReceiveData();
            
         }
 
         private void _btnOff_Click(object sender, EventArgs e)
         {
-            String temp = "L";
-            Byte[] t = new Byte[temp.Length];
-            int i = 0;
-            foreach (char c in temp)
-            {
-                t[i] = Convert.ToByte(c);
-                i++;
-            }
-
-            
+            coms.SetTarget(0);
+            coms.SendData("L");
+            _txtBoxMessage.Text = coms.ReceiveData();
+            _txtBoxMessage.Text = coms.ReceiveData();
         }
 
         private void _btnSend_Click(object sender, EventArgs e)
         {
             coms.SetTarget(0);
-            coms.SendData("Hello");
-            _txtBoxMessage.Text = coms.ReceiveData();           
+            coms.SendData("Hello World");
+            _txtBoxMessage.Text = coms.ReceiveData();
+            _txtBoxMessage.Text = coms.ReceiveData();
         }
 
 

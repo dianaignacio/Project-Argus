@@ -136,8 +136,15 @@ namespace XBee
                 }
                 lastFrame = args.Response;
                 var data = lastFrame.ToString();
-                Console.WriteLine(args.Response);    
+                Console.WriteLine(args.Response);
 
+                //if receiving a transmit packet
+                if (lastFrame.GetCommandId() == XBeeAPICommandId.RECEIVE_PACKET_RESPONSE)
+                {
+                    lastFrame.data = ((ZigBeeReceivePacket)args.Response).Data;
+                }
+
+                //if AT Command Response
                 if(lastFrame.GetCommandId() == XBeeAPICommandId.AT_COMMAND_RESPONSE)
                 {
                     lastFrame.data = ((ATLongValue)((ATCommandResponse)args.Response).Value).ToByteArray();

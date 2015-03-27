@@ -8,10 +8,8 @@ C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\D
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.pdb
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.dll
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee.dll
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\NLog.dll
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.pdb
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee.pdb
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\NLog.xml
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config

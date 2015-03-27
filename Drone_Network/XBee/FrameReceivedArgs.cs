@@ -16,7 +16,8 @@ namespace XBee
         public FrameReceivedArgs(ZigBeeReceivePacket response)
         {
             rxFrame = true;
-            rxResponse = response;
+            //rxResponse = response;
+            Response = response;
         }
     }
 }
