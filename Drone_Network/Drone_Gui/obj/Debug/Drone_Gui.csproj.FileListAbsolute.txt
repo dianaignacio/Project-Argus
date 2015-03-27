@@ -14,3 +14,16 @@ C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\D
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\NLog.xml
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
 C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csprojResolveAssemblyReference.cache
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.MainWindow.resources
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Properties.Resources.resources
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csproj.GenerateResource.Cache
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.pdb
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\XBee.dll
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.dll
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\XBee.pdb
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.pdb
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb

@@ -22,6 +22,8 @@ namespace XBee_Interface
         TransmitDataRequest request;
         String[] ports;
         public ArrayList nodes;
+        XBeeAddress16 dest16;
+        XBeeAddress64 dest64;
 
         private Timer timer;
         
@@ -96,15 +98,24 @@ namespace XBee_Interface
             coordinator.SetConnection(conn);
         }
 
-        //send data
-        public void SendData(String data, XBeeAddress16 dest16, XBeeAddress64 dest64)
+        public void SetTarget(int index)
         {
-            n.Address16 = dest16;
-            n.Address64 = dest64;
-            request = new TransmitDataRequest(n);
-            request.SetRFData(Parser(data));
-            request.FrameId = 1;
-            coordinator.Execute(request);
+            dest16 = ((XBeeNode)nodes[index]).Address16;
+            dest64 = ((XBeeNode)nodes[index]).Address64;
+        }
+
+        //send data
+        public void SendData(String data)
+        {
+            if (dest16 != null && dest64 != null)
+            {
+                n.Address16 = dest16;
+                n.Address64 = dest64;
+                request = new TransmitDataRequest(n);
+                request.SetRFData(Parser(data));
+                request.FrameId = 1;
+                coordinator.Execute(request);
+            }
         }
 
         //receive and interpret data; return relevant data
@@ -127,25 +138,24 @@ namespace XBee_Interface
         }
 
         //receive last frame without parsing data
-        public ATCommandResponse ReceiveCommandResponse()
+        public ATCommandResponse ReceiveNodeDiscoverResponse()
         {
             ATCommandResponse data = new ATCommandResponse();
-            //waits until a frame is received            
+            
             lock (this)
             {
-                while (!coordinator.frameReceived && timer!= null) ;
-                if (coordinator.frameReceived)
+                bool temp = coordinator.frameReceived;
+                
+                while (!temp && ((ATCommandResponse)coordinator.lastFrame).Command != AT.NodeDiscover /*&& timer!= null*/)
                 {
-                    if (coordinator.lastFrame != null)
-                    {
-                        data = (ATCommandResponse)coordinator.lastFrame;
-                    }
-                    else
-                    {
-                        data = null;
-                    }
+                    temp = coordinator.frameReceived;
                 }
+                //while (!coordinator.frameReceived) ;
+                //if (coordinator.frameReceived)
+                data = (ATCommandResponse)coordinator.lastFrame;
                 coordinator.frameReceived = false;
+                
+                
             }
             return data;
         }
@@ -182,16 +192,28 @@ namespace XBee_Interface
             //add array list to call receive frames multiple times w/ multiple xbees? needs testing. code is convouted and may or may not already do this.
             ATCommand getNode = new ATCommand(AT.NodeDiscover);
             getNode.FrameId = 1;
-            coordinator.Execute(getNode);
+
+            
 
             timer = new Timer(new TimerCallback(TimerProc));
             //6000 ms is standard timeout of Node Discovery Backoff
             timer.Change(6000, 0);
+
+
+            coordinator.Execute(getNode);
+
+           
             while (timer != null)
             {
-                ATCommandResponse response = (ATCommandResponse)ReceiveCommandResponse();
-                if(response.discoveredNodes.Count != 0)
-                    nodes.Add(response.discoveredNodes[0]);
+                ATCommandResponse response = (ATCommandResponse)ReceiveNodeDiscoverResponse();
+                if (response.discoveredNodes.Count != 0)
+                {
+                    //allows only unique nodes. need to fix the frameRecieved flag not firing in 'ReciveNodeDiscoverResponse'
+                    if (!nodes.Contains(response.discoveredNodes[0]))
+                    {
+                        nodes.Add(response.discoveredNodes[0]);
+                    }
+                }
             }
 
             return;

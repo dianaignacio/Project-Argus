@@ -73,32 +73,9 @@ namespace XBee.Sample
 
         private void _btnSend_Click(object sender, EventArgs e)
         {
-            String temp = _txtBoxMessage.Text;
-            if (temp.Length >= 16)
-            {
-                temp = temp.Remove(16);
-            }
-
-            Byte[] t = new Byte[temp.Length];
-            int i = 0;
-            foreach (char c in temp)
-            {
-                t[i] = Convert.ToByte(c);
-                i++;
-            }
-
-
-
-           /*
-            //poll for received data
-            do
-            {
-                if (bee.frameReceived && !bee.statusFrame)
-                {
-                    _txtBoxMessage.Text = bee.lastFrame.data.ToString();
-                }
-            } while (bee.statusFrame);
-            * */
+            coms.SetTarget(0);
+            coms.SendData("Hello");
+            _txtBoxMessage.Text = coms.ReceiveData();           
         }
 
 

@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using NLog;
+//using NLog;
 using XBee.Exceptions;
 using XBee.Frames;
 
@@ -17,7 +17,7 @@ namespace XBee
 
     public class XBee
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        //private static Logger logger = LogManager.GetCurrentClassLogger();
         private IXBeeConnection connection;
 
         private Thread receiveThread;
@@ -115,7 +115,7 @@ namespace XBee
                     receiveThread.Join(2000);
                 }
             } catch (Exception e) {
-                logger.Info(e);
+                //logger.Info(e);
             } finally {
                 receiveThread = null;
             }
@@ -125,7 +125,7 @@ namespace XBee
         {
             lock (this)
             {
-                frameReceived = true;
+                
                 if(!args.rxFrame)
                 {
                     statusFrame = true;
@@ -143,7 +143,10 @@ namespace XBee
                     lastFrame.data = ((ATLongValue)((ATCommandResponse)args.Response).Value).ToByteArray();
                     lastFrame.nodes = ((ATCommandResponse)args.Response).discoveredNodes;
                     //lastFrame.raw = args.Response.
+                    Console.WriteLine(lastFrame.GetCommandId());
                 }
+
+                frameReceived = true;
             }
             
 
