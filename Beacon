@@ -13,7 +13,7 @@ ZBTxRequest zbTx1 = ZBTxRequest(addr64,buffer,sizeof(buffer));
 ZBRxResponse zbRx = ZBRxResponse();
 
 // initialize the library with the numbers of the interface pins
-/*                Rs  En  D4  D5  D6 D7   */
+/*                Rs  En  D4  D5  D6 D7    */
 LiquidCrystal lcd(9, 8, 5, 4, 3, 2);
 
 /*Additionally,
