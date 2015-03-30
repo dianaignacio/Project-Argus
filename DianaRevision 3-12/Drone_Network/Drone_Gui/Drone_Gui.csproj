@@ -43,6 +43,9 @@
     <Reference Include="MissionPlanner.Controls">
       <HintPath>..\..\..\..\MissionPlanner\ExtLibs\Controls\bin\Debug\MissionPlanner.Controls.dll</HintPath>
     </Reference>
+    <Reference Include="MissionPlanner.Utilities">
+      <HintPath>..\..\..\..\MissionPlanner\ExtLibs\Controls\bin\Debug\MissionPlanner.Utilities.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,8 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessMode.cs" />
+    <Compile Include="Custom.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="DirectionsProvider.cs" />
+    <Compile Include="Earthbuilder.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FlightPlanner.cs">
       <SubType>UserControl</SubType>
@@ -66,6 +71,7 @@
     <Compile Include="FlightPlanner.Designer.cs" />
     <Compile Include="GDirections.cs" />
     <Compile Include="GeocodingProvider.cs" />
+    <Compile Include="GMapOverlay.cs" />
     <Compile Include="GMapProvider.cs" />
     <Compile Include="GMaps.cs" />
     <Compile Include="GoogleHybridMapProvider.cs" />
@@ -79,21 +85,18 @@
     <Compile Include="GSize.cs" />
     <Compile Include="Interface.cs" />
     <Compile Include="LanguageType.cs" />
-    <Compile Include="MainV2.cs">
+    <Compile Include="Main_V2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainV2.designer.cs">
-      <DependentUpon>MainV2.cs</DependentUpon>
+    <Compile Include="Main_V2.Designer.cs">
+      <DependentUpon>Main_V2.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainWindow.Designer.cs">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Mapbox.cs" />
+    <Compile Include="MapboxNoFly.cs" />
     <Compile Include="MapRoute.cs" />
     <Compile Include="MapType.cs" />
     <Compile Include="MouseWheelZoomType.cs" />
+    <Compile Include="MyImageCache.cs" />
     <Compile Include="Placemark.cs" />
     <Compile Include="PointLatLng.cs" />
     <Compile Include="Program.cs" />
@@ -110,26 +113,17 @@
     <Compile Include="RoutingProvider.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="SizeLatLng.cs" />
+    <Compile Include="Statkart_Topo2.cs" />
     <Compile Include="StatusCodes.cs" />
+    <Compile Include="Update.cs" />
+    <Compile Include="WMSProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainV2.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.zh-Hans.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.zh-Hant.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.zh-TW.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
-      <DependentUpon>MainWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Main_V2.resx">
+      <DependentUpon>Main_V2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
