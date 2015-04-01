@@ -8,12 +8,15 @@ using System.Threading;
 using MissionPlanner.Utilities;
 using MissionPlanner;
 using System.Net;
+using log4net.Config;
+using log4net;
 using System.Diagnostics;
 
 namespace Drone_Gui
 {
     class Program
     {
+        private static readonly ILog log = LogManager.GetLogger("Program");
         public static string[] args = new string[] { };
         internal static Thread Thread;
         

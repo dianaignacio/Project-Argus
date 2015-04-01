@@ -34,7 +34,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "MainWindow";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
+            this.Load += new System.EventHandler(this.Main_V2_Load);
             this.ResumeLayout(false);
 
         }
@@ -48,6 +48,5 @@
         private System.Windows.Forms.RichTextBox app_console;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private Controls.myGMAP MainMap;
     }
 }

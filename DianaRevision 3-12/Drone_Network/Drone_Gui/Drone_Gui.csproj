@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\GitHub\MissionPlanner\ExtLibs\GMap.NET.WindowsForms\bin\Release\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\MissionPlanner\ExtLibs\Controls\bin\Debug\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="MissionPlanner.Controls">
       <HintPath>..\..\..\..\MissionPlanner\ExtLibs\Controls\bin\Debug\MissionPlanner.Controls.dll</HintPath>
     </Reference>
@@ -115,6 +118,7 @@
     <Compile Include="SizeLatLng.cs" />
     <Compile Include="Statkart_Topo2.cs" />
     <Compile Include="StatusCodes.cs" />
+    <Compile Include="ThemeManager.cs" />
     <Compile Include="Update.cs" />
     <Compile Include="WMSProvider.cs" />
   </ItemGroup>

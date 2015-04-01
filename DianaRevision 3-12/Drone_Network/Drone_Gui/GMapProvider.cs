@@ -111,14 +111,6 @@ namespace GMap.NET.MapProviders
         public static readonly YandexSatelliteMapProvider YandexSatelliteMap = YandexSatelliteMapProvider.Instance;
         public static readonly YandexHybridMapProvider YandexHybridMap = YandexHybridMapProvider.Instance;
 
-        public static readonly LithuaniaMapProvider LithuaniaMap = LithuaniaMapProvider.Instance;
-        public static readonly Lithuania3dMapProvider Lithuania3dMap = Lithuania3dMapProvider.Instance;
-        public static readonly LithuaniaOrtoFotoMapProvider LithuaniaOrtoFotoMap = LithuaniaOrtoFotoMapProvider.Instance;
-        public static readonly LithuaniaOrtoFotoOldMapProvider LithuaniaOrtoFotoOldMap = LithuaniaOrtoFotoOldMapProvider.Instance;
-        public static readonly LithuaniaHybridMapProvider LithuaniaHybridMap = LithuaniaHybridMapProvider.Instance;
-        public static readonly LithuaniaHybridOldMapProvider LithuaniaHybridOldMap = LithuaniaHybridOldMapProvider.Instance;
-        public static readonly LithuaniaTOP50 LithuaniaTOP50Map = LithuaniaTOP50.Instance;
-
         public static readonly LatviaMapProvider LatviaMap = LatviaMapProvider.Instance;
 
         public static readonly MapBenderWMSProvider MapBenderWMSdemoMap = MapBenderWMSProvider.Instance;

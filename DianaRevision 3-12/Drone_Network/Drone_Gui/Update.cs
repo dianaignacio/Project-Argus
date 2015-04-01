@@ -160,7 +160,7 @@ new System.Net.Security.RemoteCertificateValidationCallback((sender, certificate
             if (updateFound)
             {
                 // do the update in the main thread
-                MainV2.instance.Invoke((MethodInvoker)delegate
+                Main_V2.instance.Invoke((MethodInvoker)delegate
                 {
                     string extra = "";
 
