@@ -1,5 +1,5 @@
-#include <SoftwareSerial.h>
 #include <TinyGPS.h>
+#include <SoftwareSerial.h>
 #include <LiquidCrystal.h>
 #include <XBee.h>
 
@@ -30,7 +30,7 @@ float flat, flon;
 void setup()
 { 
   Serial.begin(9600);
-  xbee.begin(Serial);
+//  xbee.begin(Serial);
    // set up the LCD's number of columns and rows: 
   lcd.begin(16, 2);
   lcd.setCursor(3, 0);lcd.print("Mobile Home");
@@ -50,16 +50,17 @@ void setup()
 
 void loop()
 {
- 
+  Serial.println("Test 1");
   bool newData = false;
 
   // For one second we parse GPS data and report some key values
   for (unsigned long start = millis(); millis() - start < 1000;)
   {
+    Serial.print(ss.available());
     while (ss.available())
     {
       char c = ss.read();
-      // Serial.write(c); // uncomment this line to see the GPS data flowing
+      Serial.write(c); // uncomment this line to see the GPS data flowing
       if (gps.encode(c))  // Did a new valid sentence come in?
         newData = true;
     }
@@ -67,21 +68,23 @@ void loop()
 
   if (newData)
   {
+    Serial.println("Test 2");
     lcd.clear();
+
     gps.f_get_position(&flat, &flon, &age);
-    //Serial.print("LAT-LON=");
-    //Serial.print(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 4);
+    Serial.print("LAT-LON=");
+    Serial.print(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 4);
       // Print a message to the LCD.
        lcd.print("LAT: "); 
          lcd.print(flat);
-    //Serial.print(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 4);
-    //Serial.println();
+    Serial.print(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 4);
+    Serial.println();
       lcd.setCursor(0,1);
       lcd.print("LON: ");
          lcd.print(flon);
   }
   
-  /*
+  
   // when characters arrive over the serial port...
   if (Serial.available()) {
     // wait a bit for the entire message to arrive
@@ -94,31 +97,33 @@ void loop()
       lcd.write(Serial.read());
     }
   }
-  */
+  
+  
+  /*
   if (xbee.readPacket(500)) 
   {
     if(xbee.getResponse().getApiId() == ZB_RX_RESPONSE)
     {
       xbee.getResponse().getZBRxResponse(zbRx);
-/*
+
       for(int i = 0;i<zbRx.getDataLength(); i++)
       {
         if(i<sizeof(buffer))
           buffer[i] = zbRx.getData(i);
       }
-*/    
+  
       
       dtostrf(flat,4,4,temp);
       for(int i = 0; i < 20; i++)
       {
        buffer[i] = temp[i]; 
       }
-      /*
+
       for(int i = 0; i < 20; i++)
       {
        Serial.print(buffer[i]); 
       }
-      */
+
       zbTx1 = ZBTxRequest(addr64, buffer, zbRx.getDataLength());
       xbee.send(zbTx1);
     }
@@ -132,7 +137,7 @@ void loop()
     // local XBee did not provide a timely TX Status Response -- should not happen
     //flashLed(errorLed, 10, 50);
   }
-  
+  */
   
 }
 
