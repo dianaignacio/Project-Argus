@@ -3,8 +3,6 @@
 #include <LiquidCrystal.h>
 #include <XBee.h>
 
-#define rxPin 12
-#define txPin 13
 
 // create the XBee object, buffer, address, response packet, and transmit packet
 XBee xbee = XBee();  
@@ -24,24 +22,23 @@ LiquidCrystal lcd(9, 8, 5, 4, 3, 2);
 /*  9600-baud serial GPS device hooked up on pins 12(rx) and 13(tx). */
 
 TinyGPS gps;
-SoftwareSerial ss(rxPin, txPin);
+SoftwareSerial ss(12, 13);
+
 
 float flat, flon;
     unsigned long age;
 
 void setup()
 { 
-  pinMode(rxPin, INPUT);
-  pinMode(txPin, OUTPUT);
-
-  ss.begin(9600);
-//  Serial.begin(9600);
+  Serial.begin(9600);
 //  xbee.begin(Serial);
-
-  // set up the LCD's number of columns and rows: 
+   // set up the LCD's number of columns and rows: 
   lcd.begin(16, 2);
   lcd.setCursor(3, 0);lcd.print("Mobile Home");
   lcd.setCursor(2, 1);lcd.print("Point Beacon");
+  // initialize the serial communications:
+  Serial.begin(9600);
+  ss.begin(9600);
   
   Serial.print("Mobile Home Point Beacon"); 
   Serial.println();
@@ -54,54 +51,58 @@ void setup()
 
 void loop()
 {
-  Serial.println("Test 1");
-  bool newData = false;
 
-  // For one second we parse GPS data and report some key values
-  Serial.print(ss.available());
-  for (unsigned long start = millis(); millis() - start < 1000;)
-  {
+	bool newData = false;
+	//Serial.println("T1");
+	// For one second we parse GPS data and report some key values
+	for (unsigned long start = millis(); millis() - start < 1000;)
+	{
+		//Serial.println("T2");
+	    //Serial.print(ss.available());
+	    while (ss.available())
+	    {
+			//Serial.println("T3");
+			char c = ss.read();
+			Serial.write(c); // uncomment this line to see the GPS data flowing
+			if (gps.encode(c))  // Did a new valid sentence come in?
+			{
+				Serial.println("STOP");
+				newData = true;
+			}
+		}
+	}
 
-    while (ss.available())
-    {
-      char c = ss.read();
-      Serial.write(c); // uncomment this line to see the GPS data flowing
-      if (gps.encode(c))  // Did a new valid sentence come in?
-        newData = true;
-    }
-  }
+	if (newData)
+	{
+	    
+		lcd.clear();
 
-  if (newData)
-  {
-    Serial.println("Test 2");
-    lcd.clear();
-
-    gps.f_get_position(&flat, &flon, &age);
-    Serial.print("LAT-LON=");
-    Serial.print(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 4);
-      // Print a message to the LCD.
-       lcd.print("LAT: "); 
-         lcd.print(flat);
-    Serial.print(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 4);
-    Serial.println();
-      lcd.setCursor(0,1);
-      lcd.print("LON: ");
-         lcd.print(flon);
-  }
+		gps.f_get_position(&flat, &flon, &age);
+		Serial.print("LAT-LON=");
+		Serial.print(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 4);
+		// Print a message to the LCD.
+		lcd.print("LAT: "); 
+		lcd.print(flat);
+		Serial.print(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 4);
+		Serial.println();
+		lcd.setCursor(0,1);
+		lcd.print("LON: ");
+        lcd.print(flon);
+	}
   
   
-  // when characters arrive over the serial port...
-  if (Serial.available()) {
-    // wait a bit for the entire message to arrive
-    delay(100);
-    // clear the screen
-    lcd.clear();
-    // read all the available characters
-    while (Serial.available() > 0) {
-      // display each character to the LCD
-      lcd.write(Serial.read());
-    }
-  }
+	// when characters arrive over the serial port...
+	if (Serial.available()) {
+		// wait a bit for the entire message to arrive
+		delay(100);
+		// clear the screen
+		lcd.clear();
+		// read all the available characters
+		while (Serial.available() > 0) {
+			// display each character to the LCD
+			lcd.write(Serial.read());
+		}
+	}
   
   
   /*
