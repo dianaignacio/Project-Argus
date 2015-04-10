@@ -66,17 +66,14 @@ namespace MapsTest
 
         private void mapControl_DoubleClick(object sender, EventArgs e)
         {
-            //point will have to be determined by coordinates of mouse click
-            //GMapMarker marker = new GMarkerGoogle(new GMap.NET.PointLatLng(-25.966688, 32.580528), GMarkerGoogleType.green);
-            //markerTest.Markers.Add()
-
-            GMapMarkerRect test = new GMapMarkerRect(new GMap.NET.PointLatLng(33.7830, -118.1129));
+            GMapMarkerRect test = new GMapMarkerRect(mapControl.FromLocalToLatLng(((MouseEventArgs)e).Location.X,((MouseEventArgs)e).Location.Y));
             markerTest.Markers.Add(test);
         }
 
 
     }
 
+    //THIS SHOULD BE IN A SEPERATE FILE
     //taken from: https://greatmaps.codeplex.com/wikipage?title=custom%20marker&referringTitle=GMap.NET.WindowsForms
     //template to generate custom marker
     //changed: pen width from 5 to 1; size from 55x55 to 5x5;
