@@ -36,16 +36,19 @@ namespace MapsTest
             //used to initialize map control, overlay, and markers
             GMapControl mapControl = new GMapControl();
             {
-                mapControl.MapProvider = GMapProviders.BingMap;
+                mapControl.MapProvider = GMapProviders.BingHybridMap;
                 mapControl.Position = new GMap.NET.PointLatLng(54.6961334816182, 25.2985095977783);
                 mapControl.MinZoom = 1;
-                mapControl.MaxZoom = 17;
+                mapControl.MaxZoom = 20;
                 mapControl.Zoom = 9;
                 mapControl.Dock = DockStyle.Fill;
             }
 
             Controls.Add(mapControl);
             ResumeLayout(true);
+
+            GMapOverlay ov1 = new GMapOverlay("ov1");
+            mapControl.Overlays.Add(ov1);
         }
 
         private void Form1_Load(object sender, EventArgs e)
