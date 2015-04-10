@@ -3,6 +3,8 @@
 #include <LiquidCrystal.h>
 #include <XBee.h>
 
+#define rxPin 12
+#define txPin 13
 
 // create the XBee object, buffer, address, response packet, and transmit packet
 XBee xbee = XBee();  
@@ -22,22 +24,24 @@ LiquidCrystal lcd(9, 8, 5, 4, 3, 2);
 /*  9600-baud serial GPS device hooked up on pins 12(rx) and 13(tx). */
 
 TinyGPS gps;
-SoftwareSerial ss(12, 13);
+SoftwareSerial ss(rxPin, txPin);
 
 float flat, flon;
     unsigned long age;
 
 void setup()
 { 
-  Serial.begin(9600);
+  pinMode(rxPin, INPUT);
+  pinMode(txPin, OUTPUT);
+
+  ss.begin(9600);
+//  Serial.begin(9600);
 //  xbee.begin(Serial);
-   // set up the LCD's number of columns and rows: 
+
+  // set up the LCD's number of columns and rows: 
   lcd.begin(16, 2);
   lcd.setCursor(3, 0);lcd.print("Mobile Home");
   lcd.setCursor(2, 1);lcd.print("Point Beacon");
-  // initialize the serial communications:
-  Serial.begin(9600);
-  ss.begin(9600);
   
   Serial.print("Mobile Home Point Beacon"); 
   Serial.println();
@@ -54,9 +58,10 @@ void loop()
   bool newData = false;
 
   // For one second we parse GPS data and report some key values
+  Serial.print(ss.available());
   for (unsigned long start = millis(); millis() - start < 1000;)
   {
-    Serial.print(ss.available());
+
     while (ss.available())
     {
       char c = ss.read();
