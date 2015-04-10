@@ -56,6 +56,7 @@
             this.mapControl.TabIndex = 0;
             this.mapControl.Zoom = 0D;
             this.mapControl.Load += new System.EventHandler(this.mapControl_Load);
+            this.mapControl.DoubleClick += new System.EventHandler(this.mapControl_DoubleClick);
             // 
             // Form1
             // 
