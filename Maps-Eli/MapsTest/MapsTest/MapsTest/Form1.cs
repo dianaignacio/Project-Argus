@@ -22,6 +22,11 @@ namespace MapsTest
     public partial class Form1 : Form
     {
         GMapOverlay markerTest = new GMapOverlay("markers");
+        GMap.NET.PointLatLng lastPoint, curPoint;
+        Pen routeDraw;
+        Graphics g;
+        GMapMarkerRect wrapper;
+
         public Form1()
         {
             InitializeComponent();
@@ -34,10 +39,6 @@ namespace MapsTest
             GMapProvider.WebProxy.Credentials = new NetworkCredential("ogrenci@bilgeadam.com", "bilgeada");
             */
             //used to initialize map control, overlay, and markers
-            
-
-
-            //GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(-25.966688, 32.580528),GMarkerGoogleType.green);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,11 +67,40 @@ namespace MapsTest
 
         private void mapControl_DoubleClick(object sender, EventArgs e)
         {
+            
             GMapMarkerRect test = new GMapMarkerRect(mapControl.FromLocalToLatLng(((MouseEventArgs)e).Location.X,((MouseEventArgs)e).Location.Y));
+            if (wrapper == null)
+                wrapper = test;
+
             markerTest.Markers.Add(test);
+            curPoint = mapControl.FromLocalToLatLng(((MouseEventArgs)e).Location.X, ((MouseEventArgs)e).Location.Y);
+
+            if (lastPoint.Lat != 0 && lastPoint.Lng != 0)
+            {
+                routeDraw = new Pen(Brushes.Blue, 5);
+                Point t1 = new Point(((int)(mapControl.FromLatLngToLocal(lastPoint)).X), ((int)(mapControl.FromLatLngToLocal(lastPoint)).Y));
+                Point t2 = new Point(((int)(mapControl.FromLatLngToLocal(curPoint)).X), ((int)(mapControl.FromLatLngToLocal(curPoint)).Y));
+                //wrapper.LineDraw(routeDraw,t1,t2);
+                System.Windows.Forms.Control
+
+            }
+            lastPoint = curPoint;
+
         }
 
+        //temporary method
+        public void OnRender(Graphics g)
+        {
+            if (lastPoint.Lat != 0 && lastPoint.Lng != 0 )
+            {
+                routeDraw = new Pen(Brushes.Blue, 5);
+                Point t1 = new Point(((int)(mapControl.FromLatLngToLocal(lastPoint)).X),((int)(mapControl.FromLatLngToLocal(lastPoint)).Y));
+                Point t2 = new Point(((int)(mapControl.FromLatLngToLocal(curPoint)).X),((int)(mapControl.FromLatLngToLocal(curPoint)).Y));
+                g.DrawLine(routeDraw, t1, t2);
 
+            }
+            lastPoint = curPoint;
+        }
     }
 
     //THIS SHOULD BE IN A SEPERATE FILE
@@ -80,7 +110,7 @@ namespace MapsTest
     public class GMapMarkerRect : GMapMarker
     {
         public Pen Pen;
-
+        private Graphics temp;
         public GMapMarkerRect(GMap.NET.PointLatLng p)
             : base(p)
         {
@@ -93,7 +123,14 @@ namespace MapsTest
 
         public override void OnRender(Graphics g)
         {
+            temp = g;
             g.DrawRectangle(Pen, new System.Drawing.Rectangle(LocalPosition.X - Size.Width / 2, LocalPosition.Y - Size.Height / 2, Size.Width, Size.Height));
         }
+
+        public void LineDraw(Pen p, Point one, Point two)
+        {
+            Graphics.DrawLine(new Pen(Brushes.Blue), one, two);
+        }
+
     }
 }
