@@ -100,8 +100,12 @@ namespace XBee_Interface
 
         public void SetTarget(int index)
         {
-            dest16 = ((XBeeNode)nodes[index]).Address16;
+            //dest16 = ((XBeeNode)nodes[index]).Address16;
+            dest16 = new XBee.XBeeAddress16(0xFFFE);
             dest64 = ((XBeeNode)nodes[index]).Address64;
+            //var temp = ((XBeeNode)nodes[index]).Address64.GetAddress();
+            //dest64 = new XBeeAddress64(Array.Reverse(BitConverter.ToUInt64(temp, 0)));
+            
         }
 
         //send data

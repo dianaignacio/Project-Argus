@@ -24,6 +24,7 @@ LiquidCrystal lcd(9, 8, 5, 4, 3, 2);
 TinyGPS gps;
 SoftwareSerial ss(12, 13);
 
+
 float flat, flon;
     unsigned long age;
 
@@ -50,53 +51,58 @@ void setup()
 
 void loop()
 {
-  Serial.println("Test 1");
-  bool newData = false;
 
-  // For one second we parse GPS data and report some key values
-  for (unsigned long start = millis(); millis() - start < 1000;)
-  {
-    Serial.print(ss.available());
-    while (ss.available())
-    {
-      char c = ss.read();
-      Serial.write(c); // uncomment this line to see the GPS data flowing
-      if (gps.encode(c))  // Did a new valid sentence come in?
-        newData = true;
-    }
-  }
+	bool newData = false;
+	//Serial.println("T1");
+	// For one second we parse GPS data and report some key values
+	for (unsigned long start = millis(); millis() - start < 1000;)
+	{
+		//Serial.println("T2");
+	    //Serial.print(ss.available());
+	    while (ss.available())
+	    {
+			//Serial.println("T3");
+			char c = ss.read();
+			Serial.write(c); // uncomment this line to see the GPS data flowing
+			if (gps.encode(c))  // Did a new valid sentence come in?
+			{
+				Serial.println("STOP");
+				newData = true;
+			}
+		}
+	}
 
-  if (newData)
-  {
-    Serial.println("Test 2");
-    lcd.clear();
+	if (newData)
+	{
+	    
+		lcd.clear();
 
-    gps.f_get_position(&flat, &flon, &age);
-    Serial.print("LAT-LON=");
-    Serial.print(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 4);
-      // Print a message to the LCD.
-       lcd.print("LAT: "); 
-         lcd.print(flat);
-    Serial.print(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 4);
-    Serial.println();
-      lcd.setCursor(0,1);
-      lcd.print("LON: ");
-         lcd.print(flon);
-  }
+		gps.f_get_position(&flat, &flon, &age);
+		Serial.print("LAT-LON=");
+		Serial.print(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 4);
+		// Print a message to the LCD.
+		lcd.print("LAT: "); 
+		lcd.print(flat);
+		Serial.print(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 4);
+		Serial.println();
+		lcd.setCursor(0,1);
+		lcd.print("LON: ");
+        lcd.print(flon);
+	}
   
   
-  // when characters arrive over the serial port...
-  if (Serial.available()) {
-    // wait a bit for the entire message to arrive
-    delay(100);
-    // clear the screen
-    lcd.clear();
-    // read all the available characters
-    while (Serial.available() > 0) {
-      // display each character to the LCD
-      lcd.write(Serial.read());
-    }
-  }
+	// when characters arrive over the serial port...
+	if (Serial.available()) {
+		// wait a bit for the entire message to arrive
+		delay(100);
+		// clear the screen
+		lcd.clear();
+		// read all the available characters
+		while (Serial.available() > 0) {
+			// display each character to the LCD
+			lcd.write(Serial.read());
+		}
+	}
   
   
   /*
