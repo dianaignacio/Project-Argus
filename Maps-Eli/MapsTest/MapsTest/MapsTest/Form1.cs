@@ -36,8 +36,8 @@ namespace MapsTest
             //used to initialize map control, overlay, and markers
             GMapControl mapControl = new GMapControl();
             {
-                mapControl.MapProvider = GMapProviders.BingMap;
-                mapControl.Position = new GMap.NET.PointLatLng(54.6961334816182, 25.2985095977783);
+                mapControl.MapProvider = GMapProviders.BingSatelliteMap;
+                mapControl.Position = new GMap.NET.PointLatLng(33.782604217529, -118.110412597656);
                 mapControl.MinZoom = 1;
                 mapControl.MaxZoom = 17;
                 mapControl.Zoom = 9;
