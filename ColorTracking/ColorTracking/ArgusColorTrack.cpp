@@ -113,7 +113,7 @@ int main(){
 
 		//we can loop the video by re-opening the capture every time the video reaches its last frame
 
-		capture.open("C:\\Users\\Brandon\\Desktop\\Highway.wmv");  //*********OPEN VIDEO FILE
+		capture.open(0);  //*********OPEN VIDEO FILE
 
 		if (!capture.isOpened()){
 			cout << "ERROR ACQUIRING VIDEO FEED\n";
@@ -254,6 +254,7 @@ int main(){
 			if (!bSuccess) //if not success, break loop
 			{
 				cout << "Cannot read a frame from video stream" << endl;
+				waitKey(1000);
 				break;
 			}
 

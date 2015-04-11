@@ -25,3 +25,4 @@ C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Netwo
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.pdb
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config
