@@ -39,17 +39,6 @@ namespace MapsTest
             GMapProvider.WebProxy.Credentials = new NetworkCredential("ogrenci@bilgeadam.com", "bilgeada");
             */
             //used to initialize map control, overlay, and markers
-<<<<<<< HEAD
-            GMapControl mapControl = new GMapControl();
-            {
-                mapControl.MapProvider = GMapProviders.BingSatelliteMap;
-                mapControl.Position = new GMap.NET.PointLatLng(33.782604217529, -118.110412597656);
-                mapControl.MinZoom = 1;
-                mapControl.MaxZoom = 17;
-                mapControl.Zoom = 9;
-                mapControl.Dock = DockStyle.Fill;
-            }
-=======
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,8 +56,6 @@ namespace MapsTest
             mapControl.MaxZoom = 18;
             mapControl.Zoom = 15;
             mapControl.Dock = DockStyle.Fill;
-
->>>>>>> 9b177462dad6085f172c9e00d16078cafe1f112d
 
             Controls.Add(mapControl);
             ResumeLayout(true);
@@ -93,7 +80,7 @@ namespace MapsTest
                 Point t1 = new Point(((int)(mapControl.FromLatLngToLocal(lastPoint)).X), ((int)(mapControl.FromLatLngToLocal(lastPoint)).Y));
                 Point t2 = new Point(((int)(mapControl.FromLatLngToLocal(curPoint)).X), ((int)(mapControl.FromLatLngToLocal(curPoint)).Y));
                 //wrapper.LineDraw(routeDraw,t1,t2);
-                System.Windows.Forms.Control
+                //System.Windows.Forms.Control
 
             }
             lastPoint = curPoint;
@@ -141,7 +128,7 @@ namespace MapsTest
 
         public void LineDraw(Pen p, Point one, Point two)
         {
-            Graphics.DrawLine(new Pen(Brushes.Blue), one, two);
+            //Graphics.DrawLine(new Pen(Brushes.Blue), one, two);
         }
 
     }
