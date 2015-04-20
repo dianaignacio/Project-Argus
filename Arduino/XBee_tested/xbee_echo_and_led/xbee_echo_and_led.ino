@@ -12,9 +12,12 @@ XBee xbee = XBee();
 uint8_t payload2[] = { "message received" };
 uint8_t *buffer;
       
-XBeeAddress64 addr64 = XBeeAddress64(0, 0);
-ZBTxRequest zbTx1 = ZBTxRequest(addr64, buffer, sizeof(buffer));
-ZBTxRequest zbTx2 = ZBTxRequest(addr64, payload2, sizeof(payload2));
+XBeeAddress64 coord1 = XBeeAddress64(0, 0);
+XBeeAddress64 coord2 = XBeeAddress64(0x0013A200, 0x40C1BC5F);
+XBeeAddress64 broadcast = XBeeAddress64(0, 0x0000FFFF);
+
+ZBTxRequest zbTx1 = ZBTxRequest(coord1, buffer, sizeof(buffer));
+ZBTxRequest zbTx2 = ZBTxRequest(coord1, payload2, sizeof(payload2));
 ZBTxStatusResponse txStatus = ZBTxStatusResponse();
 ZBRxResponse zbRx = ZBRxResponse();
 
@@ -79,15 +82,9 @@ void loop() {
     if(xbee.getResponse().getApiId() == ZB_RX_RESPONSE)
     {
       xbee.getResponse().getZBRxResponse(zbRx);
-/*
-      for(int i = 0;i<zbRx.getDataLength(); i++)
-      {
-        if(i<sizeof(buffer))
-          buffer[i] = zbRx.getData(i);
-      }
-*/      
-      buffer = zbRx.getData();
-      zbTx1 = ZBTxRequest(addr64, buffer, zbRx.getDataLength());
+  
+	  buffer = zbRx.getData();
+	  zbTx1 = ZBTxRequest(coord1, buffer, zbRx.getDataLength());
       xbee.send(zbTx1);
     }
   } 

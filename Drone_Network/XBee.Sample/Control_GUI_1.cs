@@ -45,8 +45,8 @@ namespace XBee.Sample
         {
             coms.SetTarget(0);
             coms.SendData("H");
-            _txtBoxMessage.Text = coms.ReceiveData();
-            _txtBoxMessage.Text = coms.ReceiveData();
+            _txtBoxMessage.Text = coms.ReceiveData();//status
+            //_txtBoxMessage.Text = coms.ReceiveData();//data
            
         }
 
@@ -54,16 +54,16 @@ namespace XBee.Sample
         {
             coms.SetTarget(0);
             coms.SendData("L");
-            _txtBoxMessage.Text = coms.ReceiveData();
-            _txtBoxMessage.Text = coms.ReceiveData();
+            _txtBoxMessage.Text = coms.ReceiveData();//receive status
+            //_txtBoxMessage.Text = coms.ReceiveData();//receive data
         }
 
         private void _btnSend_Click(object sender, EventArgs e)
         {
             coms.SetTarget(0);
             coms.SendData("Hello World");
-            _txtBoxMessage.Text = coms.ReceiveData();
-            _txtBoxMessage.Text = coms.ReceiveData();
+            _txtBoxMessage.Text = coms.ReceiveData();//status
+            _txtBoxMessage.Text = coms.ReceiveData();//data
         }
 
 
