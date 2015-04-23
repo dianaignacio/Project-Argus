@@ -23,21 +23,21 @@ namespace XBee.Sample
          * */
 
         XBeeManager coms;
-        
+
         public Control_GUI_1()
         {
             InitializeComponent();
-            
+
             coms = new XBeeManager();
             coms.InitScan();
             coms.NodeDiscover();
-           
+
 
         }
 
         private void Control_GUI_1_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -47,7 +47,7 @@ namespace XBee.Sample
             coms.SendData("H");
             _txtBoxMessage.Text = coms.ReceiveData();
             _txtBoxMessage.Text = coms.ReceiveData();
-           
+
         }
 
         private void _btnOff_Click(object sender, EventArgs e)

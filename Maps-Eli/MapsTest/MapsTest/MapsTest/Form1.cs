@@ -14,23 +14,22 @@ using GMap.NET.MapProviders;
 using GMap.NET.ObjectModel;
 using GMap.NET.Projections;
 using GMap.NET.Properties;
+using GMap.NET; 
 using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using GMap.NET.WindowsForms.ToolTips;
 using System.Net;
 
 namespace MapsTest
 {
     public partial class Form1 : Form
     {
-        GMapOverlay markerTest = new GMapOverlay("markers");
-        GMap.NET.PointLatLng lastPoint, curPoint;
-        Pen routeDraw;
-        Graphics g;
-        GMapMarkerRect wrapper;
+        GMapOverlay routesOverlay = new GMapOverlay("routes");
+        GMapOverlay polyOverlay = new GMapOverlay("polygons");
 
         public Form1()
         {
-            InitializeComponent();
-
+            InitializeComponent(); 
             SuspendLayout();
 
             /* To be used if there is a proxy on the network            
@@ -39,97 +38,87 @@ namespace MapsTest
             GMapProvider.WebProxy.Credentials = new NetworkCredential("ogrenci@bilgeadam.com", "bilgeada");
             */
             //used to initialize map control, overlay, and markers
-        }
 
+            //GMarkerGoogle marker = new GMarkerGoogle(new GMap.NET.PointLatLng(33.7830, -118.1129), GMarkerGoogleType.green);
+
+        }
+    
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            //GMap.NET.MapProviders.GoogleMapProvider.Instance; 
+            //mapControl.MapProvider = GMap.NET.MapProviders.GMapProviders.GoogleMap;
+            //mapControl.Manager.Mode = AccessMode.ServerOnly;
+            //GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.CacheOnly;   
         }
+
 
         private void mapControl_Load(object sender, EventArgs e)
         {
             mapControl.MapProvider = GMapProviders.BingHybridMap;
-            
+
             //position will be defined by beacon init position, for initialization purposes.
             mapControl.Position = new GMap.NET.PointLatLng(33.7830, -118.1129);
             mapControl.MinZoom = 0;
             mapControl.MaxZoom = 18;
             mapControl.Zoom = 15;
             mapControl.Dock = DockStyle.Fill;
+            mapControl.DragButton = MouseButtons.Left;
 
             Controls.Add(mapControl);
             ResumeLayout(true);
 
-           
-            mapControl.Overlays.Add(markerTest);
+            mapControl.Overlays.Add(routesOverlay);
+            mapControl.Overlays.Add(polyOverlay);
         }
+
+        private void printPoints()
+        {
+            int j = 1;
+            foreach(GMapRoute r in routesOverlay.Routes)
+            {
+                Console.WriteLine("Route #: " + j);
+                for (int i = 0; i < r.Points.Count; i++)
+                    Console.WriteLine("Route:" + r.Points[i]);
+            }
+        }
+ 
 
         private void mapControl_DoubleClick(object sender, EventArgs e)
-        {
+        {                          
+            GMap.NET.PointLatLng start = new GMap.NET.PointLatLng(33.788399, -118.123112);   
+            GMap.NET.PointLatLng end = new GMap.NET.PointLatLng(33.773846, -118.102684);
             
-            GMapMarkerRect test = new GMapMarkerRect(mapControl.FromLocalToLatLng(((MouseEventArgs)e).Location.X,((MouseEventArgs)e).Location.Y));
-            if (wrapper == null)
-                wrapper = test;
+            /* the two booleans flags are:
+                avoidHighways – If set, the mapping provider will try to avoid highways, instead taking the scenic route (if supported);
+                walkingMode – If set, the mapping provider will assume that you’re going on foot and include footpaths (if supported). */
+            GMap.NET.MapRoute route = GMap.NET.MapProviders.GMapProviders.GoogleMap.GetRoute(start, end, false, false, 15);
 
-            markerTest.Markers.Add(test);
-            curPoint = mapControl.FromLocalToLatLng(((MouseEventArgs)e).Location.X, ((MouseEventArgs)e).Location.Y);
-
-            if (lastPoint.Lat != 0 && lastPoint.Lng != 0)
-            {
-                routeDraw = new Pen(Brushes.Blue, 5);
-                Point t1 = new Point(((int)(mapControl.FromLatLngToLocal(lastPoint)).X), ((int)(mapControl.FromLatLngToLocal(lastPoint)).Y));
-                Point t2 = new Point(((int)(mapControl.FromLatLngToLocal(curPoint)).X), ((int)(mapControl.FromLatLngToLocal(curPoint)).Y));
-                //wrapper.LineDraw(routeDraw,t1,t2);
-                //System.Windows.Forms.Control
-
-            }
-            lastPoint = curPoint;
-
+            GMapRoute r = new GMapRoute(route.Points, "My route");
+            r.Stroke.Width = 2;
+            r.Stroke.Color = Color.Green;
+            routesOverlay.Routes.Add(r);
+           
+            printPoints();
+            //mapControl.Overlays.Add(routesOverlay);
+            //mapControl.ZoomAndCenterMarkers("My route");
+            
         }
 
-        //temporary method
-        public void OnRender(Graphics g)
+        private void mapControl_Click(object sender, EventArgs e)
         {
-            if (lastPoint.Lat != 0 && lastPoint.Lng != 0 )
-            {
-                routeDraw = new Pen(Brushes.Blue, 5);
-                Point t1 = new Point(((int)(mapControl.FromLatLngToLocal(lastPoint)).X),((int)(mapControl.FromLatLngToLocal(lastPoint)).Y));
-                Point t2 = new Point(((int)(mapControl.FromLatLngToLocal(curPoint)).X),((int)(mapControl.FromLatLngToLocal(curPoint)).Y));
-                g.DrawLine(routeDraw, t1, t2);
-
-            }
-            lastPoint = curPoint;
+            /*
+            // polygons 
+            List<PointLatLng> points = new List<PointLatLng>(); ;
+            points.Add(new PointLatLng(33.788399, -118.123112));
+            points.Add(new PointLatLng(33.774416, -118.121052));
+            points.Add(new PointLatLng(33.773846, -118.102684));
+            points.Add(new PointLatLng(33.787686, -118.098907));
+            GMapPolygon polygon = new GMapPolygon(points, "mypolygon");
+            polygon.Fill = new SolidBrush(Color.FromArgb(50, Color.Red));
+            polygon.Stroke = new Pen(Color.Red, 1);
+            polyOverlay.Polygons.Add(polygon);
+            */
         }
-    }
-
-    //THIS SHOULD BE IN A SEPERATE FILE
-    //taken from: https://greatmaps.codeplex.com/wikipage?title=custom%20marker&referringTitle=GMap.NET.WindowsForms
-    //template to generate custom marker
-    //changed: pen width from 5 to 1; size from 55x55 to 5x5;
-    public class GMapMarkerRect : GMapMarker
-    {
-        public Pen Pen;
-        private Graphics temp;
-        public GMapMarkerRect(GMap.NET.PointLatLng p)
-            : base(p)
-        {
-            Pen = new Pen(Brushes.Red, 1);
-
-            // do not forget set Size of the marker
-            // if so, you shall have no event on it ;}
-            Size = new Size(5, 5);
-        }
-
-        public override void OnRender(Graphics g)
-        {
-            temp = g;
-            g.DrawRectangle(Pen, new System.Drawing.Rectangle(LocalPosition.X - Size.Width / 2, LocalPosition.Y - Size.Height / 2, Size.Width, Size.Height));
-        }
-
-        public void LineDraw(Pen p, Point one, Point two)
-        {
-            //Graphics.DrawLine(new Pen(Brushes.Blue), one, two);
-        }
-
+        
     }
 }

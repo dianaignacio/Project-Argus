@@ -30,7 +30,6 @@ namespace XBee
         public XBeeFrame lastFrame = null;
         private IPacketReader reader;
         private ApiTypeValue apiType;
-        public bool rxReceived = false;
 
         public ApiTypeValue ApiType
         {
@@ -126,21 +125,35 @@ namespace XBee
         {
             lock (this)
             {
-                frameReceived = true;
-                lastFrame = args.Response;
-                rxReceived = args.rxFrame;
-
-                if (args.rxFrame)
+                
+                if(!args.rxFrame)
                 {
-                    lastFrame =((ZigBeeReceivePacket) args.Response);
- 
+                    statusFrame = true;
                 }
-                else if(lastFrame.GetCommandId() == XBeeAPICommandId.AT_COMMAND_RESPONSE)
+                else
+                {
+                    statusFrame = false;
+                }
+                lastFrame = args.Response;
+                var data = lastFrame.ToString();
+                Console.WriteLine(args.Response);
+
+                //if receiving a transmit packet
+                if (lastFrame.GetCommandId() == XBeeAPICommandId.RECEIVE_PACKET_RESPONSE)
+                {
+                    lastFrame.data = ((ZigBeeReceivePacket)args.Response).Data;
+                }
+
+                //if AT Command Response
+                if(lastFrame.GetCommandId() == XBeeAPICommandId.AT_COMMAND_RESPONSE)
                 {
                     lastFrame.data = ((ATLongValue)((ATCommandResponse)args.Response).Value).ToByteArray();
                     lastFrame.nodes = ((ATCommandResponse)args.Response).discoveredNodes;
+                    //lastFrame.raw = args.Response.
+                    Console.WriteLine(lastFrame.GetCommandId());
                 }
 
+                frameReceived = true;
             }
             
 

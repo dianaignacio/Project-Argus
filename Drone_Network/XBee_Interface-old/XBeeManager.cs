@@ -125,27 +125,22 @@ namespace XBee_Interface
         }
 
         //receive and interpret data; return relevant data
-        public String ReceiveData() //needs work
+        public String ReceiveData()
         {
-            String data = null;
+            String data;
 
             //waits until a frame is received
             while (!coordinator.frameReceived) ;
-
-            lock (this)
+            if (coordinator.lastFrame.data != null)
             {
-                if (coordinator.lastFrame.GetCommandId() == XBeeAPICommandId.TRANSMIT_STATUS_RESPONSE)
-                {
-                    data = coordinator.lastFrame.GetCommandId().ToString();
-                }
-                else if (coordinator.lastFrame.GetCommandId() == XBeeAPICommandId.RECEIVE_PACKET_RESPONSE)//receiving data
-                {
-                    data = System.Text.Encoding.Default.GetString(((ZigBeeReceivePacket)coordinator.lastFrame).Data);
-                }
-
-                coordinator.frameReceived = false;
-                return data;
+                data = System.Text.Encoding.Default.GetString(coordinator.lastFrame.data);
             }
+            else
+            {
+                data = coordinator.lastFrame.GetCommandId().ToString();
+            }
+            coordinator.frameReceived = false;
+            return data;
         }
 
         //receive last frame without parsing data

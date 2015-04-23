@@ -1,4 +1,4 @@
-﻿namespace MapsTest
+﻿namespace MapsTestOld
 {
     partial class Form1
     {
@@ -39,9 +39,9 @@
             this.mapControl.GrayScaleMode = false;
             this.mapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.mapControl.LevelsKeepInMemmory = 5;
-            this.mapControl.Location = new System.Drawing.Point(12, 12);
+            this.mapControl.Location = new System.Drawing.Point(2, 2);
             this.mapControl.MarkersEnabled = true;
-            this.mapControl.MaxZoom = 18;
+            this.mapControl.MaxZoom = 2;
             this.mapControl.MinZoom = 2;
             this.mapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.mapControl.Name = "mapControl";
@@ -50,14 +50,12 @@
             this.mapControl.RetryLoadTile = 0;
             this.mapControl.RoutesEnabled = true;
             this.mapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.mapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.mapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.mapControl.ShowTileGridLines = false;
-            this.mapControl.Size = new System.Drawing.Size(260, 238);
+            this.mapControl.Size = new System.Drawing.Size(280, 258);
             this.mapControl.TabIndex = 0;
             this.mapControl.Zoom = 0D;
             this.mapControl.Load += new System.EventHandler(this.mapControl_Load);
-            this.mapControl.Click += new System.EventHandler(this.mapControl_Click);
-            this.mapControl.DoubleClick += new System.EventHandler(this.mapControl_DoubleClick);
             // 
             // Form1
             // 
@@ -67,7 +65,6 @@
             this.Controls.Add(this.mapControl);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -77,4 +74,3 @@
         private GMap.NET.WindowsForms.GMapControl mapControl;
     }
 }
-
