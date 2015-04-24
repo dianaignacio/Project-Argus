@@ -34,20 +34,20 @@
             this.txtXYRadius = new System.Windows.Forms.TextBox();
             this.ibProcessed = new Emgu.CV.UI.ImageBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.BlueHi = new System.Windows.Forms.TextBox();
-            this.GreenHi = new System.Windows.Forms.TextBox();
-            this.RedHi = new System.Windows.Forms.TextBox();
-            this.BlueLo = new System.Windows.Forms.TextBox();
-            this.GreenLo = new System.Windows.Forms.TextBox();
-            this.RedLo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Blue = new System.Windows.Forms.TrackBar();
+            this.Green = new System.Windows.Forms.TrackBar();
+            this.Red = new System.Windows.Forms.TrackBar();
+            this.BlueLabel = new System.Windows.Forms.Label();
+            this.GreenLabel = new System.Windows.Forms.Label();
+            this.RedLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ibOriginal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ibProcessed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Blue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Green)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Red)).BeginInit();
             this.SuspendLayout();
             // 
             // ibOriginal
@@ -97,79 +97,10 @@
             this.splitter1.TabIndex = 6;
             this.splitter1.TabStop = false;
             // 
-            // BlueHi
-            // 
-            this.BlueHi.Location = new System.Drawing.Point(794, 533);
-            this.BlueHi.Name = "BlueHi";
-            this.BlueHi.Size = new System.Drawing.Size(68, 20);
-            this.BlueHi.TabIndex = 7;
-            this.BlueHi.Text = "0";
-            this.BlueHi.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // GreenHi
-            // 
-            this.GreenHi.Location = new System.Drawing.Point(892, 534);
-            this.GreenHi.Name = "GreenHi";
-            this.GreenHi.Size = new System.Drawing.Size(68, 20);
-            this.GreenHi.TabIndex = 8;
-            this.GreenHi.Text = "0";
-            // 
-            // RedHi
-            // 
-            this.RedHi.Location = new System.Drawing.Point(991, 533);
-            this.RedHi.Name = "RedHi";
-            this.RedHi.Size = new System.Drawing.Size(68, 20);
-            this.RedHi.TabIndex = 9;
-            this.RedHi.Text = "255";
-            this.RedHi.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // BlueLo
-            // 
-            this.BlueLo.Location = new System.Drawing.Point(794, 581);
-            this.BlueLo.Name = "BlueLo";
-            this.BlueLo.Size = new System.Drawing.Size(68, 20);
-            this.BlueLo.TabIndex = 10;
-            this.BlueLo.Text = "0";
-            // 
-            // GreenLo
-            // 
-            this.GreenLo.Location = new System.Drawing.Point(892, 581);
-            this.GreenLo.Name = "GreenLo";
-            this.GreenLo.Size = new System.Drawing.Size(68, 20);
-            this.GreenLo.TabIndex = 11;
-            this.GreenLo.Text = "0";
-            // 
-            // RedLo
-            // 
-            this.RedLo.Location = new System.Drawing.Point(991, 581);
-            this.RedLo.Name = "RedLo";
-            this.RedLo.Size = new System.Drawing.Size(68, 20);
-            this.RedLo.TabIndex = 12;
-            this.RedLo.Text = "230";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(724, 581);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Low(0-255)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(725, 533);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "High(0-255)";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(813, 507);
+            this.label3.Location = new System.Drawing.Point(700, 511);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 15;
@@ -178,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(909, 507);
+            this.label4.Location = new System.Drawing.Point(700, 542);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 16;
@@ -187,39 +118,81 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1008, 507);
+            this.label5.Location = new System.Drawing.Point(701, 574);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "Red";
             // 
-            // button1
+            // Blue
             // 
-            this.button1.Location = new System.Drawing.Point(1100, 531);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Set BGR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.Blue.Location = new System.Drawing.Point(751, 507);
+            this.Blue.Maximum = 255;
+            this.Blue.Name = "Blue";
+            this.Blue.Size = new System.Drawing.Size(364, 45);
+            this.Blue.TabIndex = 19;
+            this.Blue.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // Green
+            // 
+            this.Green.Location = new System.Drawing.Point(751, 542);
+            this.Green.Maximum = 255;
+            this.Green.Name = "Green";
+            this.Green.Size = new System.Drawing.Size(364, 45);
+            this.Green.TabIndex = 20;
+            this.Green.Scroll += new System.EventHandler(this.trackBar1_Scroll_1);
+            // 
+            // Red
+            // 
+            this.Red.Location = new System.Drawing.Point(751, 574);
+            this.Red.Maximum = 255;
+            this.Red.Name = "Red";
+            this.Red.Size = new System.Drawing.Size(364, 45);
+            this.Red.TabIndex = 21;
+            this.Red.Scroll += new System.EventHandler(this.Red_Scroll);
+            // 
+            // BlueLabel
+            // 
+            this.BlueLabel.AutoSize = true;
+            this.BlueLabel.Location = new System.Drawing.Point(1135, 511);
+            this.BlueLabel.Name = "BlueLabel";
+            this.BlueLabel.Size = new System.Drawing.Size(13, 13);
+            this.BlueLabel.TabIndex = 22;
+            this.BlueLabel.Text = "0";
+            this.BlueLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // GreenLabel
+            // 
+            this.GreenLabel.AutoSize = true;
+            this.GreenLabel.Location = new System.Drawing.Point(1135, 542);
+            this.GreenLabel.Name = "GreenLabel";
+            this.GreenLabel.Size = new System.Drawing.Size(13, 13);
+            this.GreenLabel.TabIndex = 23;
+            this.GreenLabel.Text = "0";
+            // 
+            // RedLabel
+            // 
+            this.RedLabel.AutoSize = true;
+            this.RedLabel.Location = new System.Drawing.Point(1135, 574);
+            this.RedLabel.Name = "RedLabel";
+            this.RedLabel.Size = new System.Drawing.Size(13, 13);
+            this.RedLabel.TabIndex = 24;
+            this.RedLabel.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1424, 638);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RedLabel);
+            this.Controls.Add(this.GreenLabel);
+            this.Controls.Add(this.BlueLabel);
+            this.Controls.Add(this.Red);
+            this.Controls.Add(this.Green);
+            this.Controls.Add(this.Blue);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.RedLo);
-            this.Controls.Add(this.GreenLo);
-            this.Controls.Add(this.BlueLo);
-            this.Controls.Add(this.RedHi);
-            this.Controls.Add(this.GreenHi);
-            this.Controls.Add(this.BlueHi);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.ibProcessed);
             this.Controls.Add(this.txtXYRadius);
@@ -230,6 +203,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ibOriginal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ibProcessed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Blue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Green)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Red)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,18 +218,15 @@
         private System.Windows.Forms.TextBox txtXYRadius;
         private Emgu.CV.UI.ImageBox ibProcessed;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.TextBox BlueHi;
-        private System.Windows.Forms.TextBox GreenHi;
-        private System.Windows.Forms.TextBox RedHi;
-        private System.Windows.Forms.TextBox BlueLo;
-        private System.Windows.Forms.TextBox GreenLo;
-        private System.Windows.Forms.TextBox RedLo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TrackBar Blue;
+        private System.Windows.Forms.TrackBar Green;
+        private System.Windows.Forms.TrackBar Red;
+        private System.Windows.Forms.Label BlueLabel;
+        private System.Windows.Forms.Label GreenLabel;
+        private System.Windows.Forms.Label RedLabel;
     }
 }
 
