@@ -1,0 +1,9 @@
+prefix=/c/mhvavrtools/mhvavrtools/mhvavrtools
+libdir=/c/mhvavrtools/mhvavrtools/mhvavrtools/lib
+includedir=/c/mhvavrtools/mhvavrtools/mhvavrtools/include
+
+Name: Sparse
+Description: Semantic parser for C
+Version: 0.4.4
+Libs: -L${libdir} -lsparse
+Cflags: -I${includedir}
