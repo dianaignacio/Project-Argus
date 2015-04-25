@@ -26,3 +26,33 @@ C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Netwo
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
 C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csprojResolveAssemblyReference.cache
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.MainWindow.resources
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Properties.Resources.resources
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csproj.GenerateResource.Cache
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.pdb
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.DebuggerVisualizers.VS2013.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.GPU.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.ML.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.OCR.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.OpenCL.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.Stitching.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.Util.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\XBee.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\ZedGraph.dll
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\XBee.pdb
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.pdb
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.GPU.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.ML.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.OCR.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.OpenCL.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.Stitching.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.Util.xml
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
+C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb

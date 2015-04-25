@@ -28,26 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.main_view = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
             this.secondary_view = new System.Windows.Forms.PictureBox();
             this.list_status = new System.Windows.Forms.ListView();
             this.list_connections = new System.Windows.Forms.ListView();
             this.app_console = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.main_view)).BeginInit();
+            this.camera1 = new Emgu.CV.UI.ImageBox();
+            this.camera2 = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.secondary_view)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // main_view
-            // 
-            this.main_view.Image = global::Drone_Gui.Properties.Resources.test1;
-            this.main_view.Location = new System.Drawing.Point(232, 52);
-            this.main_view.Name = "main_view";
-            this.main_view.Size = new System.Drawing.Size(882, 469);
-            this.main_view.TabIndex = 0;
-            this.main_view.TabStop = false;
-            this.main_view.Click += new System.EventHandler(this.main_view_Click);
             // 
             // secondary_view
             // 
@@ -65,6 +58,7 @@
             this.list_status.Size = new System.Drawing.Size(228, 571);
             this.list_status.TabIndex = 2;
             this.list_status.UseCompatibleStateImageBehavior = false;
+            this.list_status.SelectedIndexChanged += new System.EventHandler(this.list_status_SelectedIndexChanged);
             // 
             // list_connections
             // 
@@ -98,24 +92,43 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // camera1
+            // 
+            this.camera1.Location = new System.Drawing.Point(253, 52);
+            this.camera1.Name = "camera1";
+            this.camera1.Size = new System.Drawing.Size(400, 389);
+            this.camera1.TabIndex = 2;
+            this.camera1.TabStop = false;
+            this.camera1.Click += new System.EventHandler(this.camera1_Click);
+            // 
+            // camera2
+            // 
+            this.camera2.Location = new System.Drawing.Point(683, 52);
+            this.camera2.Name = "camera2";
+            this.camera2.Size = new System.Drawing.Size(400, 389);
+            this.camera2.TabIndex = 7;
+            this.camera2.TabStop = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 635);
+            this.Controls.Add(this.camera2);
+            this.Controls.Add(this.camera1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.app_console);
             this.Controls.Add(this.list_connections);
             this.Controls.Add(this.list_status);
             this.Controls.Add(this.secondary_view);
-            this.Controls.Add(this.main_view);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.Load += new System.EventHandler(this.MainWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.main_view)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondary_view)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +136,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox main_view;
         private System.Windows.Forms.PictureBox secondary_view;
         private System.Windows.Forms.ListView list_status;
         private System.Windows.Forms.ListView list_connections;
         private System.Windows.Forms.RichTextBox app_console;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private Emgu.CV.UI.ImageBox camera1;
+        private Emgu.CV.UI.ImageBox camera2;
     }
 }
