@@ -104,7 +104,11 @@ namespace Drone_Gui
             }
             try
             {
+<<<<<<< HEAD
                 //capwebcam2 = new Capture(2); // default webcam
+=======
+                capwebcam2 = new Capture(1); // default webcam
+>>>>>>> e64396afd30ce8b1108ed5b9ffad20316463c7ae
             }
             catch (NullReferenceException except)
             {
