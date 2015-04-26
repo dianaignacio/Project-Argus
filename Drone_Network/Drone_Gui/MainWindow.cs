@@ -14,19 +14,32 @@ using XBee;
 using XBee_Interface;
 using System.Threading;
 
+using GMap.NET.CacheProviders;
+using GMap.NET.Internals;
+using GMap.NET.MapProviders;
+using GMap.NET.ObjectModel;
+using GMap.NET.Projections;
+using GMap.NET.Properties;
+using GMap.NET;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using GMap.NET.WindowsForms.ToolTips;
+
+/*
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 using Emgu.Util;
 using Emgu.CV.UI;
 using Emgu.CV.VideoSurveillance;
-
+*/
 
 namespace Drone_Gui
 {
     
     public partial class MainWindow : Form
     {
+        /*
         //Camera initialization 
         Capture capwebcam = null;
         Capture capwebcam2 = null;
@@ -35,7 +48,17 @@ namespace Drone_Gui
         Image<Bgr, byte> imgOriginal2;
         Image<Gray, byte> imgProcessed2;
         int LoBlue = 0, LoGreen = 0, LoRed = 230, HiBlue = 0, HiGreen = 0, HiRed = 255;
-       
+        */
+
+        //Map Layers and Points
+
+        GMap.NET.PointLatLng start;
+        GMap.NET.PointLatLng end;
+        GMapOverlay routesOverlay = new GMapOverlay("routes");
+        GMapOverlay polyOverlay = new GMapOverlay("polygons");
+        List<PointLatLng> route = new List<PointLatLng>();
+        List<PointLatLng> area = new List<PointLatLng>();
+
         //XBeeManager comms;
         ArrayList nodes;
         Thread recieveThread;
@@ -44,6 +67,7 @@ namespace Drone_Gui
         public MainWindow()
         {
             InitializeComponent();
+            SuspendLayout();
             //comms = new XBeeManager();
             //comms.InitScan();
             //comms.NodeDiscover();
@@ -71,7 +95,7 @@ namespace Drone_Gui
             //Color recognition
             try
             {
-                capwebcam = new Capture(0); // default webcam
+                //capwebcam = new Capture(0); // default webcam
             }
             catch (NullReferenceException except)
             {
@@ -80,7 +104,7 @@ namespace Drone_Gui
             }
             try
             {
-                capwebcam2 = new Capture(2); // default webcam
+                //capwebcam2 = new Capture(2); // default webcam
             }
             catch (NullReferenceException except)
             {
@@ -90,6 +114,75 @@ namespace Drone_Gui
             Application.Idle += processFramAndUpdateGui; // add process image function to the application's list of task
         }
 
+        private void mapControl_Load(object sender, EventArgs e)
+        {
+            mapControl.MapProvider = GMapProviders.BingHybridMap;
+
+            //position will be defined by beacon init position, for initialization purposes.
+            mapControl.Position = new GMap.NET.PointLatLng(33.7830, -118.1129);
+            mapControl.MinZoom = 0;
+            mapControl.MaxZoom = 18;
+            mapControl.Zoom = 15;
+            mapControl.DragButton = MouseButtons.Right;
+
+            Controls.Add(mapControl);
+            ResumeLayout(true);
+
+            mapControl.Overlays.Add(routesOverlay);
+            mapControl.Overlays.Add(polyOverlay);
+        }
+
+        private void generateRoute()
+        {
+            routesOverlay.Clear();
+            GMapRoute r = new GMapRoute(route, "My route");
+            r.Stroke.Width = 2;
+            r.Stroke.Color = Color.Green;
+            routesOverlay.Routes.Add(r);
+
+            printPoints();
+        }
+
+        private void generateArea()
+        {
+            
+            
+
+            //draw polygon
+            polyOverlay.Clear();
+            GMapPolygon polygon = new GMapPolygon(area, "mypolygon");
+            polygon.Fill = new SolidBrush(Color.FromArgb(50, Color.Red));
+            polygon.Stroke = new Pen(Color.Red, 1);
+            polyOverlay.Polygons.Add(polygon);
+        }
+
+        private void mapControl_DoubleClick(object sender, EventArgs e)
+        {
+            if (mapModeSel.SelectedIndex == 0)
+            {
+                PointLatLng temp = mapControl.FromLocalToLatLng(((System.Windows.Forms.MouseEventArgs)e).Location.X, ((System.Windows.Forms.MouseEventArgs)e).Location.Y);
+                route.Add(temp);
+                generateRoute();
+            }
+            else if(mapModeSel.SelectedIndex == 1)
+            {
+                PointLatLng temp = mapControl.FromLocalToLatLng(((System.Windows.Forms.MouseEventArgs)e).Location.X, ((System.Windows.Forms.MouseEventArgs)e).Location.Y);
+                area.Add(temp);
+                generateArea();
+            }
+        }
+
+        private void printPoints()
+        {
+            int j = 1;
+            foreach (GMapRoute r in routesOverlay.Routes)
+            {
+                Console.WriteLine("Route #: " + j);
+                for (int i = 0; i < r.Points.Count; i++)
+                    Console.WriteLine("Route:" + r.Points[i]);
+            }
+        }
+        
         private void ReadConnection()
         {
             while (true)
@@ -128,6 +221,8 @@ namespace Drone_Gui
 
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
+            /*
+            //Dispose of cameras
             if (capwebcam != null)
             {
                 capwebcam.Dispose();
@@ -136,10 +231,12 @@ namespace Drone_Gui
             {
                 capwebcam2.Dispose();
             }
+             * */
         }
 
         void processFramAndUpdateGui(object sender, EventArgs arg)
         {
+            /*
             imgOriginal = capwebcam.QueryFrame(); //Get frame from webcam
             imgOriginal2 = capwebcam2.QueryFrame(); //Get frame from second webcam
             if (imgOriginal == null || imgOriginal2 == null) return;      //did not get frame
@@ -221,7 +318,7 @@ namespace Drone_Gui
             camera1.Image = imgOriginal;
             camera2.Image = imgOriginal2;
      
-
+            */
         }
 
         private void list_status_SelectedIndexChanged(object sender, EventArgs e)
@@ -232,6 +329,25 @@ namespace Drone_Gui
         private void camera1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainWindow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == '+')
+            {
+                mapControl.Zoom = mapControl.Zoom + 1;
+            }
+
+            if (e.KeyChar == '-')
+            {
+                mapControl.Zoom = mapControl.Zoom - 1;
+            }
+        }
+
+        private void areaClear_Click(object sender, EventArgs e)
+        {
+            area.Clear();
+            polyOverlay.Clear();
         }
 
 

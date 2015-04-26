@@ -56,3 +56,7 @@ C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.
 C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\Emgu.Util.xml
 C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
 C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\GMap.NET.Core.dll
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\GMap.NET.Core.xml
+C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\GMap.NET.WindowsForms.xml

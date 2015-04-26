@@ -19,6 +19,7 @@ ZBRxResponse zbRx = ZBRxResponse();
 /*  9600-baud serial GPS device hooked up on pins 13(rx) and 12(tx). */
 
 TinyGPS gps;
+
 SoftwareSerial ss(12, 13);
 
 float flat, flon;
@@ -47,9 +48,9 @@ void loop()
   {
     while (ss.available())
     {
-      char c = ss.read();
-     // Serial.write(c);  // uncomment this line to see the GPS data flowing
-      if (gps.encode(c))  // did a new valid sentence come in?
+		char c = ss.read();
+		Serial.write(c);  // uncomment this line to see the GPS data flowing
+		if (gps.encode(c))  // did a new valid sentence come in?
         newData = true;
     }
   }
