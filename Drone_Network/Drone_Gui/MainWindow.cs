@@ -25,21 +25,21 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
 
-/*
+
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 using Emgu.Util;
 using Emgu.CV.UI;
 using Emgu.CV.VideoSurveillance;
-*/
+
 
 namespace Drone_Gui
 {
     
     public partial class MainWindow : Form
     {
-        /*
+        
         //Camera initialization 
         Capture capwebcam = null;
         Capture capwebcam2 = null;
@@ -47,8 +47,8 @@ namespace Drone_Gui
         Image<Gray, byte> imgProcessed;
         Image<Bgr, byte> imgOriginal2;
         Image<Gray, byte> imgProcessed2;
-        int LoBlue = 0, LoGreen = 0, LoRed = 230, HiBlue = 0, HiGreen = 0, HiRed = 255;
-        */
+        int LoHue = 0, LoSaturation = 0, LoValue = 230, HiHue = 0, HiSaturation = 0, HiValue = 255;
+        
 
         //Map Layers and Points
 
@@ -95,26 +95,26 @@ namespace Drone_Gui
             //Color recognition
             try
             {
-                //capwebcam = new Capture(0); // default webcam
+                capwebcam = new Capture(0); // default webcam
             }
             catch (NullReferenceException except)
             {
                 list_status.Text = except.Message;
                 return;
             }
+            /*
             try
             {
-<<<<<<< HEAD
-                //capwebcam2 = new Capture(2); // default webcam
-=======
                 capwebcam2 = new Capture(1); // default webcam
->>>>>>> e64396afd30ce8b1108ed5b9ffad20316463c7ae
             }
             catch (NullReferenceException except)
             {
                 list_status.Text = except.Message;
                 return;
             }
+             */
+            capwebcam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_WIDTH, 557);
+            capwebcam.SetCaptureProperty(CAP_PROP.CV_CAP_PROP_FRAME_HEIGHT, 389);
             Application.Idle += processFramAndUpdateGui; // add process image function to the application's list of task
         }
 
@@ -149,8 +149,7 @@ namespace Drone_Gui
 
         private void generateArea()
         {
-            
-            
+              
 
             //draw polygon
             polyOverlay.Clear();
@@ -225,7 +224,6 @@ namespace Drone_Gui
 
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
-            /*
             //Dispose of cameras
             if (capwebcam != null)
             {
@@ -235,30 +233,30 @@ namespace Drone_Gui
             {
                 capwebcam2.Dispose();
             }
-             * */
         }
 
         void processFramAndUpdateGui(object sender, EventArgs arg)
         {
-            /*
             imgOriginal = capwebcam.QueryFrame(); //Get frame from webcam
-            imgOriginal2 = capwebcam2.QueryFrame(); //Get frame from second webcam
-            if (imgOriginal == null || imgOriginal2 == null) return;      //did not get frame
-            imgProcessed = imgOriginal.InRange(new Bgr(LoBlue, LoGreen, LoRed), new Bgr(HiBlue, HiGreen, HiRed));
+           // imgOriginal2 = capwebcam2.QueryFrame(); //Get frame from second webcam
+            if (imgOriginal == null) return;      //did not get frame
+            Image<Hsv, Byte> imgHSV = imgOriginal.Convert<Hsv, Byte>();
+            imgProcessed = imgHSV.InRange(new Hsv(LoHue,LoSaturation,LoValue), new Hsv(HiHue,HiSaturation,HiValue));
             imgProcessed = imgProcessed.SmoothGaussian(9);
-            imgProcessed2 = imgOriginal2.InRange(new Bgr(LoBlue, LoGreen, LoRed), new Bgr(HiBlue, HiGreen, HiRed));
-            imgProcessed2 = imgProcessed2.SmoothGaussian(9);
+           // Image<Hsv, Byte> imgHSV2 = imgOriginal2.Convert<Hsv, Byte>();
+            //imgProcessed2 = imgHSV2.InRange(new Hsv(LoHue, LoSaturation, LoValue), new Hsv(HiHue, HiSaturation, HiValue));
+            //imgProcessed2 = imgProcessed2.SmoothGaussian(9);
             MCvMoments oMoments = imgProcessed.GetMoments(true);
-            MCvMoments oMoments2 = imgProcessed2.GetMoments(true);
+            //MCvMoments oMoments2 = imgProcessed2.GetMoments(true);
             double dM01 = oMoments.m01;
             double dM10 = oMoments.m10;
             double dArea = oMoments.m00;
 
-            double d2M01 = oMoments.m01;
-            double d2M10 = oMoments.m10;
-            double d2Area = oMoments.m00;
+            //double d2M01 = oMoments.m01;
+            //double d2M10 = oMoments.m10;
+            //double d2Area = oMoments.m00;
  
-            if (dArea > 10000)
+            if (dArea > 3000)
             {
                 //calculate the position of the object
                 int posX = (int)dM10 / (int)dArea;
@@ -290,7 +288,7 @@ namespace Drone_Gui
                     imgOriginal.Draw(liney, new Bgr(Color.Blue), 4);
                     imgOriginal.Draw(circle, new Bgr(Color.Red), 4);
             }
-
+            /*
             if (d2Area > 10000)
             {
                 int pos2X = (int)d2M10 / (int)d2Area;
@@ -316,13 +314,11 @@ namespace Drone_Gui
                 imgOriginal2.Draw(linex, new Bgr(Color.Blue), 4);
                 imgOriginal2.Draw(liney, new Bgr(Color.Blue), 4);
                 imgOriginal2.Draw(circle, new Bgr(Color.Red), 4);
-
-            }
+            
+            }*/
 
             camera1.Image = imgOriginal;
-            camera2.Image = imgOriginal2;
-     
-            */
+           
         }
 
         private void list_status_SelectedIndexChanged(object sender, EventArgs e)
@@ -352,6 +348,44 @@ namespace Drone_Gui
         {
             area.Clear();
             polyOverlay.Clear();
+        }
+
+        private void imageBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void redButtonSelect_Click(object sender, EventArgs e)
+        {
+            LoHue = 0; 
+            LoSaturation = 196; 
+            LoValue = 74; 
+            HiHue = 15; 
+            HiSaturation = 138; 
+            HiValue = 125;
+            currentColorLabel.Text = "Color Selected: Red";
+        }
+
+        private void yellowButtonSelect_Click(object sender, EventArgs e)
+        {
+            LoHue = 29;
+            LoSaturation = 86;
+            LoValue = 102;
+            HiHue = 63;
+            HiSaturation = 165;
+            HiValue = 181;
+            currentColorLabel.Text = "Color Selected: Yellow";
+        }
+
+        private void blueButtonSelect_Click(object sender, EventArgs e)
+        {
+            LoHue = 140;
+            LoSaturation = 86;
+            LoValue = 97;
+            HiHue = 165;
+            HiSaturation = 190;
+            HiValue = 170;
+            currentColorLabel.Text = "Color Selected: Blue";
         }
 
 

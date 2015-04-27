@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.list_status = new System.Windows.Forms.ListView();
             this.list_connections = new System.Windows.Forms.ListView();
             this.app_console = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mapControl = new GMap.NET.WindowsForms.GMapControl();
             this.mapModeSel = new System.Windows.Forms.ToolStripComboBox();
             this.areaClear = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mapControl = new GMap.NET.WindowsForms.GMapControl();
+            this.camera1 = new Emgu.CV.UI.ImageBox();
+            this.redButtonSelect = new System.Windows.Forms.Button();
+            this.yellowButtonSelect = new System.Windows.Forms.Button();
+            this.blueButtonSelect = new System.Windows.Forms.Button();
+            this.currentColorLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.camera1)).BeginInit();
             this.SuspendLayout();
             // 
             // list_status
@@ -75,44 +82,6 @@
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1356, 24);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mapControl
-            // 
-            this.mapControl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mapControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mapControl.Bearing = 0F;
-            this.mapControl.CanDragMap = true;
-            this.mapControl.EmptyTileColor = System.Drawing.Color.Navy;
-            this.mapControl.GrayScaleMode = false;
-            this.mapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.mapControl.LevelsKeepInMemmory = 5;
-            this.mapControl.Location = new System.Drawing.Point(12, 447);
-            this.mapControl.MarkersEnabled = true;
-            this.mapControl.MaxZoom = 2;
-            this.mapControl.MinZoom = 2;
-            this.mapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.mapControl.Name = "mapControl";
-            this.mapControl.NegativeMode = false;
-            this.mapControl.PolygonsEnabled = true;
-            this.mapControl.RetryLoadTile = 0;
-            this.mapControl.RoutesEnabled = true;
-            this.mapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.mapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.mapControl.ShowTileGridLines = false;
-            this.mapControl.Size = new System.Drawing.Size(214, 176);
-            this.mapControl.TabIndex = 7;
-            this.mapControl.Zoom = 0D;
-            this.mapControl.Load += new System.EventHandler(this.mapControl_Load);
-            this.mapControl.DoubleClick += new System.EventHandler(this.mapControl_DoubleClick);
-            this.mapControl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindow_KeyPress);
-            // 
             // mapModeSel
             // 
             this.mapModeSel.Items.AddRange(new object[] {
@@ -131,11 +100,102 @@
             this.areaClear.Text = "Area Clear";
             this.areaClear.Click += new System.EventHandler(this.areaClear_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1356, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mapControl
+            // 
+            this.mapControl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mapControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mapControl.Bearing = 0F;
+            this.mapControl.CanDragMap = true;
+            this.mapControl.EmptyTileColor = System.Drawing.Color.Navy;
+            this.mapControl.GrayScaleMode = false;
+            this.mapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.mapControl.LevelsKeepInMemmory = 5;
+            this.mapControl.Location = new System.Drawing.Point(807, 52);
+            this.mapControl.MarkersEnabled = true;
+            this.mapControl.MaxZoom = 2;
+            this.mapControl.MinZoom = 2;
+            this.mapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.mapControl.Name = "mapControl";
+            this.mapControl.NegativeMode = false;
+            this.mapControl.PolygonsEnabled = true;
+            this.mapControl.RetryLoadTile = 0;
+            this.mapControl.RoutesEnabled = true;
+            this.mapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.mapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.mapControl.ShowTileGridLines = false;
+            this.mapControl.Size = new System.Drawing.Size(286, 389);
+            this.mapControl.TabIndex = 7;
+            this.mapControl.Zoom = 0D;
+            this.mapControl.Load += new System.EventHandler(this.mapControl_Load);
+            this.mapControl.DoubleClick += new System.EventHandler(this.mapControl_DoubleClick);
+            this.mapControl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindow_KeyPress);
+            // 
+            // camera1
+            // 
+            this.camera1.Location = new System.Drawing.Point(244, 52);
+            this.camera1.Name = "camera1";
+            this.camera1.Size = new System.Drawing.Size(557, 389);
+            this.camera1.TabIndex = 2;
+            this.camera1.TabStop = false;
+            this.camera1.Click += new System.EventHandler(this.imageBox1_Click);
+            // 
+            // redButtonSelect
+            // 
+            this.redButtonSelect.Location = new System.Drawing.Point(183, 23);
+            this.redButtonSelect.Name = "redButtonSelect";
+            this.redButtonSelect.Size = new System.Drawing.Size(75, 23);
+            this.redButtonSelect.TabIndex = 9;
+            this.redButtonSelect.Text = "Red";
+            this.redButtonSelect.UseVisualStyleBackColor = true;
+            this.redButtonSelect.Click += new System.EventHandler(this.redButtonSelect_Click);
+            // 
+            // yellowButtonSelect
+            // 
+            this.yellowButtonSelect.Location = new System.Drawing.Point(264, 23);
+            this.yellowButtonSelect.Name = "yellowButtonSelect";
+            this.yellowButtonSelect.Size = new System.Drawing.Size(75, 23);
+            this.yellowButtonSelect.TabIndex = 10;
+            this.yellowButtonSelect.Text = "Yellow";
+            this.yellowButtonSelect.UseVisualStyleBackColor = true;
+            this.yellowButtonSelect.Click += new System.EventHandler(this.yellowButtonSelect_Click);
+            // 
+            // blueButtonSelect
+            // 
+            this.blueButtonSelect.Location = new System.Drawing.Point(345, 23);
+            this.blueButtonSelect.Name = "blueButtonSelect";
+            this.blueButtonSelect.Size = new System.Drawing.Size(75, 23);
+            this.blueButtonSelect.TabIndex = 11;
+            this.blueButtonSelect.Text = "Blue";
+            this.blueButtonSelect.UseVisualStyleBackColor = true;
+            this.blueButtonSelect.Click += new System.EventHandler(this.blueButtonSelect_Click);
+            // 
+            // currentColorLabel
+            // 
+            this.currentColorLabel.AutoSize = true;
+            this.currentColorLabel.Location = new System.Drawing.Point(180, 7);
+            this.currentColorLabel.Name = "currentColorLabel";
+            this.currentColorLabel.Size = new System.Drawing.Size(102, 13);
+            this.currentColorLabel.TabIndex = 12;
+            this.currentColorLabel.Text = "Color Selected: Red";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 635);
+            this.Controls.Add(this.currentColorLabel);
+            this.Controls.Add(this.blueButtonSelect);
+            this.Controls.Add(this.yellowButtonSelect);
+            this.Controls.Add(this.redButtonSelect);
+            this.Controls.Add(this.camera1);
             this.Controls.Add(this.mapControl);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -149,6 +209,7 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindow_KeyPress);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.camera1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +225,11 @@
         private GMap.NET.WindowsForms.GMapControl mapControl;
         private System.Windows.Forms.ToolStripComboBox mapModeSel;
         private System.Windows.Forms.ToolStripButton areaClear;
+        private Emgu.CV.UI.ImageBox camera1;
+        private System.Windows.Forms.Button redButtonSelect;
+        private System.Windows.Forms.Button yellowButtonSelect;
+        private System.Windows.Forms.Button blueButtonSelect;
+        private System.Windows.Forms.Label currentColorLabel;
         //private Emgu.CV.UI.ImageBox camera1;
         //private Emgu.CV.UI.ImageBox camera2;
     }
