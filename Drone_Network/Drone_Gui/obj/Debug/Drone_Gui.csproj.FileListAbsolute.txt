@@ -100,3 +100,5 @@ C:\Users\Kevin\Documents\Visual Studio 2013\Projects\Argus\Drone_Network\Drone_G
 C:\Users\Kevin\Documents\Visual Studio 2013\Projects\Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
 C:\Users\Kevin\Documents\Visual Studio 2013\Projects\Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
 >>>>>>> 9ac23af1e5b14b21df255b57812d69300bbdfca5
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\MissionPlanner.ParamCompare.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.ParamCompare.resources

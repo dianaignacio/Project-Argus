@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DefaultSettings));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.BUT_paramfileload = new Drone_Gui.Controls.MyButton();
+            this.BUT_paramfileload = new MissionPlanner.Controls.MyButton();
             this.CMB_paramfiles = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        //private Controls.MyButton BUT_paramfileload;
+        private MissionPlanner.Controls.MyButton BUT_paramfileload;
         private System.Windows.Forms.ComboBox CMB_paramfiles;
     }
 }

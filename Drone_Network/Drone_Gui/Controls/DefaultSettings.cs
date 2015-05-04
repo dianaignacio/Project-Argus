@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using MissionPlanner.Utilities;
+using Drone_Gui.Utilities;
 using MissionPlanner.Controls;
 using System.Collections;
+using Drone_Gui;
 //using log4net;
 
 namespace Drone_Gui.Controls
@@ -55,7 +56,8 @@ namespace Drone_Gui.Controls
                     BUT_paramfileload.Enabled = true;
                 });
             }
-            catch (Exception ex) { //log.Error(ex); }
+            catch (Exception ex) { //log.Error(ex); 
+            }
         }
 
         private void BUT_paramfileload_Click(object sender, EventArgs e)
@@ -76,6 +78,7 @@ namespace Drone_Gui.Controls
 
                 Hashtable param2 = Utilities.ParamFile.loadParamFile(filepath);
 
+                
                 Form paramCompareForm = new ParamCompare(null, MainV2.comPort.MAV.param, param2);
 
                 ThemeManager.ApplyThemeTo(paramCompareForm);

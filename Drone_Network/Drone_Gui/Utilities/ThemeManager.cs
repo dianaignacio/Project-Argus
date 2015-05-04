@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Drone_Gui.Controls.BackstageView;
-using log4net;
-using Drone_Gui.Controls;
+using MissionPlanner.Controls.BackstageView;
+//using log4net;
+using MissionPlanner.Controls;
 using System.IO;
 using System.Collections.Generic;
 
@@ -15,8 +15,7 @@ namespace Drone_Gui.Utilities
     /// </summary>
     public class ThemeManager
     {
-        private static readonly ILog log =
-            LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        //private static readonly ILog log =            LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private static Themes _currentTheme = Themes.BurntKermit;
         public static Themes CurrentTheme { get { return _currentTheme; } }
@@ -105,41 +104,41 @@ namespace Drone_Gui.Utilities
             temp.Add(new ServoOptions());
             temp.Add(new ThemeColors());
 
-            temp.Add(new Drone_Gui.Controls.BackstageView.BackstageView());
-            temp.Add(new Drone_Gui.Controls.BackstageView.BackstageViewButton());
-            temp.Add(new Drone_Gui.Controls.BackstageView.BackStageViewMenuPanel());
+            temp.Add(new MissionPlanner.Controls.BackstageView.BackstageView());
+            temp.Add(new MissionPlanner.Controls.BackstageView.BackstageViewButton());
+            temp.Add(new MissionPlanner.Controls.BackstageView.BackStageViewMenuPanel());
             temp.Add(new Drone_Gui.Controls.ConnectionControl());
             temp.Add(new Drone_Gui.Controls.ConnectionStats());
-            temp.Add(new Drone_Gui.Controls.Coords());
-            temp.Add(new Drone_Gui.Controls.FileBrowse());
-            temp.Add(new Drone_Gui.Controls.FlashMessage());
-            temp.Add(new Drone_Gui.Controls.GradientBG());
-            temp.Add(new Drone_Gui.Controls.HorizontalProgressBar());
-            temp.Add(new Drone_Gui.Controls.HorizontalProgressBar2());
-            temp.Add(new Drone_Gui.Controls.HSI());
-            temp.Add(new Drone_Gui.Controls.HUD());
-            temp.Add(new Drone_Gui.Controls.ImageLabel());
-            temp.Add(new Drone_Gui.Controls.LabelWithPseudoOpacity());
-            temp.Add(new Drone_Gui.Controls.LineSeparator());
+            temp.Add(new MissionPlanner.Controls.Coords());
+            temp.Add(new MissionPlanner.Controls.FileBrowse());
+            temp.Add(new MissionPlanner.Controls.FlashMessage());
+            temp.Add(new MissionPlanner.Controls.GradientBG());
+            temp.Add(new MissionPlanner.Controls.HorizontalProgressBar());
+            temp.Add(new MissionPlanner.Controls.HorizontalProgressBar2());
+            temp.Add(new MissionPlanner.Controls.HSI());
+            temp.Add(new HUD());
+            temp.Add(new MissionPlanner.Controls.ImageLabel());
+            temp.Add(new MissionPlanner.Controls.LabelWithPseudoOpacity());
+            temp.Add(new MissionPlanner.Controls.LineSeparator());
 
-            temp.Add(new Drone_Gui.Controls.MyButton());
-            temp.Add(new Drone_Gui.Controls.myGMAP());
-            temp.Add(new Drone_Gui.Controls.MyLabel());
-            temp.Add(new Drone_Gui.Controls.MyProgressBar());
-            temp.Add(new Drone_Gui.Controls.MyTrackBar());
-            temp.Add(new Drone_Gui.Controls.OpenGLtest());
-            temp.Add(new Drone_Gui.Controls.OptionForm());
-            temp.Add(new Drone_Gui.Controls.PictureBoxMouseOver());
-            temp.Add(new Drone_Gui.Controls.PictureBoxWithPseudoOpacity());
-            temp.Add(new Drone_Gui.Controls.ProgressReporterDialogue());
-            temp.Add(new Drone_Gui.Controls.ProgressStep());
-            temp.Add(new Drone_Gui.Controls.QuickView());
-            temp.Add(new Drone_Gui.Controls.RadialGradientBG());
-            temp.Add(new Drone_Gui.Controls.RangeControl());
+            temp.Add(new MissionPlanner.Controls.MyButton());
+            temp.Add(new MissionPlanner.Controls.myGMAP());
+            temp.Add(new MissionPlanner.Controls.MyLabel());
+            temp.Add(new MissionPlanner.Controls.MyProgressBar());
+            temp.Add(new MissionPlanner.Controls.MyTrackBar());
+            temp.Add(new MissionPlanner.Controls.OpenGLtest());
+            temp.Add(new MissionPlanner.Controls.OptionForm());
+            temp.Add(new MissionPlanner.Controls.PictureBoxMouseOver());
+            temp.Add(new MissionPlanner.Controls.PictureBoxWithPseudoOpacity());
+            temp.Add(new MissionPlanner.Controls.ProgressReporterDialogue());
+            temp.Add(new MissionPlanner.Controls.ProgressStep());
+            temp.Add(new MissionPlanner.Controls.QuickView());
+            temp.Add(new MissionPlanner.Controls.RadialGradientBG());
+            temp.Add(new MissionPlanner.Controls.RangeControl());
             temp.Add(new Drone_Gui.Controls.ServoOptions());
-            temp.Add(new Drone_Gui.Controls.ValuesControl());
-            temp.Add(new Drone_Gui.Controls.VerticalProgressBar());
-            temp.Add(new Drone_Gui.Controls.VerticalProgressBar2());
+            temp.Add(new MissionPlanner.Controls.ValuesControl());
+            temp.Add(new MissionPlanner.Controls.VerticalProgressBar());
+            temp.Add(new MissionPlanner.Controls.VerticalProgressBar2());
 
 
 
@@ -607,7 +606,7 @@ mc:Ignorable=""d""
             {
                 if (ctl.GetType() == typeof(MyButton))
                 {
-                    Controls.MyButton but = (MyButton)ctl;
+                    MyButton but = (MyButton)ctl;
                     but.BGGradTop = SystemColors.ControlLight;
                     but.BGGradBot = SystemColors.ControlDark;
                     but.TextColor = SystemColors.ControlText;
@@ -662,7 +661,7 @@ mc:Ignorable=""d""
                 }
                 else if (ctl.GetType() == typeof(MyButton))
                 {
-                    Controls.MyButton but = (MyButton)ctl;
+                    MyButton but = (MyButton)ctl;
                     but.BGGradTop = ButBG;
                     but.BGGradBot = Color.FromArgb(ButBG.ToArgb() - 0x333333);
                     but.TextColor = TextColor;
@@ -825,10 +824,12 @@ mc:Ignorable=""d""
                     bsv.UnSelectedTextColor = Color.Gray;
                     bsv.ButtonsAreaPencilColor = Color.DarkGray;
                 }
-                else if (ctl.GetType() == typeof(HorizontalProgressBar2) || ctl.GetType() == typeof(VerticalProgressBar2))
+                else if (ctl.GetType() == typeof(MissionPlanner.Controls.HorizontalProgressBar2) || ctl.GetType() == typeof(MissionPlanner.Controls.VerticalProgressBar2))
                 {
                     ((HorizontalProgressBar2)ctl).BackgroundColor = ControlBGColor;
                     ((HorizontalProgressBar2)ctl).ValueColor = Color.FromArgb(148, 193, 31);
+                    
+
                 }
 
                 if (ctl.Controls.Count > 0)
@@ -867,7 +868,7 @@ mc:Ignorable=""d""
                     ctl.BackColor = BGColor;
                     ctl.ForeColor = TextColor;
                 }
-                else if (ctl.GetType() == typeof(MyLabel))
+                else if (ctl.GetType() == typeof(MissionPlanner.Controls.MyLabel))
                 {
                     ctl.BackColor = BGColor;
                     ctl.ForeColor = TextColor;
@@ -876,9 +877,9 @@ mc:Ignorable=""d""
                 {
                     ctl.ForeColor = Color.Black;
                 }
-                else if (ctl.GetType() == typeof(MyButton))
+                else if (ctl.GetType() == typeof(MissionPlanner.Controls.MyButton))
                 {
-                    Controls.MyButton but = (MyButton)ctl;
+                    MissionPlanner.Controls.MyButton but = (MissionPlanner.Controls.MyButton)ctl;
                 }
                 else if (ctl.GetType() == typeof(TextBox))
                 {

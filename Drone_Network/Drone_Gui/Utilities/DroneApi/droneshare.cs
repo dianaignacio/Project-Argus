@@ -101,7 +101,8 @@ namespace Drone_Gui.Utilities.DroneApi
                     validcred = true;
                     System.Diagnostics.Process.Start(viewurl);
                 }
-                catch (Exception ex) { //log.Error(ex); CustomMessageBox.Show("Failed to open url " + viewurl); }
+                catch (Exception ex) { //log.Error(ex); CustomMessageBox.Show("Failed to open url " + viewurl); 
+                }
             }
         }
 

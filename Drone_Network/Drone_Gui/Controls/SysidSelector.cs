@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using MissionPlanner.Controls;
+
 namespace Drone_Gui.Controls
 {
     public partial class SysidSelector : Form

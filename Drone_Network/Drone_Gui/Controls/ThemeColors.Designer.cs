@@ -35,12 +35,12 @@
             this.TXT_text = new System.Windows.Forms.TextBox();
             this.TXT_butbg = new System.Windows.Forms.TextBox();
             this.TXT_butbord = new System.Windows.Forms.TextBox();
-            this.BUT_butbord = new Drone_Gui.Controls.MyButton();
-            this.BUT_butbg = new Drone_Gui.Controls.MyButton();
-            this.BUT_text = new Drone_Gui.Controls.MyButton();
-            this.BUT_ctlbg = new Drone_Gui.Controls.MyButton();
-            this.BUT_bg = new Drone_Gui.Controls.MyButton();
-            this.BUT_done = new Drone_Gui.Controls.MyButton();
+            this.BUT_butbord = new MissionPlanner.Controls.MyButton();
+            this.BUT_butbg = new MissionPlanner.Controls.MyButton();
+            this.BUT_text = new MissionPlanner.Controls.MyButton();
+            this.BUT_ctlbg = new MissionPlanner.Controls.MyButton();
+            this.BUT_bg = new MissionPlanner.Controls.MyButton();
+            this.BUT_done = new MissionPlanner.Controls.MyButton();
             this.SuspendLayout();
             // 
             // TXT_bg
@@ -136,16 +136,16 @@
         #endregion
 
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private MyButton BUT_bg;
-        private MyButton BUT_ctlbg;
-        private MyButton BUT_text;
-        private MyButton BUT_butbg;
+        private MissionPlanner.Controls.MyButton BUT_bg;
+        private MissionPlanner.Controls.MyButton BUT_ctlbg;
+        private MissionPlanner.Controls.MyButton BUT_text;
+        private MissionPlanner.Controls.MyButton BUT_butbg;
         private System.Windows.Forms.TextBox TXT_bg;
         private System.Windows.Forms.TextBox TXT_ctlbg;
         private System.Windows.Forms.TextBox TXT_text;
         private System.Windows.Forms.TextBox TXT_butbg;
         private System.Windows.Forms.TextBox TXT_butbord;
-        private MyButton BUT_butbord;
-        private MyButton BUT_done;
+        private MissionPlanner.Controls.MyButton BUT_butbord;
+        private MissionPlanner.Controls.MyButton BUT_done;
     }
 }

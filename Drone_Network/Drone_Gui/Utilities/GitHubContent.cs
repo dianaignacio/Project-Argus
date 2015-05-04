@@ -5,13 +5,13 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Text;
-using log4net;
+//using log4net;
 
 namespace Drone_Gui.Utilities
 {
     public class GitHubContent
     {
-        internal static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        //internal static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         //http://developer.github.com/v3/repos/contents/#get-contents
         //GET /repos/:owner/:repo/contents/:path

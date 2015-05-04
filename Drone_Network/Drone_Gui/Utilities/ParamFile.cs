@@ -43,7 +43,8 @@ namespace Drone_Gui.Utilities
                 {
                     value = float.Parse(items[1], System.Globalization.CultureInfo.InvariantCulture);// new System.Globalization.CultureInfo("en-US"));
                 }
-                catch (Exception ex) { //log.Error(ex); throw new FormatException("Invalid number on param " + name + " : " + items[1].ToString()); }
+                catch (Exception ex) { //log.Error(ex); throw new FormatException("Invalid number on param " + name + " : " + items[1].ToString());
+                }
 
                 if (name == "SYSID_SW_MREV")
                     continue;

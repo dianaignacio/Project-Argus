@@ -115,11 +115,11 @@
 
         #endregion
 
-        private MyButton BUT_Low;
-        private MyButton BUT_High;
+        private MissionPlanner.Controls.MyButton BUT_Low;
+        private MissionPlanner.Controls.MyButton BUT_High;
         private System.Windows.Forms.TextBox TXT_pwm_low;
         private System.Windows.Forms.TextBox TXT_pwm_high;
-        private MyButton BUT_Repeat;
+        private MissionPlanner.Controls.MyButton BUT_Repeat;
         private System.Windows.Forms.Label TXT_rcchannel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem renameToolStripMenuItem;

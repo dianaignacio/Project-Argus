@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Drone_Gui.HIL;
-using Drone_Gui.Utilities;
+using MissionPlanner.Utilities;
 
 namespace Drone_Gui.Controls.Waypoints
 {
