@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BSE.Windows.Forms">
+      <HintPath>..\..\mission planner dlls\BSE-Windows-Forms\BSE.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="Emgu.CV, Version=2.4.10.1939, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Emgu dll\Emgu.CV.dll</HintPath>
@@ -47,11 +50,44 @@
     <Reference Include="Emgu.Util">
       <HintPath>Emgu dll\Emgu.Util.dll</HintPath>
     </Reference>
+    <Reference Include="GeoUtility">
+      <HintPath>..\..\mission planner dlls\GeoUtility\GeoUtility.dll</HintPath>
+    </Reference>
     <Reference Include="GMap.NET.Core">
       <HintPath>..\..\Maps-Eli\GMap.NET.WindowsForms\Release-NETv4.0\GMap.NET.Core.dll</HintPath>
     </Reference>
     <Reference Include="GMap.NET.WindowsForms">
       <HintPath>..\..\Maps-Eli\GMap.NET.WindowsForms\Release-NETv4.0\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.SQLite">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Wpf">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\IronPython.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.AspNet">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Scripting.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>..\packages\IronPython.2.7.5\lib\Net45\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\..\mission planner dlls\opentk-2014-07-23\Binaries\OpenTK\Release\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl">
+      <HintPath>..\..\mission planner dlls\opentk-2014-07-23\Binaries\OpenTK\Release\OpenTK.GLControl.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
@@ -155,6 +191,288 @@
     </Compile>
     <Compile Include="Controls\Waypoints\Spline.cs" />
     <Compile Include="Controls\Waypoints\Spline2.cs" />
+    <Compile Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.Designer.cs">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.Designer.cs">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.Designer.cs">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAC_Fence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAC_Fence.Designer.cs">
+      <DependentUpon>ConfigAC_Fence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAntennaTracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAntennaTracker.Designer.cs">
+      <DependentUpon>ConfigAntennaTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAP_Limits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAP_Limits.Designer.cs">
+      <DependentUpon>ConfigAP_Limits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigArducopter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigArducopter.Designer.cs">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigArduplane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigArduplane.Designer.cs">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigArdurover.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigArdurover.Designer.cs">
+      <DependentUpon>ConfigArdurover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAteryx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAteryx.Designer.cs">
+      <DependentUpon>ConfigAteryx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAteryxSensors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigAteryxSensors.Designer.cs">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.Designer.cs">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigCameraStab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigCameraStab.Designer.cs">
+      <DependentUpon>ConfigCameraStab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigCompassMot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigCompassMot.Designer.cs">
+      <DependentUpon>ConfigCompassMot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFailSafe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFailSafe.Designer.cs">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFirmware.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFirmware.Designer.cs">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFirmwareDisabled.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFirmwareDisabled.Designer.cs">
+      <DependentUpon>ConfigFirmwareDisabled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightModes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightModes.Designer.cs">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFrameType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFrameType.Designer.cs">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFriendlyParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFriendlyParams.Designer.cs">
+      <DependentUpon>ConfigFriendlyParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWAirspeed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWAirspeed.Designer.cs">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWBT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWBT.Designer.cs">
+      <DependentUpon>ConfigHWBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWCompass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWCompass.Designer.cs">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWOptFlow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWOptFlow.Designer.cs">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWOSD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWOSD.Designer.cs">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWSonar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigHWSonar.Designer.cs">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigMandatory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigMandatory.Designer.cs">
+      <DependentUpon>ConfigMandatory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigMotorTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigMotorTest.Designer.cs">
+      <DependentUpon>ConfigMotorTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigMount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigMount.designer.cs">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigOptional.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigOptional.Designer.cs">
+      <DependentUpon>ConfigOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigPlanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigPlanner.Designer.cs">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigPlannerAdv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigPlannerAdv.Designer.cs">
+      <DependentUpon>ConfigPlannerAdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigRadioInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigRadioInput.Designer.cs">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigRawParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigRawParams.Designer.cs">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigRawParamsTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigRawParamsTree.Designer.cs">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigSimplePids.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigSimplePids.Designer.cs">
+      <DependentUpon>ConfigSimplePids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigTradHeli.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigTradHeli.Designer.cs">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigWizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigWizard.Designer.cs">
+      <DependentUpon>ConfigWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\FlightData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\FlightData.Designer.cs">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\FlightData2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\FlightData2.Designer.cs">
+      <DependentUpon>FlightData2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\FlightPlanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\FlightPlanner.Designer.cs">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\InitialSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\InitialSetup.Designer.cs">
+      <DependentUpon>InitialSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Simple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Simple.Designer.cs">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Simulation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Simulation.Designer.cs">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\SoftwareConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\SoftwareConfig.Designer.cs">
+      <DependentUpon>SoftwareConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Terminal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Terminal.Designer.cs">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="HIL\Aircraft.cs" />
     <Compile Include="HIL\Hil.cs" />
     <Compile Include="HIL\Matrix3.cs" />
@@ -174,6 +492,9 @@
     </Compile>
     <Compile Include="Mavlink\MAVLinkInterface.cs" />
     <Compile Include="Mavlink\MAVState.cs" />
+    <Compile Include="OpenGLtest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="paramcompare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +536,103 @@
     <Compile Include="Utilities\ThemeManager.cs" />
     <Compile Include="Utilities\Update.cs" />
     <Compile Include="Utilities\VersionDetection.cs" />
+    <Compile Include="Wizard\10FlightModes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\10FlightModes.Designer.cs">
+      <DependentUpon>10FlightModes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\11Verify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\11Verify.Designer.cs">
+      <DependentUpon>11Verify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\12FailSafe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\12FailSafe.Designer.cs">
+      <DependentUpon>12FailSafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\13GeoFence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\13GeoFence.Designer.cs">
+      <DependentUpon>13GeoFence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\1Intro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\1Intro.Designer.cs">
+      <DependentUpon>1Intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\2FrameFW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\2FrameFW.Designer.cs">
+      <DependentUpon>2FrameFW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\3ConnectAP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\3ConnectAP.Designer.cs">
+      <DependentUpon>3ConnectAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\4FrameType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\4FrameType.Designer.cs">
+      <DependentUpon>4FrameType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\5AccelCalib.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\5AccelCalib.Designer.cs">
+      <DependentUpon>5AccelCalib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\6CompassCalib.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\6CompassCalib.Designer.cs">
+      <DependentUpon>6CompassCalib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\7BatteryMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\7BatteryMonitor.Designer.cs">
+      <DependentUpon>7BatteryMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\8OptionalItemsAC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\8OptionalItemsAC.Designer.cs">
+      <DependentUpon>8OptionalItemsAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\8OptionalItemsAP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\8OptionalItemsAP.Designer.cs">
+      <DependentUpon>8OptionalItemsAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\98DontForget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\98DontForget.Designer.cs">
+      <DependentUpon>98DontForget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\9RadioCalibration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\9RadioCalibration.Designer.cs">
+      <DependentUpon>9RadioCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\IWizard.cs" />
+    <Compile Include="Wizard\Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizard\Wizard.Designer.cs">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -263,8 +681,875 @@
     <EmbeddedResource Include="Controls\Waypoints\Command.resx">
       <DependentUpon>Command.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.de-DE.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.es-ES.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.fr.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.it-IT.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.pl.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.zh-Hans.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.zh-Hant.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationPlane.zh-TW.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.de-DE.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.es-ES.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.fr.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.it-IT.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.pl.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.zh-Hans.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.zh-Hant.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationQuad.zh-TW.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationQuad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.de-DE.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.es-ES.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.fr.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.it-IT.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.pl.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.zh-Hans.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.zh-Hant.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibrationTracker.zh-TW.resx">
+      <DependentUpon>ConfigAccelerometerCalibrationTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAC_Fence.resx">
+      <DependentUpon>ConfigAC_Fence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAC_Fence.zh-Hans.resx">
+      <DependentUpon>ConfigAC_Fence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAC_Fence.zh-Hant.resx">
+      <DependentUpon>ConfigAC_Fence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAC_Fence.zh-TW.resx">
+      <DependentUpon>ConfigAC_Fence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAntennaTracker.resx">
+      <DependentUpon>ConfigAntennaTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAP_Limits.de-DE.resx">
+      <DependentUpon>ConfigAP_Limits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAP_Limits.fr.resx">
+      <DependentUpon>ConfigAP_Limits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAP_Limits.it-IT.resx">
+      <DependentUpon>ConfigAP_Limits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAP_Limits.resx">
+      <DependentUpon>ConfigAP_Limits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAP_Limits.zh-Hans.resx">
+      <DependentUpon>ConfigAP_Limits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArducopter.de-DE.resx">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArducopter.fr.resx">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArducopter.it-IT.resx">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArducopter.resx">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArducopter.zh-Hans.resx">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArducopter.zh-Hant.resx">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArducopter.zh-TW.resx">
+      <DependentUpon>ConfigArducopter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArduplane.de-DE.resx">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArduplane.fr.resx">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArduplane.it-IT.resx">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArduplane.resx">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArduplane.zh-Hans.resx">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArduplane.zh-Hant.resx">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArduplane.zh-TW.resx">
+      <DependentUpon>ConfigArduplane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArdurover.de-DE.resx">
+      <DependentUpon>ConfigArdurover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArdurover.fr.resx">
+      <DependentUpon>ConfigArdurover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArdurover.it-IT.resx">
+      <DependentUpon>ConfigArdurover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArdurover.resx">
+      <DependentUpon>ConfigArdurover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigArdurover.zh-Hans.resx">
+      <DependentUpon>ConfigArdurover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryx.de-DE.resx">
+      <DependentUpon>ConfigAteryx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryx.fr.resx">
+      <DependentUpon>ConfigAteryx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryx.it-IT.resx">
+      <DependentUpon>ConfigAteryx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryx.resx">
+      <DependentUpon>ConfigAteryx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryx.zh-Hans.resx">
+      <DependentUpon>ConfigAteryx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.de-DE.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.es-ES.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.fr.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.it-IT.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.pl.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.zh-Hans.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.zh-Hant.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAteryxSensors.zh-TW.resx">
+      <DependentUpon>ConfigAteryxSensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.de-DE.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.es-ES.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.fr.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.it-IT.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.pl.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.zh-Hans.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.zh-Hant.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigBatteryMonitoring.zh-TW.resx">
+      <DependentUpon>ConfigBatteryMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigCameraStab.resx">
+      <DependentUpon>ConfigCameraStab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigCompassMot.resx">
+      <DependentUpon>ConfigCompassMot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.de-DE.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.es-ES.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.fr.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.it-IT.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.pl.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.zh-Hans.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.zh-Hant.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.zh-TW.resx">
+      <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.de-DE.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.es-ES.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.fr.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.it-IT.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.pl.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.ru-RU.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.zh-Hans.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.zh-Hant.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.zh-TW.resx">
+      <DependentUpon>ConfigFirmware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmwareDisabled.resx">
+      <DependentUpon>ConfigFirmwareDisabled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmwareDisabled.zh-Hans.resx">
+      <DependentUpon>ConfigFirmwareDisabled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.de-DE.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.es-ES.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.fr.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.it-IT.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.pl.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.zh-Hans.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.zh-Hant.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.zh-TW.resx">
+      <DependentUpon>ConfigFlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.de-DE.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.es-ES.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.fr.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.it-IT.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.pl.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.zh-Hans.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.zh-Hant.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFrameType.zh-TW.resx">
+      <DependentUpon>ConfigFrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFriendlyParams.resx">
+      <DependentUpon>ConfigFriendlyParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFriendlyParams.zh-Hans.resx">
+      <DependentUpon>ConfigFriendlyParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.de-DE.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.es-ES.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.fr.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.it-IT.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.pl.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.zh-Hans.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.zh-Hant.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.zh-TW.resx">
+      <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWBT.resx">
+      <DependentUpon>ConfigHWBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWBT.zh-Hans.resx">
+      <DependentUpon>ConfigHWBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.de-DE.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.es-ES.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.fr.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.it-IT.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.pl.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.zh-Hans.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.zh-Hant.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWCompass.zh-TW.resx">
+      <DependentUpon>ConfigHWCompass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.de-DE.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.es-ES.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.fr.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.it-IT.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.pl.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.zh-Hans.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.zh-Hant.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOptFlow.zh-TW.resx">
+      <DependentUpon>ConfigHWOptFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.de-DE.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.es-ES.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.fr.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.it-IT.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.pl.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.zh-Hans.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.zh-Hant.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWOSD.zh-TW.resx">
+      <DependentUpon>ConfigHWOSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.de-DE.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.es-ES.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.fr.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.it-IT.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.pl.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.zh-Hans.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.zh-Hant.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWSonar.zh-TW.resx">
+      <DependentUpon>ConfigHWSonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMandatory.resx">
+      <DependentUpon>ConfigMandatory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMandatory.zh-Hans.resx">
+      <DependentUpon>ConfigMandatory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMotorTest.resx">
+      <DependentUpon>ConfigMotorTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMount.de-DE.resx">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMount.fr.resx">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMount.it-IT.resx">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMount.resx">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMount.zh-Hans.resx">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMount.zh-Hant.resx">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMount.zh-TW.resx">
+      <DependentUpon>ConfigMount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigOptional.resx">
+      <DependentUpon>ConfigOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigOptional.zh-Hans.resx">
+      <DependentUpon>ConfigOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigPlanner.de-DE.resx">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigPlanner.fr.resx">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigPlanner.it-IT.resx">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigPlanner.resx">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigPlanner.zh-Hans.resx">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigPlanner.zh-Hant.resx">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigPlanner.zh-TW.resx">
+      <DependentUpon>ConfigPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.de-DE.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.es-ES.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.fr.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.it-IT.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.pl.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.zh-Hans.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.zh-Hant.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRadioInput.zh-TW.resx">
+      <DependentUpon>ConfigRadioInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParams.de-DE.resx">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParams.fr.resx">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParams.it-IT.resx">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParams.resx">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParams.zh-Hans.resx">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParams.zh-Hant.resx">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParams.zh-TW.resx">
+      <DependentUpon>ConfigRawParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParamsTree.de-DE.resx">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParamsTree.fr.resx">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParamsTree.it-IT.resx">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParamsTree.resx">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParamsTree.zh-Hans.resx">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParamsTree.zh-Hant.resx">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigRawParamsTree.zh-TW.resx">
+      <DependentUpon>ConfigRawParamsTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigSimplePids.resx">
+      <DependentUpon>ConfigSimplePids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigSimplePids.zh-Hans.resx">
+      <DependentUpon>ConfigSimplePids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.de-DE.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.es-ES.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.fr.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.it-IT.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.pl.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.zh-Hans.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.zh-TW.resx">
+      <DependentUpon>ConfigTradHeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigWizard.resx">
+      <DependentUpon>ConfigWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.de-DE.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.es-ES.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.fr.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.it-IT.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.pl.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.ru-RU.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.zh-Hans.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.zh-Hant.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData.zh-TW.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightData2.resx">
+      <DependentUpon>FlightData2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.de-DE.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.es-ES.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.fr.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.it-IT.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.pl.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.ru-RU.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.zh-Hans.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.zh-Hant.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightPlanner.zh-TW.resx">
+      <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.de-DE.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.es-ES.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.fr.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.it-IT.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.pl.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.ru-RU.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.zh-Hans.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.zh-Hant.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Help.zh-TW.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\InitialSetup.resx">
+      <DependentUpon>InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\InitialSetup.zh-Hans.resx">
+      <DependentUpon>InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\InitialSetup.zh-Hant.resx">
+      <DependentUpon>InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\InitialSetup.zh-TW.resx">
+      <DependentUpon>InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.de-DE.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.es-ES.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.fr.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.it-IT.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.pl.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.ru-RU.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.zh-Hans.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.zh-Hant.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simple.zh-TW.resx">
+      <DependentUpon>Simple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.de-DE.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.es-ES.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.fr.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.it-IT.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.pl.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.ru-RU.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.zh-Hans.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.zh-Hant.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Simulation.zh-TW.resx">
+      <DependentUpon>Simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\SoftwareConfig.resx">
+      <DependentUpon>SoftwareConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.de-DE.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.es-ES.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.fr.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.it-IT.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.pl.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.ru-RU.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.zh-Hans.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.zh-Hant.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Terminal.zh-TW.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenGLtest.resx">
+      <DependentUpon>OpenGLtest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="paramcompare.resx">
       <DependentUpon>paramcompare.cs</DependentUpon>
@@ -272,6 +1557,198 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\10FlightModes.resx">
+      <DependentUpon>10FlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\10FlightModes.zh-Hans.resx">
+      <DependentUpon>10FlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\10FlightModes.zh-Hant.resx">
+      <DependentUpon>10FlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\10FlightModes.zh-TW.resx">
+      <DependentUpon>10FlightModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\11Verify.resx">
+      <DependentUpon>11Verify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\11Verify.zh-Hans.resx">
+      <DependentUpon>11Verify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\11Verify.zh-Hant.resx">
+      <DependentUpon>11Verify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\11Verify.zh-TW.resx">
+      <DependentUpon>11Verify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\12FailSafe.resx">
+      <DependentUpon>12FailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\12FailSafe.zh-Hans.resx">
+      <DependentUpon>12FailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\12FailSafe.zh-Hant.resx">
+      <DependentUpon>12FailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\12FailSafe.zh-TW.resx">
+      <DependentUpon>12FailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\13GeoFence.resx">
+      <DependentUpon>13GeoFence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\13GeoFence.zh-Hans.resx">
+      <DependentUpon>13GeoFence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\13GeoFence.zh-Hant.resx">
+      <DependentUpon>13GeoFence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\13GeoFence.zh-TW.resx">
+      <DependentUpon>13GeoFence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\1Intro.resx">
+      <DependentUpon>1Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\1Intro.zh-Hans.resx">
+      <DependentUpon>1Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\1Intro.zh-Hant.resx">
+      <DependentUpon>1Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\1Intro.zh-TW.resx">
+      <DependentUpon>1Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\2FrameFW.resx">
+      <DependentUpon>2FrameFW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\2FrameFW.zh-Hans.resx">
+      <DependentUpon>2FrameFW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\2FrameFW.zh-Hant.resx">
+      <DependentUpon>2FrameFW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\2FrameFW.zh-TW.resx">
+      <DependentUpon>2FrameFW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\3ConnectAP.resx">
+      <DependentUpon>3ConnectAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\3ConnectAP.zh-Hans.resx">
+      <DependentUpon>3ConnectAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\3ConnectAP.zh-Hant.resx">
+      <DependentUpon>3ConnectAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\3ConnectAP.zh-TW.resx">
+      <DependentUpon>3ConnectAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\4FrameType.resx">
+      <DependentUpon>4FrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\4FrameType.zh-Hans.resx">
+      <DependentUpon>4FrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\4FrameType.zh-Hant.resx">
+      <DependentUpon>4FrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\4FrameType.zh-TW.resx">
+      <DependentUpon>4FrameType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\5AccelCalib.resx">
+      <DependentUpon>5AccelCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\5AccelCalib.zh-Hans.resx">
+      <DependentUpon>5AccelCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\5AccelCalib.zh-Hant.resx">
+      <DependentUpon>5AccelCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\5AccelCalib.zh-TW.resx">
+      <DependentUpon>5AccelCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\6CompassCalib.resx">
+      <DependentUpon>6CompassCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\6CompassCalib.zh-Hans.resx">
+      <DependentUpon>6CompassCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\6CompassCalib.zh-Hant.resx">
+      <DependentUpon>6CompassCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\6CompassCalib.zh-TW.resx">
+      <DependentUpon>6CompassCalib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\7BatteryMonitor.resx">
+      <DependentUpon>7BatteryMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\7BatteryMonitor.zh-Hans.resx">
+      <DependentUpon>7BatteryMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\7BatteryMonitor.zh-Hant.resx">
+      <DependentUpon>7BatteryMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\7BatteryMonitor.zh-TW.resx">
+      <DependentUpon>7BatteryMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAC.resx">
+      <DependentUpon>8OptionalItemsAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAC.zh-Hans.resx">
+      <DependentUpon>8OptionalItemsAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAC.zh-Hant.resx">
+      <DependentUpon>8OptionalItemsAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAC.zh-TW.resx">
+      <DependentUpon>8OptionalItemsAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAP.resx">
+      <DependentUpon>8OptionalItemsAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAP.zh-Hans.resx">
+      <DependentUpon>8OptionalItemsAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAP.zh-Hant.resx">
+      <DependentUpon>8OptionalItemsAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\8OptionalItemsAP.zh-TW.resx">
+      <DependentUpon>8OptionalItemsAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\98DontForget.resx">
+      <DependentUpon>98DontForget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\98DontForget.zh-Hans.resx">
+      <DependentUpon>98DontForget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\98DontForget.zh-Hant.resx">
+      <DependentUpon>98DontForget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\98DontForget.zh-TW.resx">
+      <DependentUpon>98DontForget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\9RadioCalibration.resx">
+      <DependentUpon>9RadioCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\9RadioCalibration.zh-Hans.resx">
+      <DependentUpon>9RadioCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\9RadioCalibration.zh-Hant.resx">
+      <DependentUpon>9RadioCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\9RadioCalibration.zh-TW.resx">
+      <DependentUpon>9RadioCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Wizard.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Wizard.zh-Hans.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Wizard.zh-Hant.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\Wizard.zh-TW.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +1790,10 @@
     <ProjectReference Include="..\Libs\Utilities\MissionPlanner.Utilities.csproj">
       <Project>{1378a66c-38e4-46f5-a05f-dc04ef7d4d16}</Project>
       <Name>MissionPlanner.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\ZedGraph\ZedGraph.csproj">
+      <Project>{2541686b-1673-43bf-af89-3163945db009}</Project>
+      <Name>ZedGraph</Name>
     </ProjectReference>
     <ProjectReference Include="..\XBee\XBee.csproj">
       <Project>{026296ff-9939-49dc-ad87-7f8780d7e1b0}</Project>

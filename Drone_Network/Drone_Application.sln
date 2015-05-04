@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissionPlanner.Comms", "Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissionPlanner.Controls", "Libs\Controls\MissionPlanner.Controls.csproj", "{C8B88795-6D01-494D-83AD-6944BD4C5023}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMap.NET.Core", "Libs\GMap.NET.Core\GMap.NET.Core.csproj", "{D0C39D9D-BED0-418B-9A5E-713176CAF40C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZedGraph", "Libs\ZedGraph\ZedGraph.csproj", "{2541686B-1673-43BF-AF89-3163945DB009}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +134,26 @@ Global
 		{C8B88795-6D01-494D-83AD-6944BD4C5023}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C8B88795-6D01-494D-83AD-6944BD4C5023}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C8B88795-6D01-494D-83AD-6944BD4C5023}.Release|x86.ActiveCfg = Release|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C}.Release|x86.ActiveCfg = Release|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2541686B-1673-43BF-AF89-3163945DB009}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,5 +164,7 @@ Global
 		{2A8E8AF5-74E7-49DB-A42E-9360FA7A6CC4} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
 		{825E7A10-390C-4A2B-B3A8-491D14966912} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
 		{C8B88795-6D01-494D-83AD-6944BD4C5023} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
+		{D0C39D9D-BED0-418B-9A5E-713176CAF40C} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
+		{2541686B-1673-43BF-AF89-3163945DB009} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
 	EndGlobalSection
 EndGlobal

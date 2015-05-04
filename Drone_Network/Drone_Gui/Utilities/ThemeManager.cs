@@ -4,8 +4,11 @@ using System.Windows.Forms;
 using MissionPlanner.Controls.BackstageView;
 //using log4net;
 using MissionPlanner.Controls;
+using Drone_Gui.Controls;
 using System.IO;
 using System.Collections.Generic;
+using MissionPlanner.GCSViews;
+using MissionPlanner.Wizard;
 
 namespace Drone_Gui.Utilities
 {
@@ -116,7 +119,7 @@ namespace Drone_Gui.Utilities
             temp.Add(new MissionPlanner.Controls.HorizontalProgressBar());
             temp.Add(new MissionPlanner.Controls.HorizontalProgressBar2());
             temp.Add(new MissionPlanner.Controls.HSI());
-            temp.Add(new HUD());
+            temp.Add(new MissionPlanner.Controls.HUD());
             temp.Add(new MissionPlanner.Controls.ImageLabel());
             temp.Add(new MissionPlanner.Controls.LabelWithPseudoOpacity());
             temp.Add(new MissionPlanner.Controls.LineSeparator());
