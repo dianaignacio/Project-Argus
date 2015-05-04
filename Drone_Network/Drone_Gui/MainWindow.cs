@@ -149,8 +149,6 @@ namespace Drone_Gui
 
         private void generateArea()
         {
-              
-
             //draw polygon
             polyOverlay.Clear();
             GMapPolygon polygon = new GMapPolygon(area, "mypolygon");
@@ -387,6 +385,9 @@ namespace Drone_Gui
             HiValue = 170;
             currentColorLabel.Text = "Color Selected: Blue";
         }
+
+       
+
 
 
         
