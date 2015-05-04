@@ -1,17 +1,4 @@
 c:\users\eblain\documents\visual studio 2013\Projects\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.MainWindow.resources
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Properties.Resources.resources
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csproj.GenerateResource.Cache
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csprojResolveAssemblyReference.cache
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.pdb
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.dll
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee.dll
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee_Interface.pdb
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\XBee.pdb
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.exe
-C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.pdb
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csprojResolveAssemblyReference.cache
 C:\Users\eblain\Documents\Visual Studio 2013\Projects\Senior Project\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.MainWindow.resources
@@ -64,3 +51,22 @@ C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\GMap.
 C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\GMap.NET.WindowsForms.dll
 C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\GMap.NET.Core.xml
 C:\Users\Brandon\Documents\Project-Argus\Drone_Network\Drone_Gui\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csprojResolveAssemblyReference.cache
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ConnectionControl.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ConnectionStats.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.DefaultSettings.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.DistanceBar.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.LogAnalyzer.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ModifyandSet.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ServoOptions.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.SysidSelector.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ThemeColors.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.Waypoints.Command.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.MainWindow.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Properties.Resources.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ConnectionControl.zh-Hans.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ConnectionStats.zh-Hans.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.DefaultSettings.zh-Hans.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.Controls.ThemeColors.zh-Hans.resources
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\obj\Debug\Drone_Gui.csproj.GenerateResource.Cache
+C:\Users\Eli\Documents\Visual Studio 2013\Projects\Project_Argus\Drone_Network\Drone_Gui\bin\Debug\Drone_Gui.exe.config
