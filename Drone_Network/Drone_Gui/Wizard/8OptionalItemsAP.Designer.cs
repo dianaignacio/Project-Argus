@@ -32,11 +32,11 @@ namespace MissionPlanner.Wizard
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_8OptionalItemsAP));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CHK_airspeeduse = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_airspeeduse = new Drone_Gui.Controls.MavlinkCheckBox();
             this.LBL_airspeed = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.CHK_enableairspeed = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_enableairspeed = new Drone_Gui.Controls.MavlinkCheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radialGradientBG1 = new MissionPlanner.Controls.GradientBG();
@@ -99,7 +99,7 @@ namespace MissionPlanner.Wizard
             // 
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.BackgroundImage = global::MissionPlanner.Properties.Resources.airspeed;
+            //this.pictureBox3.BackgroundImage = global::MissionPlanner.Properties.Resources.airspeed;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
@@ -194,12 +194,12 @@ namespace MissionPlanner.Wizard
         private Label label1;
         private Controls.GradientBG radialGradientBG1;
         private PictureBox pictureBox3;
-        private Controls.MavlinkCheckBox CHK_enableairspeed;
+        private Drone_Gui.Controls.MavlinkCheckBox CHK_enableairspeed;
         private Label label3;
         private Timer timer1;
         private Label label4;
         private Label LBL_airspeed;
-        private Controls.MavlinkCheckBox CHK_airspeeduse;
+        private Drone_Gui.Controls.MavlinkCheckBox CHK_airspeeduse;
 
     }
 }

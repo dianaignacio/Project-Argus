@@ -9,3 +9,12 @@ To install IronPython, run the following command in the Package Manager Console
 
 To install log4net, run the following command in the Package Manager Console
 	Install-Package log4net
+
+To install fastJSON, run the following command in the Package Manager Console
+	Install-Package fastJSON, 
+
+To install ProjNet, run the following command in the Package Manager Console
+	Install-Package ProjNet
+
+for the custom GMAP library in the libs folder, I had to right click and manage NuGet packages to get all dll's except for
+	Mono.Data.SqliteClient

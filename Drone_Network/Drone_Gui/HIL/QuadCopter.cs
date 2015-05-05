@@ -353,7 +353,7 @@ namespace Drone_Gui.HIL
         {
             self = this;
 
-            motors = Motor.build_motors(MAVLink.MAV_TYPE.QUADROTOR, (int)Drone_Gui.GCSViews.ConfigurationView.ConfigFrameType.Frame.Plus);
+            motors = Motor.build_motors(MAVLink.MAV_TYPE.QUADROTOR, (int)GCSViews.ConfigurationView.ConfigFrameType.Frame.Plus);
             motor_speed = new double[motors.Length];
             mass = 1.5;// # Kg
             frame_height = 0.1;

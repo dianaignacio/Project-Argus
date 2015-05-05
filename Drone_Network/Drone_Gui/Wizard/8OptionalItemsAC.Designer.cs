@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+
 namespace MissionPlanner.Wizard
 {
     partial class _8OptionalItemsAC
@@ -35,16 +36,16 @@ namespace MissionPlanner.Wizard
             this.label5 = new System.Windows.Forms.Label();
             this.LBL_volt = new System.Windows.Forms.Label();
             this.LBL_dist = new System.Windows.Forms.Label();
-            this.mavlinkComboBox1 = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkComboBox1 = new Drone_Gui.Controls.MavlinkComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.mavlinkCheckBox1 = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBox1 = new Drone_Gui.Controls.MavlinkCheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radialGradientBG1 = new MissionPlanner.Controls.GradientBG();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.mavlinkCheckBox2 = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBox2 = new Drone_Gui.Controls.MavlinkCheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -126,7 +127,7 @@ namespace MissionPlanner.Wizard
             // 
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.BackgroundImage = global::MissionPlanner.Properties.Resources.sonar;
+            //this.pictureBox3.BackgroundImage = global::Drone_Gui.Properties.Resources.sonar;
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
@@ -222,7 +223,7 @@ namespace MissionPlanner.Wizard
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.opticalflow;
+            //this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.opticalflow;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
@@ -242,7 +243,7 @@ namespace MissionPlanner.Wizard
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.BackgroundImage = global::MissionPlanner.Properties.Resources.planebackground;
+            //this.BackgroundImage = global::MissionPlanner.Properties.Resources.planebackground;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.radialGradientBG1);
             this.Controls.Add(this.panel1);
@@ -261,22 +262,23 @@ namespace MissionPlanner.Wizard
 
         #endregion
 
+        
         private Panel panel1;
         private Label label1;
         private Controls.GradientBG radialGradientBG1;
         private Panel panel2;
         private PictureBox pictureBox3;
-        private Controls.MavlinkCheckBox mavlinkCheckBox1;
+        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBox1;
         private Label label3;
         private Timer timer1;
         private Label label4;
         private Label label2;
-        private Controls.MavlinkComboBox mavlinkComboBox1;
+        private Drone_Gui.Controls.MavlinkComboBox mavlinkComboBox1;
         private Label LBL_volt;
         private Label LBL_dist;
         private Label label5;
         private Label label6;
-        private Controls.MavlinkCheckBox mavlinkCheckBox2;
+        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBox2;
         private Label label7;
         private PictureBox pictureBox2;
 

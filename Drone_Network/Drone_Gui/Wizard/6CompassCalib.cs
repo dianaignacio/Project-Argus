@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
+using Drone_Gui.HIL;
 
 namespace MissionPlanner.Wizard
 {
@@ -89,10 +90,11 @@ namespace MissionPlanner.Wizard
         }
 
         int step = 0;
-        HIL.Vector3 north;
-        HIL.Vector3 east;
-        HIL.Vector3 south;
-        HIL.Vector3 west;
+        
+        Drone_Gui.HIL.Vector3 north;
+        Drone_Gui.HIL.Vector3 east;
+        Drone_Gui.HIL.Vector3 south;
+        Drone_Gui.HIL.Vector3 west;
 
         private void BUT_compassorient_Click(object sender, EventArgs e)
         {
@@ -106,19 +108,19 @@ namespace MissionPlanner.Wizard
                     label5.Text = "Please face the autopilot north";
                     break;
                 case 1:
-                    north = new HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
+                    north = new Drone_Gui.HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
                     label5.Text = "Please face the autopilot east";
                     break;
                 case 2:
-                    east = new HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
+                    east = new Drone_Gui.HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
                     label5.Text = "Please face the autopilot south";
                     break;
                 case 3:
-                    south = new HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
+                    south = new Drone_Gui.HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
                     label5.Text = "Please face the autopilot west";
                     break;
                 case 4:
-                    west = new HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
+                    west = new Drone_Gui.HIL.Vector3(MainV2.comPort.MAV.cs.mx, MainV2.comPort.MAV.cs.my, MainV2.comPort.MAV.cs.mz);
                     label5.Text = "Calculating";
                     if (docalc())
                     {
@@ -138,9 +140,9 @@ namespace MissionPlanner.Wizard
         const float rad2deg = (float)(180 / Math.PI);
         const float deg2rad = (float)(1.0 / rad2deg);
 
-        float calcheading(HIL.Vector3 mag)
+        float calcheading(Drone_Gui.HIL.Vector3 mag)
         {
-            HIL.Matrix3 dcm_matrix = new HIL.Matrix3();
+            Drone_Gui.HIL.Matrix3 dcm_matrix = new Drone_Gui.HIL.Matrix3();
             dcm_matrix.from_euler(0, 0, 0);
 
             // Tilt compensated magnetic field Y component:

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigHWAirspeed));
-            this.CHK_enableairspeed = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_enableairspeed = new Drone_Gui.Controls.MavlinkCheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.CHK_airspeeduse = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_airspeeduse = new Drone_Gui.Controls.MavlinkCheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.mavlinkCheckBoxAirspeed_pin = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkCheckBoxAirspeed_pin = new Drone_Gui.Controls.MavlinkComboBox();
             this.lbl_airspeed_pin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -114,12 +114,12 @@
 
         #endregion
 
-        private Controls.MavlinkCheckBox CHK_enableairspeed;
+        private Drone_Gui.Controls.MavlinkCheckBox CHK_enableairspeed;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Controls.MavlinkCheckBox CHK_airspeeduse;
+        private Drone_Gui.Controls.MavlinkCheckBox CHK_airspeeduse;
         private System.Windows.Forms.Label label2;
-        private Controls.MavlinkComboBox mavlinkCheckBoxAirspeed_pin;
+        private Drone_Gui.Controls.MavlinkComboBox mavlinkCheckBoxAirspeed_pin;
         private System.Windows.Forms.Label lbl_airspeed_pin;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigHWSonar));
-            this.CMB_sonartype = new MissionPlanner.Controls.MavlinkComboBox();
+            this.CMB_sonartype = new Drone_Gui.Controls.MavlinkComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -122,7 +122,7 @@
 
         #endregion
 
-        private Controls.MavlinkComboBox CMB_sonartype;
+        private Drone_Gui.Controls.MavlinkComboBox CMB_sonartype;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
