@@ -34,7 +34,7 @@ using Emgu.CV.UI;
 using Emgu.CV.VideoSurveillance;
 
 
-namespace Drone_Gui
+namespace MissionPlanner
 {
     
     public partial class MainWindow : Form

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Drone_Gui.HIL;
+using MissionPlanner.HIL;
 using MissionPlanner.Utilities;
 
-namespace Drone_Gui.Controls.Waypoints
+namespace MissionPlanner.Controls.Waypoints
 {
-    public class Spline: Drone_Gui.HIL.Utils
+    public class Spline: MissionPlanner.HIL.Utils
     {
         float spline_t;
         Vector3 current_position;

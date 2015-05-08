@@ -11,11 +11,11 @@ using System.Threading;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using log4net;
-using Drone_Gui.Utilities;
+using MissionPlanner.Utilities;
 using SharpKml.Base;
 using SharpKml.Dom;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     class httpserver
     {

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
+using MissionPlanner.HIL;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -49,31 +51,31 @@ namespace GCSViews.ConfigurationView
                 return;
             }
 
-            HIL.Motor[] motors = new HIL.Motor[0];
+            Motor[] motors = new Motor[0];
 
             if (MainV2.comPort.MAV.aptype == MAVLink.MAV_TYPE.TRICOPTER)
             {
                 motormax = 4;
 
-                motors = HIL.Motor.build_motors(MAVLink.MAV_TYPE.TRICOPTER, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
+                motors = Motor.build_motors(MAVLink.MAV_TYPE.TRICOPTER, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
             }
             else if (MainV2.comPort.MAV.aptype == MAVLink.MAV_TYPE.QUADROTOR)
             {
                 motormax = 4;
 
-                motors = HIL.Motor.build_motors(MAVLink.MAV_TYPE.QUADROTOR, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
+                motors = Motor.build_motors(MAVLink.MAV_TYPE.QUADROTOR, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
             }
             else if (MainV2.comPort.MAV.aptype == MAVLink.MAV_TYPE.HEXAROTOR)
             {
                 motormax = 6;
 
-                motors = HIL.Motor.build_motors(MAVLink.MAV_TYPE.HEXAROTOR, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
+                motors = Motor.build_motors(MAVLink.MAV_TYPE.HEXAROTOR, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
             }
             else if (MainV2.comPort.MAV.aptype == MAVLink.MAV_TYPE.OCTOROTOR)
             {
                 motormax = 8;
 
-                motors = HIL.Motor.build_motors(MAVLink.MAV_TYPE.OCTOROTOR, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
+                motors = Motor.build_motors(MAVLink.MAV_TYPE.OCTOROTOR, (int)(float)MainV2.comPort.MAV.param["FRAME"]);
             }
             else if (MainV2.comPort.MAV.aptype == MAVLink.MAV_TYPE.HELICOPTER)
             {

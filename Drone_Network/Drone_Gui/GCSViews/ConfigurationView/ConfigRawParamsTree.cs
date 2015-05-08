@@ -6,12 +6,14 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Utilities;
+using MissionPlanner.ParamCompare;
 using log4net;
 using MissionPlanner.Controls;
 using System.Collections.Generic;
 using System.Net;
 using System.Globalization;
 using BrightIdeasSoftware;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -83,7 +85,7 @@ namespace GCSViews.ConfigurationView
 
         void loadparamsfromfile(string fn)
         {
-            Hashtable param2 = Utilities.ParamFile.loadParamFile(fn);
+            Hashtable param2 = ParamFile.loadParamFile(fn);
 
             foreach (string name in param2.Keys)
             {
@@ -156,7 +158,7 @@ namespace GCSViews.ConfigurationView
                     }
                 }
 
-                Utilities.ParamFile.SaveParamFile(sfd.FileName,data);
+                ParamFile.SaveParamFile(sfd.FileName,data);
 
             }
         }
@@ -199,7 +201,7 @@ namespace GCSViews.ConfigurationView
             var dr = ofd.ShowDialog();
             if (dr == DialogResult.OK)
             {
-                param2 = Utilities.ParamFile.loadParamFile(ofd.FileName);
+                param2 = ParamFile.loadParamFile(ofd.FileName);
 
                 ParamCompare paramCompareForm = new ParamCompare(null, MainV2.comPort.MAV.param, param2);
 
@@ -438,7 +440,7 @@ namespace GCSViews.ConfigurationView
 
                 File.WriteAllBytes(filepath, data);
 
-                Hashtable param2 = Utilities.ParamFile.loadParamFile(filepath);
+                Hashtable param2 = ParamFile.loadParamFile(filepath);
 
                 ParamCompare paramCompareForm = new ParamCompare(null, MainV2.comPort.MAV.param, param2);
 

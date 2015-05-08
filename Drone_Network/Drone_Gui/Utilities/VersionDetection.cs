@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 //using log4net;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     class VersionDetection
     {

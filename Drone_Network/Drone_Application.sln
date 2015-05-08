@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drone_Gui", "Drone_Gui\Drone_Gui.csproj", "{6D66F0A5-45DF-48EF-96AC-F62635E208FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissionPlanner", "Drone_Gui\MissionPlanner.csproj", "{6D66F0A5-45DF-48EF-96AC-F62635E208FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBee", "XBee\XBee.csproj", "{026296FF-9939-49DC-AD87-7F8780D7E1B0}"
 EndProject
@@ -33,6 +33,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMap.NET.Core", "Libs\GMap.NET.Core\GMap.NET.Core.csproj", "{D0C39D9D-BED0-418B-9A5E-713176CAF40C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZedGraph", "Libs\ZedGraph\ZedGraph.csproj", "{2541686B-1673-43BF-AF89-3163945DB009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpKml", "Libs\SharpKml\SharpKml.csproj", "{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "px4uploader", "Libs\px4uploader\px4uploader.csproj", "{664FC484-2A94-4B0D-808F-A71F88E06B11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3DRRadio", "Libs\3DRRadio\3DRRadio.csproj", "{B8943726-04B0-4477-BFDA-E156A0CD98A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -154,6 +160,36 @@ Global
 		{2541686B-1673-43BF-AF89-3163945DB009}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2541686B-1673-43BF-AF89-3163945DB009}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2541686B-1673-43BF-AF89-3163945DB009}.Release|x86.ActiveCfg = Release|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D}.Release|x86.ActiveCfg = Release|Any CPU
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Debug|x86.ActiveCfg = Debug|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Debug|x86.Build.0 = Debug|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Release|Any CPU.ActiveCfg = Release|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Release|Mixed Platforms.Build.0 = Release|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Release|x86.ActiveCfg = Release|x86
+		{664FC484-2A94-4B0D-808F-A71F88E06B11}.Release|x86.Build.0 = Release|x86
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B8943726-04B0-4477-BFDA-E156A0CD98A4}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -166,5 +202,7 @@ Global
 		{C8B88795-6D01-494D-83AD-6944BD4C5023} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
 		{D0C39D9D-BED0-418B-9A5E-713176CAF40C} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
 		{2541686B-1673-43BF-AF89-3163945DB009} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
+		{53F12A60-E9CC-44BC-8366-1AE3AB2B547D} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
+		{664FC484-2A94-4B0D-808F-A71F88E06B11} = {DD6EB7B5-D6D8-426B-B6E4-BC83F50EC42F}
 	EndGlobalSection
 EndGlobal

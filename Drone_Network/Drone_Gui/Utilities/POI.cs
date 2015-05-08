@@ -1,6 +1,6 @@
 ﻿using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
-using Drone_Gui.Controls;
+using MissionPlanner.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,13 +10,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Drone_Gui.Utilities
+using GMap.NET;
+using MissionPlanner.Utilities;
+
+namespace MissionPlanner.Utilities
 {
     public class POI
     {
         /// <summary>
         /// Store points of interest
         /// </summary>
+        
         static ObservableCollection<PointLatLngAlt> POIs = new ObservableCollection<PointLatLngAlt>();
 
         public static event EventHandler POIModified;

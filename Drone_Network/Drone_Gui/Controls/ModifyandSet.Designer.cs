@@ -1,4 +1,5 @@
-﻿namespace Drone_Gui.Controls
+﻿using MissionPlanner.Controls;
+namespace MissionPlanner.Controls
 {
     partial class ModifyandSet
     {
@@ -30,7 +31,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyandSet));
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.myButton1 = new Drone_Gui.Controls.MyButton();
+            this.myButton1 = new MyButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();

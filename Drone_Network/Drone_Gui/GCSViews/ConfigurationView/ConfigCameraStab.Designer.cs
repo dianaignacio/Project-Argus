@@ -1,7 +1,7 @@
 ﻿using MissionPlanner.Controls;
 using MissionPlanner.Presenter;
 
-namespace MissionPlanner.GCSViews.ConfigurationView
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigCameraStab
     {
@@ -39,9 +39,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.BUT_WriteValues = new Controls.MyButton();
-            this.BUT_SetDefaults = new Controls.MyButton();
-            this.BUT_Refresh = new Controls.MyButton();
+            this.BUT_WriteValues = new MyButton();
+            this.BUT_SetDefaults = new MyButton();
+            this.BUT_Refresh = new MyButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,8 +60,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.PBOX_WarningIcon = new Controls.PictureBoxWithPseudoOpacity();
-            this.LBL_Error = new Controls.LabelWithPseudoOpacity();
+            this.PBOX_WarningIcon = new PictureBoxWithPseudoOpacity();
+            this.LBL_Error = new LabelWithPseudoOpacity();
             this.LNK_wiki = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -81,7 +81,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
 
-            this.pictureBox1.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalPitch1;
+            //this.pictureBox1.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalPitch1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(33, 52);
             this.pictureBox1.Name = "pictureBox1";
@@ -261,7 +261,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalRoll1;
+            //this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalRoll1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(33, 207);
             this.pictureBox2.Name = "pictureBox2";
@@ -505,7 +505,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             this.PBOX_WarningIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBOX_WarningIcon.Image = global::MissionPlanner.Properties.Resources.iconWarning32;
+            //this.PBOX_WarningIcon.Image = global::MissionPlanner.Properties.Resources.iconWarning32;
             this.PBOX_WarningIcon.Location = new System.Drawing.Point(264, 389);
             this.PBOX_WarningIcon.Name = "PBOX_WarningIcon";
             this.PBOX_WarningIcon.Opacity = 0.5F;
@@ -600,9 +600,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private Controls.MyButton BUT_WriteValues;
-        private Controls.MyButton BUT_SetDefaults;
-        private Controls.MyButton BUT_Refresh;
+        private MyButton BUT_WriteValues;
+        private MyButton BUT_SetDefaults;
+        private MyButton BUT_Refresh;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;

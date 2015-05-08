@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigArdurover
     {
@@ -508,8 +509,8 @@
         private System.Windows.Forms.NumericUpDown SPEED2THR_P;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Controls.MyButton BUT_writePIDS;
-        private Controls.MyButton BUT_rerequestparams;
+        private MyButton BUT_writePIDS;
+        private MyButton BUT_rerequestparams;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.NumericUpDown SPEED_TURN_DIST;
         private System.Windows.Forms.Label label10;
@@ -542,6 +543,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown NAVL1_PERIOD;
         private System.Windows.Forms.Label label18;
-        private Controls.MyButton BUT_refreshpart;
+        private MyButton BUT_refreshpart;
     }
 }

@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
    partial class ConfigFriendlyParams
    {
@@ -85,9 +86,9 @@
       #endregion
 
       private System.Windows.Forms.Panel tableLayoutPanel1;
-      private Controls.MyButton BUT_rerequestparams;
-      private Controls.MyButton BUT_writePIDS;
-      private Controls.MyButton BUT_Find;
+      private MyButton BUT_rerequestparams;
+      private MyButton BUT_writePIDS;
+      private MyButton BUT_Find;
       private System.Windows.Forms.CheckBox chk_advview;
    }
 }

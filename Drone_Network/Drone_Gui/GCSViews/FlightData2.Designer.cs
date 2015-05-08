@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+namespace GCSViews
 {
     partial class FlightData2
     {
@@ -382,22 +383,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private Controls.Coords coords1;
-        private Controls.myGMAP gMapControl1;
-        private Controls.QuickView quickView3;
-        private Controls.QuickView quickView2;
-        private Controls.QuickView quickView1;
-        private Controls.HUD hud1;
+        private Coords coords1;
+        private myGMAP gMapControl1;
+        private QuickView quickView3;
+        private QuickView quickView2;
+        private QuickView quickView1;
+        private HUD hud1;
         private System.Windows.Forms.Panel panel4;
-        private Controls.QuickView quickView7;
-        private Controls.QuickView quickView6;
-        private Controls.QuickView quickView5;
+        private QuickView quickView7;
+        private QuickView quickView6;
+        private QuickView quickView5;
         private System.Windows.Forms.BindingSource bindingSourceHud;
         private System.Windows.Forms.BindingSource bindingSourceQuickTab;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Timer timer1;
-        private Controls.QuickView quickView9;
-        private Controls.QuickView quickView8;
-        private Controls.QuickView quickView4;
+        private QuickView quickView9;
+        private QuickView quickView8;
+        private QuickView quickView4;
     }
 }

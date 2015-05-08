@@ -4,13 +4,14 @@ using System.Windows.Forms;
 using MissionPlanner.Controls.BackstageView;
 //using log4net;
 using MissionPlanner.Controls;
-using Drone_Gui.Controls;
+using MissionPlanner.Controls;
 using System.IO;
 using System.Collections.Generic;
-using MissionPlanner.GCSViews;
-using MissionPlanner.Wizard;
+using GCSViews;
+//using MissionPlanner.Wizard;
 
-namespace Drone_Gui.Utilities
+
+namespace MissionPlanner.Utilities
 {
     /// <summary>
     /// Helper class for the stylng 'theming' of forms and controls, and provides MessageBox
@@ -110,8 +111,8 @@ namespace Drone_Gui.Utilities
             temp.Add(new MissionPlanner.Controls.BackstageView.BackstageView());
             temp.Add(new MissionPlanner.Controls.BackstageView.BackstageViewButton());
             temp.Add(new MissionPlanner.Controls.BackstageView.BackStageViewMenuPanel());
-            temp.Add(new Drone_Gui.Controls.ConnectionControl());
-            temp.Add(new Drone_Gui.Controls.ConnectionStats());
+            temp.Add(new MissionPlanner.Controls.ConnectionControl());
+            temp.Add(new MissionPlanner.Controls.ConnectionStats());
             temp.Add(new MissionPlanner.Controls.Coords());
             temp.Add(new MissionPlanner.Controls.FileBrowse());
             temp.Add(new MissionPlanner.Controls.FlashMessage());
@@ -138,14 +139,14 @@ namespace Drone_Gui.Utilities
             temp.Add(new MissionPlanner.Controls.QuickView());
             temp.Add(new MissionPlanner.Controls.RadialGradientBG());
             temp.Add(new MissionPlanner.Controls.RangeControl());
-            temp.Add(new Drone_Gui.Controls.ServoOptions());
+            temp.Add(new MissionPlanner.Controls.ServoOptions());
             temp.Add(new MissionPlanner.Controls.ValuesControl());
             temp.Add(new MissionPlanner.Controls.VerticalProgressBar());
             temp.Add(new MissionPlanner.Controls.VerticalProgressBar2());
 
 
 
-            temp.Add(new Wizard._1Intro());
+         /*   temp.Add(new Wizard._1Intro());
             temp.Add(new Wizard._2FrameFW());
             temp.Add(new Wizard._3ConnectAP());
             temp.Add(new Wizard._4FrameType());
@@ -159,7 +160,7 @@ namespace Drone_Gui.Utilities
             temp.Add(new Wizard._12FailSafe());
             temp.Add(new Wizard._13GeoFence());
             temp.Add(new Wizard._98DontForget());
-
+            */
             temp.Add(new GCSViews.ConfigurationView.ConfigAC_Fence());
             temp.Add(new GCSViews.ConfigurationView.ConfigAccelerometerCalibrationPlane());
             temp.Add(new GCSViews.ConfigurationView.ConfigAccelerometerCalibrationQuad());
@@ -219,9 +220,9 @@ xmlns:xctk=""http://schemas.xceed.com/wpf/xaml/toolkit""
 xmlns:Custom=""http://schemas.microsoft.com/wpf/2008/toolkit""
 xmlns:BackstageView=""clr-namespace:MissionPlanner.Controls.BackstageView""
 xmlns:Controls=""clr-namespace:MissionPlanner.Controls""
-xmlns:GCSViews=""clr-namespace:MissionPlanner.GCSViews""
+xmlns:GCSViews=""clr-namespace:GCSViews""
 xmlns:Wizard=""clr-namespace:MissionPlanner.Wizard""
-xmlns:ConfigurationView=""clr-namespace:MissionPlanner.GCSViews.ConfigurationView""
+xmlns:ConfigurationView=""clr-namespace:GCSViews.ConfigurationView""
 mc:Ignorable=""d"" 
 > <Grid>";
 
@@ -244,7 +245,7 @@ mc:Ignorable=""d""
             foreach (Control ctl in control.Controls)
             {
                 if (ctl is QuickView || ctl is ServoOptions || ctl is ModifyandSet 
-                    || ctl is Coords /*|| ctl is AGaugeApp.AGauge*/ || ctl is Drone_Gui.Controls.HUD) 
+                    || ctl is Coords /*|| ctl is AGaugeApp.AGauge*/ || ctl is MissionPlanner.Controls.HUD) 
                 {
                  //   st.WriteLine(@"<WindowsFormsHost HorizontalAlignment=""Left"" VerticalAlignment=""Top"" Margin=""" + ctl.Location.X + "," + ctl.Location.Y + @",0,0"" Width=""" + ctl.Width + @""" Height=""" + ctl.Height + @""">");
 
@@ -426,7 +427,7 @@ mc:Ignorable=""d""
                 }
                 else if (ctl.GetType() == typeof(MyButton))
                 {
-                    Controls.MyButton but = (MyButton)ctl;
+                    MyButton but = (MyButton)ctl;
                     but.BGGradTop = ButBG;
                     try
                     {

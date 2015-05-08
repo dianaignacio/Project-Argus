@@ -1,5 +1,5 @@
 ﻿using MissionPlanner.Controls;
-namespace MissionPlanner.GCSViews.ConfigurationView
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigRadioInput
     {
@@ -40,7 +40,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.CHK_revch4 = new System.Windows.Forms.CheckBox();
             this.CHK_revch2 = new System.Windows.Forms.CheckBox();
             this.CHK_revch1 = new System.Windows.Forms.CheckBox();
-            this.BUT_Calibrateradio = new Controls.MyButton();
+            this.BUT_Calibrateradio = new MyButton();
             this.BAR8 = new HorizontalProgressBar2();
             this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BAR7 = new HorizontalProgressBar2();
@@ -144,7 +144,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // currentStateBindingSource
             // 
-            this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
+         this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
             // 
             // BAR7
             // 
@@ -289,7 +289,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private System.Windows.Forms.CheckBox CHK_revch4;
         private System.Windows.Forms.CheckBox CHK_revch2;
         private System.Windows.Forms.CheckBox CHK_revch1;
-        private Controls.MyButton BUT_Calibrateradio;
+        private MyButton BUT_Calibrateradio;
         private HorizontalProgressBar2 BAR8;
         private HorizontalProgressBar2 BAR7;
         private HorizontalProgressBar2 BAR6;

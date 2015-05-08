@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public partial class DistanceBar : UserControl
     {
         Brush brushbar = new SolidBrush(Color.FromArgb(50, Color.White));
 
-        private readonly Bitmap icon = global::Drone_Gui.Properties.Resources.marker_05;
+        private readonly Bitmap icon = null;
 
         public float totaldist { get; set; }
         public float traveleddist { get; set; }

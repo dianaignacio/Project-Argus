@@ -603,7 +603,7 @@ namespace GCSViews
 
         private void BUT_logbrowse_Click(object sender, EventArgs e)
         {
-            Form logbrowse = new Log.LogBrowse();
+            Form logbrowse = new MissionPlanner.Log.LogBrowse();
             ThemeManager.ApplyThemeTo(logbrowse);
             logbrowse.Show();
         }

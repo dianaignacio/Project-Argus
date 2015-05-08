@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using Drone_Gui.Utilities;
+using MissionPlanner.Utilities;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     class fontgen
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     public class LogAnalyzer
     {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -26,10 +27,10 @@ namespace GCSViews.ConfigurationView
         {
             mavlinkCheckBox1.setup(1, 0, "FENCE_ENABLE", MainV2.comPort.MAV.param);
 
-            mavlinkComboBox1.setup(Utilities.ParameterMetaDataRepository.GetParameterOptionsInt("FENCE_TYPE", MainV2.comPort.MAV.cs.firmware.ToString()), "FENCE_TYPE", MainV2.comPort.MAV.param);
+            mavlinkComboBox1.setup(ParameterMetaDataRepository.GetParameterOptionsInt("FENCE_TYPE", MainV2.comPort.MAV.cs.firmware.ToString()), "FENCE_TYPE", MainV2.comPort.MAV.param);
 
 
-            mavlinkComboBox2.setup(Utilities.ParameterMetaDataRepository.GetParameterOptionsInt("FENCE_ACTION", MainV2.comPort.MAV.cs.firmware.ToString()), "FENCE_ACTION", MainV2.comPort.MAV.param);
+            mavlinkComboBox2.setup(ParameterMetaDataRepository.GetParameterOptionsInt("FENCE_ACTION", MainV2.comPort.MAV.cs.firmware.ToString()), "FENCE_ACTION", MainV2.comPort.MAV.param);
   
 
             // 3

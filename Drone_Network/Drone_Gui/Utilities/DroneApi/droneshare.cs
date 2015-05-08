@@ -1,6 +1,6 @@
 ﻿using fastJSON;
 using log4net;
-using Drone_Gui.Controls;
+using MissionPlanner.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Web;
 using System.Windows.Forms;
 
-namespace Drone_Gui.Utilities.DroneApi
+namespace MissionPlanner.Utilities.DroneApi
 {
     public class droneshare
     {

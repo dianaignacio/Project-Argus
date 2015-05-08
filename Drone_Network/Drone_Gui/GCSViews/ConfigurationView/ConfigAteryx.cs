@@ -12,6 +12,7 @@ using System.Collections;
 using log4net;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {

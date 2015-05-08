@@ -14,7 +14,7 @@ using px4uploader;
 using System.Collections;
 using System.Xml.Serialization;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     public class Firmware
     {
@@ -620,7 +620,7 @@ namespace Drone_Gui.Utilities
                 return false; 
             }
 
-            Drone_Gui.Utilities.Tracking.AddFW(temp.name, board.ToString());
+            MissionPlanner.Utilities.Tracking.AddFW(temp.name, board.ToString());
 
             return UploadFlash(comport, Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar + @"firmware.hex", board);
         }
@@ -743,30 +743,30 @@ namespace Drone_Gui.Utilities
 
                         if (up.libre)
                         {
-                            Drone_Gui.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "libre", "");
+                            MissionPlanner.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "libre", "");
                         }
                         else 
                         {
-                            Drone_Gui.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "Pass", "");
+                            MissionPlanner.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "Pass", "");
                         }
                     }
                     catch (Org.BouncyCastle.Security.InvalidKeyException ex) 
                     {
-                        Drone_Gui.Utilities.Tracking.AddEvent("FWUpload", "verifyotp","InvalidKeyException","");
+                        MissionPlanner.Utilities.Tracking.AddEvent("FWUpload", "verifyotp","InvalidKeyException","");
                         //log.Error(ex);
                         CustomMessageBox.Show("You are using unsupported hardware.\nThis board does not contain a valid certificate of authenticity.\nPlease contact your hardware vendor about signing your hardware.", "Invalid Cert"); 
                         up.skipotp = true;
                     }
                     catch (FormatException ex)
                     {
-                        Drone_Gui.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "FormatException", "");
+                        MissionPlanner.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "FormatException", "");
                         //log.Error(ex);
                         CustomMessageBox.Show("You are using unsupported hardware.\nThis board does not contain a valid certificate of authenticity.\nPlease contact your hardware vendor about signing your hardware.", "Invalid Cert");
                         up.skipotp = true;
                     }
                     catch (IOException ex) 
                     {
-                        Drone_Gui.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "IOException", "");
+                        MissionPlanner.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "IOException", "");
                         //log.Error(ex);
                         CustomMessageBox.Show("lost communication with the board.", "lost comms");
                         up.close();
@@ -774,7 +774,7 @@ namespace Drone_Gui.Utilities
                     }
                     catch (TimeoutException ex)
                     {
-                        Drone_Gui.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "TimeoutException", "");
+                        MissionPlanner.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "TimeoutException", "");
                         //log.Error(ex);
                         CustomMessageBox.Show("lost communication with the board.", "lost comms");
                         up.close();
@@ -782,7 +782,7 @@ namespace Drone_Gui.Utilities
                     }
                     catch (Exception ex)
                     {
-                        Drone_Gui.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "Exception", "");
+                        MissionPlanner.Utilities.Tracking.AddEvent("FWUpload", "verifyotp", "Exception", "");
                         //log.Error(ex);
                         CustomMessageBox.Show("lost communication with the board. " + ex.ToString(), "lost comms");
                         up.close();

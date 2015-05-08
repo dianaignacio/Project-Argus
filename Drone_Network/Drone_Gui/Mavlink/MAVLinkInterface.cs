@@ -13,20 +13,22 @@ using System.Threading;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
-//using log4net;
+using log4net;
 
-using Drone_Gui.Controls;
-using Drone_Gui.Comms;
-using Drone_Gui.Utilities;
-using Drone_Gui.HIL;
+using MissionPlanner.Controls;
+using MissionPlanner.Comms;
 using MissionPlanner.Utilities;
 
+using MissionPlanner.HIL;
+using MissionPlanner.Utilities;
+using MissionPlanner.Controls;
+using MissionPlanner.Comms;
 
-namespace Drone_Gui
+namespace MissionPlanner
 {
     public class MAVLinkInterface: MAVLink, IDisposable
     {
-        //private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public ICommsSerial BaseStream { get; set; }
 
         public ICommsSerial MirrorStream { get; set; }
@@ -2130,7 +2132,7 @@ Please check the following
                 if (ans != MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
                     throw new Exception("Guided Mode Failed");
             }
-            catch (Exception ex) { //log.Error(ex); 
+            catch (Exception ex) { log.Error(ex); 
             }
 
             giveComport = false;
@@ -2149,7 +2151,7 @@ Please check the following
                 if (ans != MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
                     throw new Exception("Alt Change Failed");
             }
-            catch (Exception ex) { giveComport = false; //log.Error(ex); throw; 
+            catch (Exception ex) { giveComport = false; log.Error(ex); throw; 
             }
 
             giveComport = false;
@@ -2726,7 +2728,7 @@ Please check the following
                         }
                         catch (Exception ex)
                         {
-                            //log.Error(ex);
+                            log.Error(ex);
                         }
                     }
                 }

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MissionPlanner;
+using MissionPlanner.Comms;
 
-namespace Drone_Gui.Comms
+namespace MissionPlanner.Comms
 {
     public class CommsSerialScan
     {
         static public bool foundport = false;
-        //static public ICommsSerial portinterface;
+        static public ICommsSerial portinterface;
 
         public static int run = 0;
         public static int running = 0;

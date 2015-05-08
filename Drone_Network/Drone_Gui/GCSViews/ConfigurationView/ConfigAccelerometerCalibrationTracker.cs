@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using MissionPlanner.Controls;
 using log4net;
 using Transitions;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {

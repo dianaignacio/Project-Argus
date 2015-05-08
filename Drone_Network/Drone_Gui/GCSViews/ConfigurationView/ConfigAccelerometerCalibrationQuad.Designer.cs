@@ -1,6 +1,6 @@
 ﻿using MissionPlanner.Controls;
 
-namespace MissionPlanner.GCSViews.ConfigurationView
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigAccelerometerCalibrationQuad
     {
@@ -107,7 +107,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         #endregion
 
-        private Controls.MyButton BUT_levelac2;
+        private MyButton BUT_levelac2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private LineSeparator lineSeparator2;

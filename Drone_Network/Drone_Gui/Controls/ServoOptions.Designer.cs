@@ -1,4 +1,4 @@
-﻿namespace Drone_Gui.Controls
+﻿namespace MissionPlanner.Controls
 {
     partial class ServoOptions
     {
@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServoOptions));
-            this.BUT_Low = new Drone_Gui.Controls.MyButton();
-            this.BUT_High = new Drone_Gui.Controls.MyButton();
+            this.BUT_Low = new MissionPlanner.Controls.MyButton();
+            this.BUT_High = new MissionPlanner.Controls.MyButton();
             this.TXT_pwm_low = new System.Windows.Forms.TextBox();
             this.TXT_pwm_high = new System.Windows.Forms.TextBox();
-            this.BUT_Repeat = new Drone_Gui.Controls.MyButton();
+            this.BUT_Repeat = new MissionPlanner.Controls.MyButton();
             this.TXT_rcchannel = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.renameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

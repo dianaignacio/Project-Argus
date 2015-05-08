@@ -1,5 +1,5 @@
 ﻿using MissionPlanner.Controls;
-namespace MissionPlanner.GCSViews.ConfigurationView
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigFailSafe
     {
@@ -37,20 +37,20 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LNK_wiki = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.mavlinkNumericUpDownlow_voltage = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBoxlong_fs = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.mavlinkCheckBoxshort_fs = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.mavlinkCheckBoxgcs_fs = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.mavlinkCheckBoxthr_fs_action = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.mavlinkNumericUpDownfs_thr_value = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownthr_fs_value = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBoxthr_fs = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.mavlinkComboBox_fs_thr_enable = new Drone_Gui.Controls.MavlinkComboBox();
-            this.mavlinkComboBoxfs_batt_enable = new Drone_Gui.Controls.MavlinkComboBox();
-            this.mavlinkCheckBoxFS_GCS_ENABLE = new Drone_Gui.Controls.MavlinkCheckBox();
+            this.mavlinkNumericUpDownlow_voltage = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBoxlong_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBoxshort_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBoxgcs_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBoxthr_fs_action = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkNumericUpDownfs_thr_value = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownthr_fs_value = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBoxthr_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkComboBox_fs_thr_enable = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkComboBoxfs_batt_enable = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkCheckBoxFS_GCS_ENABLE = new MissionPlanner.Controls.MavlinkCheckBox();
             this.pnlmah = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.mavlinkNumericUpDownFS_BATT_MAH = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownFS_BATT_MAH = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.PNL_low_bat = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.PNL_thr_fs_value = new System.Windows.Forms.Panel();
@@ -649,28 +649,28 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private HorizontalProgressBar horizontalProgressBar2;
         private HorizontalProgressBar horizontalProgressBar1;
         private System.Windows.Forms.Label lbl_currentmode;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxthr_fs;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownthr_fs_value;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxthr_fs;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownthr_fs_value;
         private System.Windows.Forms.LinkLabel LNK_wiki;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxgcs_fs;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxgcs_fs;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxshort_fs;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxlong_fs;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxthr_fs_action;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxshort_fs;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxlong_fs;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxthr_fs_action;
         private System.Windows.Forms.Label label3;
-        private Controls.MyLabel lbl_armed;
-        private Controls.MyLabel lbl_gpslock;
+        private MyLabel lbl_armed;
+        private MyLabel lbl_gpslock;
         private System.Windows.Forms.Panel PNL_thr_fs_value;
-        private Drone_Gui.Controls.MavlinkComboBox mavlinkComboBox_fs_thr_enable;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownlow_voltage;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownfs_thr_value;
+        private MissionPlanner.Controls.MavlinkComboBox mavlinkComboBox_fs_thr_enable;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownlow_voltage;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownfs_thr_value;
         private System.Windows.Forms.Panel PNL_low_bat;
         private System.Windows.Forms.Label label4;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxFS_GCS_ENABLE;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxFS_GCS_ENABLE;
         private System.Windows.Forms.Panel pnlmah;
         private System.Windows.Forms.Label label5;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownFS_BATT_MAH;
-        private Drone_Gui.Controls.MavlinkComboBox mavlinkComboBoxfs_batt_enable;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownFS_BATT_MAH;
+        private MissionPlanner.Controls.MavlinkComboBox mavlinkComboBoxfs_batt_enable;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;

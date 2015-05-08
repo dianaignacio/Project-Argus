@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+namespace GCSViews
 {
     partial class Help
     {
@@ -31,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Help));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.CHK_showconsole = new System.Windows.Forms.CheckBox();
-            this.BUT_updatecheck = new Controls.MyButton();
+            this.BUT_updatecheck = new MyButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.PIC_wizard = new System.Windows.Forms.PictureBox();
-            this.BUT_betaupdate = new Controls.MyButton();
+            this.BUT_betaupdate = new MyButton();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_wizard)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             // PIC_wizard
             // 
             resources.ApplyResources(this.PIC_wizard, "PIC_wizard");
-            this.PIC_wizard.Image = global::MissionPlanner.Properties.Resources.wizardicon;
+            //this.PIC_wizard.Image = global::MissionPlanner.Properties.Resources.wizardicon;
             this.PIC_wizard.Name = "PIC_wizard";
             this.PIC_wizard.TabStop = false;
             this.PIC_wizard.Click += new System.EventHandler(this.PIC_wizard_Click);
@@ -110,11 +111,11 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private Controls.MyButton BUT_updatecheck;
+        private MyButton BUT_updatecheck;
         private System.Windows.Forms.CheckBox CHK_showconsole;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox PIC_wizard;
-        private Controls.MyButton BUT_betaupdate;
+        private MyButton BUT_betaupdate;
 
     }
 }

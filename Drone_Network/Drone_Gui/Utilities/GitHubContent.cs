@@ -5,9 +5,11 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Text;
-//using log4net;
+using log4net;
+using fastJSON;
 
-namespace Drone_Gui.Utilities
+
+namespace MissionPlanner.Utilities
 {
     public class GitHubContent
     {

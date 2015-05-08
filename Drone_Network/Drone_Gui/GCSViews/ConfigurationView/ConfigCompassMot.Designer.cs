@@ -1,4 +1,7 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+using MissionPlanner;
+
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigCompassMot
     {
@@ -125,7 +128,7 @@
 
         #endregion
 
-        private Controls.MyButton BUT_compassmot;
+        private MyButton BUT_compassmot;
         private System.Windows.Forms.TextBox txt_status;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbl_start;

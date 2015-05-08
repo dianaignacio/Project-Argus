@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+namespace GCSViews
 {
     partial class Simple
     {
@@ -22,19 +23,19 @@
             this.tableMap = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.zg1 = new ZedGraph.ZedGraphControl();
-            this.lbl_winddir = new Controls.MyLabel();
+            this.lbl_winddir = new MyLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.lbl_windvel = new Controls.MyLabel();
-            this.lbl_hdop = new Controls.MyLabel();
-            this.lbl_sats = new Controls.MyLabel();
-            this.gMapControl1 = new Controls.myGMAP();
-            this.TRK_zoom = new Controls.MyTrackBar();
+            this.lbl_windvel = new MyLabel();
+            this.lbl_hdop = new MyLabel();
+            this.lbl_sats = new MyLabel();
+            this.gMapControl1 = new myGMAP();
+            this.TRK_zoom = new MyTrackBar();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TXT_lat = new Controls.MyLabel();
+            this.TXT_lat = new MyLabel();
             this.Zoomlevel = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new Controls.MyLabel();
-            this.TXT_long = new Controls.MyLabel();
-            this.TXT_alt = new Controls.MyLabel();
+            this.label1 = new MyLabel();
+            this.TXT_long = new MyLabel();
+            this.TXT_alt = new MyLabel();
             this.CHK_autopan = new System.Windows.Forms.CheckBox();
             this.CB_tuning = new System.Windows.Forms.CheckBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -328,7 +329,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Image = global::MissionPlanner.Properties.Resources.up;
+            //this.dataGridViewImageColumn1.Image = global::MissionPlanner.Properties.Resources.up;
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
@@ -337,7 +338,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
-            this.dataGridViewImageColumn2.Image = global::MissionPlanner.Properties.Resources.down;
+            //this.dataGridViewImageColumn2.Image = global::MissionPlanner.Properties.Resources.down;
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
@@ -390,23 +391,23 @@
         private System.Windows.Forms.CheckBox CB_tuning;
         private System.Windows.Forms.TableLayoutPanel tableMap;
         private System.Windows.Forms.Panel panel1;
-        private Controls.MyLabel TXT_lat;
+        private MyLabel TXT_lat;
         private System.Windows.Forms.NumericUpDown Zoomlevel;
-        private Controls.MyLabel label1;
-        private Controls.MyLabel TXT_long;
-        private Controls.MyLabel TXT_alt;
+        private MyLabel label1;
+        private MyLabel TXT_long;
+        private MyLabel TXT_alt;
         private System.Windows.Forms.CheckBox CHK_autopan;
-        private Controls.myGMAP gMapControl1;
+        private myGMAP gMapControl1;
         private ZedGraph.ZedGraphControl zg1;
-        private Controls.MyLabel lbl_windvel;
-        private Controls.MyLabel lbl_winddir;
+        private MyLabel lbl_windvel;
+        private MyLabel lbl_winddir;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private Controls.MyLabel lbl_hdop;
-        private Controls.MyLabel lbl_sats;
+        private MyLabel lbl_hdop;
+        private MyLabel lbl_sats;
         private System.Windows.Forms.ToolStripMenuItem flyToHereAltToolStripMenuItem;
         //private Crom.Controls.Docking.DockContainer dockContainer1;
-        private Controls.MyTrackBar TRK_zoom;
+        private MyTrackBar TRK_zoom;
         private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trackerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rTLToolStripMenuItem;

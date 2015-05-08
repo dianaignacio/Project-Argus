@@ -27,8 +27,11 @@ using log4net;
 using System.Reflection;
 using MissionPlanner.Log;
 using GMap.NET.MapProviders;
-using Drone_Gui.Controls;
+using MissionPlanner.Controls;
 
+using MissionPlanner;
+using MissionPlanner;
+using MissionPlanner.Utilities;
 // written by michael oborne
 namespace GCSViews
 {
@@ -247,7 +250,7 @@ namespace GCSViews
 
             CMB_action.DataSource = list;
 
-            CMB_modes.DataSource = Common.getModesList(MainV2.comPort.MAV.cs);
+            CMB_modes.DataSource = MissionPlanner.Common.getModesList(MainV2.comPort.MAV.cs);
             CMB_modes.ValueMember = "Key";
             CMB_modes.DisplayMember = "Value";
 
@@ -323,7 +326,7 @@ namespace GCSViews
         {
             HUD.Custom.src = MainV2.comPort.MAV.cs;
 
-            MissionPlanner.Warnings.CustomWarning.defaultsrc = MainV2.comPort.MAV.cs;
+           
         }
 
         internal GMapMarker CurrentGMapMarker;
@@ -442,7 +445,7 @@ namespace GCSViews
 
             tabStatus.Width = x;
 
-            ThemeManager.ApplyThemeTo(tabStatus);
+            //ThemeManager.ApplyThemeTo(tabStatus);
 
             //   tabStatus.ResumeLayout();
         }
@@ -648,7 +651,7 @@ namespace GCSViews
             Zoomlevel.Maximum = (decimal)24;
             Zoomlevel.Value = Convert.ToDecimal(gMapControl1.Zoom);
 
-            CMB_mountmode.DataSource = Utilities.ParameterMetaDataRepository.GetParameterOptionsInt("MNT_MODE", MainV2.comPort.MAV.cs.firmware.ToString());
+            CMB_mountmode.DataSource = MissionPlanner.Utilities.ParameterMetaDataRepository.GetParameterOptionsInt("MNT_MODE", MainV2.comPort.MAV.cs.firmware.ToString());
             CMB_mountmode.DisplayMember = "Value";
             CMB_mountmode.ValueMember = "Key";
 
@@ -1095,7 +1098,7 @@ namespace GCSViews
                             if (MainV2.ShowAirports)
                             {
                                 // airports
-                                foreach (var item in Utilities.Airports.getAirports(gMapControl1.Position))
+                                foreach (var item in Airports.getAirports(gMapControl1.Position))
                                 {
                                     rallypointoverlay.Markers.Add(new GMapMarkerAirport(item) { ToolTipText = item.Tag, ToolTipMode = MarkerTooltipMode.OnMouseOver });
                                 }
@@ -2102,14 +2105,12 @@ namespace GCSViews
 
         private void BUT_joystick_Click(object sender, EventArgs e)
         {
-            Form joy = new Joystick.JoystickSetup();
-            ThemeManager.ApplyThemeTo(joy);
-            joy.Show();
+           
         }
 
         private void CMB_modes_Click(object sender, EventArgs e)
         {
-            CMB_modes.DataSource = Common.getModesList(MainV2.comPort.MAV.cs);
+            CMB_modes.DataSource = MissionPlanner.Common.getModesList(MainV2.comPort.MAV.cs);
             CMB_modes.ValueMember = "Key";
             CMB_modes.DisplayMember = "Value";
         }
@@ -2716,17 +2717,17 @@ namespace GCSViews
 
                 MainV2.config["mjpeg_url"] = url;
 
-                Utilities.CaptureMJPEG.Stop();
+                CaptureMJPEG.Stop();
 
-                Utilities.CaptureMJPEG.URL = url;
+                CaptureMJPEG.URL = url;
 
-                Utilities.CaptureMJPEG.OnNewImage += new EventHandler(CaptureMJPEG_OnNewImage);
+                CaptureMJPEG.OnNewImage += new EventHandler(CaptureMJPEG_OnNewImage);
 
-                Utilities.CaptureMJPEG.runAsync();
+                CaptureMJPEG.runAsync();
             }
             else
             {
-                Utilities.CaptureMJPEG.Stop();
+                CaptureMJPEG.Stop();
             }
         }
 
@@ -3062,7 +3063,7 @@ namespace GCSViews
 
         private void BUT_logbrowse_Click(object sender, EventArgs e)
         {
-            Form logbrowse = new Log.LogBrowse();
+            Form logbrowse = new LogBrowse();
             ThemeManager.ApplyThemeTo(logbrowse);
             logbrowse.Show();
         }
@@ -3139,11 +3140,11 @@ namespace GCSViews
             {
                 outputwindowstarted = true;
 
-                ScriptConsole console = new ScriptConsole();
-                console.SetScript(script);
-                ThemeManager.ApplyThemeTo((Form)console);
-                console.Show();
-                console.BringToFront();
+               // ScriptConsole console = new ScriptConsole();
+                //console.SetScript(script);
+                //ThemeManager.ApplyThemeTo((Form)console);
+                //console.Show();
+                //console.BringToFront();
             }
         }
 
@@ -3261,7 +3262,7 @@ namespace GCSViews
 
         private void BUT_DFMavlink_Click(object sender, EventArgs e)
         {
-            var form = new Log.LogDownloadMavLink();
+            var form = new LogDownloadMavLink();
 
             form.Show();
         }
@@ -3311,7 +3312,7 @@ namespace GCSViews
                 {
                     var out1 = MissionPlanner.Utilities.LogAnalyzer.Results(xmlfile);
 
-                    MissionPlanner.Controls.LogAnalyzer frm = new Controls.LogAnalyzer(out1);
+                    MissionPlanner.Controls.LogAnalyzer frm = new MissionPlanner.Controls.LogAnalyzer(out1);
 
                     frm.Show();
                 }

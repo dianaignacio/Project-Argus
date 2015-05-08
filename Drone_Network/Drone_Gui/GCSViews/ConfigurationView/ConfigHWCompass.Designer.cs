@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigHWCompass
     {
@@ -47,13 +48,13 @@
             this.radioButtonmanual = new System.Windows.Forms.RadioButton();
             this.radioButton_external = new System.Windows.Forms.RadioButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.CMB_compass_orient = new Drone_Gui.Controls.MavlinkComboBox();
+            this.CMB_compass_orient = new MissionPlanner.Controls.MavlinkComboBox();
             this.radioButton_onboard = new System.Windows.Forms.RadioButton();
             this.TXT_declination_min = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.CHK_enablecompass = new Drone_Gui.Controls.MavlinkCheckBox();
+            this.CHK_enablecompass = new MissionPlanner.Controls.MavlinkCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::MissionPlanner.Properties.Resources.compass;
+            //this.pictureBox1.BackgroundImage = global::MissionPlanner.Properties.Resources.compass;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Name = "pictureBox1";
@@ -133,7 +134,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.apmp2;
+            //this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.apmp2;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Name = "pictureBox2";
@@ -162,7 +163,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::MissionPlanner.Properties.Resources.pixhawk;
+            //this.pictureBox4.BackgroundImage = global::MissionPlanner.Properties.Resources.pixhawk;
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Name = "pictureBox4";
@@ -186,7 +187,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::MissionPlanner.Properties.Resources.maggps;
+            //this.pictureBox3.BackgroundImage = global::MissionPlanner.Properties.Resources.maggps;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Name = "pictureBox3";
@@ -277,19 +278,19 @@
 
         #endregion
 
-        private Controls.MyButton BUT_MagCalibrationLive;
+        private MyButton BUT_MagCalibrationLive;
         private System.Windows.Forms.LinkLabel linkLabelmagdec;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.TextBox TXT_declination_deg;
-        private Drone_Gui.Controls.MavlinkCheckBox CHK_enablecompass;
+        private MissionPlanner.Controls.MavlinkCheckBox CHK_enablecompass;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox CHK_autodec;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
-        private Drone_Gui.Controls.MavlinkComboBox CMB_compass_orient;
+        private MissionPlanner.Controls.MavlinkComboBox CMB_compass_orient;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
-        private Controls.ImageLabel imageLabel1;
+        private ImageLabel imageLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonmanual;

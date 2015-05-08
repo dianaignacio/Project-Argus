@@ -13,9 +13,11 @@ using System.IO;
 using System.Threading;
 using System.Net.Sockets;
 using System.Net;
-using Microsoft.Win32.SafeHandles;  
+using Microsoft.Win32.SafeHandles;
 
-namespace Drone_Gui.Utilities
+using MissionPlanner;
+
+namespace MissionPlanner.Utilities
 {
 
     // C:\Windows\Microsoft.NET\Framework\v2.0.50727\RegAsm.exe %1.dll /nologo /codebase /tlb: %1.tlbs

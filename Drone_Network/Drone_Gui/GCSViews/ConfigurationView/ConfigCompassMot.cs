@@ -8,8 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
 using ZedGraph;
-
-
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {

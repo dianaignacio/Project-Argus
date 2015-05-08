@@ -7,7 +7,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
    public class ParameterMetaDataRepositoryAutoTest
    {

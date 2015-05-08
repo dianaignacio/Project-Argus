@@ -4,7 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace Drone_Gui.Utilities
+using MissionPlanner.Utilities;
+
+namespace MissionPlanner.Utilities
 {
     class GimbalPoint
     {
@@ -154,6 +156,7 @@ namespace Drone_Gui.Utilities
             {
                 // get a projected point to test intersection against - not using slope distance
                 PointLatLngAlt newposdist = currentlocation.newpos(yawangle + MainV2.comPort.MAV.cs.yaw, distout);
+                
                 newposdist.Alt = srtm.getAltitude(newposdist.Lat, newposdist.Lng).alt;
 
                 // get another point 50 infront

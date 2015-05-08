@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigAteryx
     {
@@ -139,10 +140,10 @@
             this.label44 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.ROLL_TO_ELEV = new System.Windows.Forms.NumericUpDown();
-            this.BUT_read_flash = new Controls.MyButton();
-            this.BUT_write_flash = new Controls.MyButton();
-            this.BUT_rerequestparams = new Controls.MyButton();
-            this.BUT_writePIDS = new Controls.MyButton();
+            this.BUT_read_flash = new MyButton();
+            this.BUT_write_flash = new MyButton();
+            this.BUT_rerequestparams = new MyButton();
+            this.BUT_writePIDS = new MyButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.THR_FS_VALUE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.THR_MAX)).BeginInit();
@@ -1000,8 +1001,8 @@
         private System.Windows.Forms.NumericUpDown ROLL_KP;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Controls.MyButton BUT_writePIDS;
-        private Controls.MyButton BUT_rerequestparams;
+        private MyButton BUT_writePIDS;
+        private MyButton BUT_rerequestparams;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown ROLL_INT_LIM;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1092,7 +1093,7 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.NumericUpDown ROLL_TO_ELEV;
-        private Controls.MyButton BUT_write_flash;
-        private Controls.MyButton BUT_read_flash;
+        private MyButton BUT_write_flash;
+        private MyButton BUT_read_flash;
     }
 }

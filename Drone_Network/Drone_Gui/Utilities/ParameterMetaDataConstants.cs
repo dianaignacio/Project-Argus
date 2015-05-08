@@ -1,4 +1,4 @@
-﻿namespace Drone_Gui.Utilities
+﻿namespace MissionPlanner.Utilities
 {
    public sealed class ParameterMetaDataConstants
    {

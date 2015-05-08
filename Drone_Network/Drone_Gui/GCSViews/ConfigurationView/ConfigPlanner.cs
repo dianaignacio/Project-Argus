@@ -13,6 +13,7 @@ using MissionPlanner.Controls.BackstageView;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
 using System.Threading;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -326,9 +327,9 @@ namespace GCSViews.ConfigurationView
 
         private void BUT_Joystick_Click(object sender, EventArgs e)
         {
-            Form joy = new Joystick.JoystickSetup();
-            ThemeManager.ApplyThemeTo(joy);
-            joy.Show();
+            //Form joy = new Joystick.JoystickSetup();
+            //ThemeManager.ApplyThemeTo(joy);
+            //joy.Show();
         }
 
         private void CMB_distunits_SelectedIndexChanged(object sender, EventArgs e)
@@ -524,7 +525,7 @@ namespace GCSViews.ConfigurationView
             CMB_distunits.DataSource = Enum.GetNames(typeof(Common.distances));
             CMB_speedunits.DataSource = Enum.GetNames(typeof(Common.speeds));
 
-            CMB_theme.DataSource = Enum.GetNames(typeof(Utilities.ThemeManager.Themes));
+            CMB_theme.DataSource = Enum.GetNames(typeof(ThemeManager.Themes));
 
             CMB_theme.Text = ThemeManager.CurrentTheme.ToString();
 

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Drone_Gui")]
+[assembly: AssemblyTitle("MissionPlanner")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Toshiba")]
-[assembly: AssemblyProduct("Drone_Gui")]
+[assembly: AssemblyProduct("MissionPlanner")]
 [assembly: AssemblyCopyright("Copyright © Toshiba 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Drone_Gui
+namespace MissionPlanner
 {
     class Program
     {
+        public static string[] args = new string[] { };
+
         [STAThread]
         static void Main(string[] args)
         {

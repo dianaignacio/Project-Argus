@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public partial class ServoOptions : UserControl
     {
@@ -143,7 +143,7 @@ namespace Drone_Gui.Controls
             Control sourcectl = ((ContextMenuStrip)renameToolStripMenuItem.Owner).SourceControl;
 
             string desc = sourcectl.Text;
-            Drone_Gui.Controls.InputBox.Show("Description", "Enter new Description", ref desc);
+            MissionPlanner.Controls.InputBox.Show("Description", "Enter new Description", ref desc);
             sourcectl.Text = desc;
 
             if (sourcectl == BUT_High)

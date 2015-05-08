@@ -5,7 +5,7 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 
-namespace Drone_Gui.HIL
+namespace MissionPlanner.HIL
 {
     public class XPlane : Hil, IDisposable
     {

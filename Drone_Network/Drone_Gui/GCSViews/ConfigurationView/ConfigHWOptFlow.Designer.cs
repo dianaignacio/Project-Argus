@@ -1,4 +1,4 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿namespace GCSViews.ConfigurationView
 {
     partial class ConfigHWOptFlow
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigHWOptFlow));
-            this.CHK_enableoptflow = new Drone_Gui.Controls.MavlinkCheckBox();
+            this.CHK_enableoptflow = new MissionPlanner.Controls.MavlinkCheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -50,7 +50,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.opticalflow;
+            //this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.opticalflow;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Name = "pictureBox2";
@@ -83,7 +83,7 @@
 
         #endregion
 
-        private Drone_Gui.Controls.MavlinkCheckBox CHK_enableoptflow;
+        private MissionPlanner.Controls.MavlinkCheckBox CHK_enableoptflow;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox4;

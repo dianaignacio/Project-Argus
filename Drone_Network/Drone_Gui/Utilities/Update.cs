@@ -10,11 +10,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using Drone_Gui.Controls;
-using Drone_Gui.Utilities;
+using MissionPlanner.Controls;
+using MissionPlanner.Utilities;
 using log4net;
+using MissionPlanner.Controls;
+using MissionPlanner.Utilities;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     class Update
     {

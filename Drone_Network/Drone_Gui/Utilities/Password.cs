@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using Drone_Gui.Controls;
+using MissionPlanner.Controls;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     // one way encryption
     public static class Password

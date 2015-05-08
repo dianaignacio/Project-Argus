@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigPlanner
     {
@@ -736,21 +737,21 @@
         private System.Windows.Forms.CheckBox CHK_hudshow;
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.ComboBox CMB_videosources;
-        private Controls.MyButton BUT_Joystick;
-        private Controls.MyButton BUT_videostop;
-        private Controls.MyButton BUT_videostart;
+        private MyButton BUT_Joystick;
+        private MyButton BUT_videostop;
+        private MyButton BUT_videostart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox CHK_maprotation;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox CHK_disttohomeflightdata;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_log_dir;
-        private Controls.MyButton BUT_logdirbrowse;
+        private MyButton BUT_logdirbrowse;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CMB_theme;
-        private Controls.MyButton BUT_themecustom;
+        private MyButton BUT_themecustom;
         private System.Windows.Forms.CheckBox CHK_speecharmdisarm;
-        private Controls.MyButton BUT_Vario;
+        private MyButton BUT_Vario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chk_analytics;
         private System.Windows.Forms.CheckBox CHK_beta;

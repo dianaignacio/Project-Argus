@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     public delegate void StringWrittenEvent(object sender, string writtenString);
 

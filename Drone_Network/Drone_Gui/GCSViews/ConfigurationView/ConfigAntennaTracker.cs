@@ -10,6 +10,7 @@ using MissionPlanner.Controls.BackstageView;
 using System.Collections;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -60,8 +61,8 @@ namespace GCSViews.ConfigurationView
 
             changes.Clear();
 
-            mavlinkComboBox1.setup(Utilities.ParameterMetaDataRepository.GetParameterOptionsInt("AHRS_ORIENTATION", MainV2.comPort.MAV.cs.firmware.ToString()), "AHRS_ORIENTATION", MainV2.comPort.MAV.param);
-            mavlinkComboBox2.setup(Utilities.ParameterMetaDataRepository.GetParameterOptionsInt("SERVO_TYPE", MainV2.comPort.MAV.cs.firmware.ToString()), "SERVO_TYPE", MainV2.comPort.MAV.param);
+            mavlinkComboBox1.setup(ParameterMetaDataRepository.GetParameterOptionsInt("AHRS_ORIENTATION", MainV2.comPort.MAV.cs.firmware.ToString()), "AHRS_ORIENTATION", MainV2.comPort.MAV.param);
+            mavlinkComboBox2.setup(ParameterMetaDataRepository.GetParameterOptionsInt("SERVO_TYPE", MainV2.comPort.MAV.cs.firmware.ToString()), "SERVO_TYPE", MainV2.comPort.MAV.param);
 
             // yaw
             mavlinkNumericUpDown1.setup(900, 2200, 1, 1, "RC1_MIN", MainV2.comPort.MAV.param);

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using Drone_Gui.Utilities;
+using MissionPlanner.Utilities;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public class MavlinkNumericUpDown : NumericUpDown
     {

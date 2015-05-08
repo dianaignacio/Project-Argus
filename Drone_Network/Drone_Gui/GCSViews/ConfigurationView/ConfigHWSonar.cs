@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls.BackstageView;
 using MissionPlanner.Controls;
+using MissionPlanner;
+using MissionPlanner.Utilities;
 
 namespace GCSViews.ConfigurationView
 {
@@ -34,7 +36,7 @@ namespace GCSViews.ConfigurationView
                 this.Enabled = true;
             }
 
-            CMB_sonartype.setup(Utilities.ParameterMetaDataRepository.GetParameterOptionsInt("RNGFND_TYPE", MainV2.comPort.MAV.cs.firmware.ToString()), "RNGFND_TYPE", MainV2.comPort.MAV.param);
+            CMB_sonartype.setup(ParameterMetaDataRepository.GetParameterOptionsInt("RNGFND_TYPE", MainV2.comPort.MAV.cs.firmware.ToString()), "RNGFND_TYPE", MainV2.comPort.MAV.param);
 
             timer1.Start();
         }

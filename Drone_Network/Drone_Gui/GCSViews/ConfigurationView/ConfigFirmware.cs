@@ -14,8 +14,8 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using px4uploader;
 using MissionPlanner.Controls;
-using Drone_Gui.Utilities;
 using System.Collections;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -26,8 +26,8 @@ namespace GCSViews.ConfigurationView
         string firmwareurl = "";
 
         string custom_fw_dir = "";
-        
-        Firmware fw = new Firmware();
+
+        MissionPlanner.Utilities.Firmware fw = new MissionPlanner.Utilities.Firmware();
 
         bool firstrun = true;
 
@@ -51,7 +51,7 @@ namespace GCSViews.ConfigurationView
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        static List<Firmware.software> softwares = new List<Firmware.software>();
+        static List<MissionPlanner.Utilities.Firmware.software> softwares = new List<MissionPlanner.Utilities.Firmware.software>();
 
         public ConfigFirmware()
         {
@@ -96,9 +96,9 @@ namespace GCSViews.ConfigurationView
 
         }
 
-        void pdr_DoWork(object sender, Controls.ProgressWorkerEventArgs e, object passdata = null)
+        void pdr_DoWork(object sender, MissionPlanner.Controls.ProgressWorkerEventArgs e, object passdata = null)
         {
-            Firmware fw = new Firmware();
+            MissionPlanner.Utilities.Firmware fw = new MissionPlanner.Utilities.Firmware();
             fw.Progress -= fw_Progress1;
             fw.Progress += fw_Progress;
             softwares = fw.getFWList(firmwareurl);
@@ -130,6 +130,7 @@ namespace GCSViews.ConfigurationView
 
             if (progress != -1)
             {
+                
                 if (this.progress.Value != progress)
                 {
                     this.progress.Value = progress;
@@ -147,7 +148,7 @@ namespace GCSViews.ConfigurationView
                 this.Refresh();
         }
 
-        void updateDisplayNameInvoke(Firmware.software temp)
+        void updateDisplayNameInvoke(MissionPlanner.Utilities.Firmware.software temp)
         {
             this.Invoke((MethodInvoker)delegate
             {
@@ -155,7 +156,7 @@ namespace GCSViews.ConfigurationView
             });
         }
 
-        void updateDisplayName(Firmware.software temp)
+        void updateDisplayName(MissionPlanner.Utilities.Firmware.software temp)
         {
             if (temp.url2560.ToLower().Contains("AR2".ToLower()) || temp.url2560.ToLower().Contains("apm1/APMRover".ToLower()))
             {
@@ -228,7 +229,7 @@ namespace GCSViews.ConfigurationView
             }
         }
 
-        void findfirmware(Firmware.software fwtoupload)
+        void findfirmware(MissionPlanner.Utilities.Firmware.software fwtoupload)
         {
             DialogResult dr = CustomMessageBox.Show("Are you sure you want to upload " + fwtoupload.name + "?", "Continue", MessageBoxButtons.YesNo);
             if (dr == System.Windows.Forms.DialogResult.Yes)
@@ -264,12 +265,12 @@ namespace GCSViews.ConfigurationView
 
         private void pictureBoxFW_Click(object sender, EventArgs e)
         {
-            if (((Control)sender).Tag.GetType() != typeof(Firmware.software))
+            if (((Control)sender).Tag.GetType() != typeof(MissionPlanner.Utilities.Firmware.software))
             {
                 CustomMessageBox.Show(Strings.ErrorFirmwareFile, Strings.ERROR); return;
             }
 
-            findfirmware((Firmware.software)((Control)sender).Tag);
+            findfirmware((MissionPlanner.Utilities.Firmware.software)((Control)sender).Tag);
         }
 
         void up_LogEvent(string message, int level = 0)

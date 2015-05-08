@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+namespace GCSViews
 {
     partial class FlightPlanner
     {
@@ -1293,8 +1294,8 @@
 
         #endregion
 
-        private Controls.MyButton BUT_read;
-        private Controls.MyButton BUT_write;
+        private MyButton BUT_read;
+        private MyButton BUT_write;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel label4;
@@ -1310,7 +1311,7 @@
         private System.Windows.Forms.Label lbl_status;
         private System.Windows.Forms.DataGridView Commands;
         private System.Windows.Forms.CheckBox CHK_verifyheight;
-        private Controls.MyButton BUT_Add;
+        private MyButton BUT_Add;
         private System.Windows.Forms.TextBox TXT_WPRad;
         private System.Windows.Forms.TextBox TXT_DefaultAlt;
         private System.Windows.Forms.Label LBL_WPRad;
@@ -1320,8 +1321,8 @@
         private BSE.Windows.Forms.Panel panelWaypoints;
         private BSE.Windows.Forms.Panel panelAction;
         private System.Windows.Forms.Panel panelMap;
-        private Controls.myGMAP MainMap;
-        private Controls.MyTrackBar trackBar1;
+        private myGMAP MainMap;
+        private MyTrackBar trackBar1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbl_distance;
         private System.Windows.Forms.Label lbl_prevdist;
@@ -1397,9 +1398,9 @@
         private System.Windows.Forms.ToolStripMenuItem poieditToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enterUTMCoordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadSHPFileToolStripMenuItem;
-        private Controls.Coords coords1;
-        private Controls.MyButton BUT_loadwpfile;
-        private Controls.MyButton BUT_saveWPFile;
+        private Coords coords1;
+        private MyButton BUT_loadwpfile;
+        private MyButton BUT_saveWPFile;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;

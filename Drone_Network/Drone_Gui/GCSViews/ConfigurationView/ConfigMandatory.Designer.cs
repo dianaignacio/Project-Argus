@@ -1,4 +1,4 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿namespace GCSViews.ConfigurationView
 {
     partial class ConfigMandatory
     {

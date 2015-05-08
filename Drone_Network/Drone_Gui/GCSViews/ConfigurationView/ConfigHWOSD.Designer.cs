@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigHWOSD
     {
@@ -32,7 +33,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.BUT_osdrates = new Controls.MyButton();
+            this.BUT_osdrates = new MyButton();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.BackgroundImage = global::MissionPlanner.Properties.Resources.MinimOSD;
+            //this.pictureBox5.BackgroundImage = global::MissionPlanner.Properties.Resources.MinimOSD;
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Name = "pictureBox5";
@@ -93,7 +94,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private Controls.MyButton BUT_osdrates;
+        private MyButton BUT_osdrates;
         private System.Windows.Forms.Label label7;
     }
 }

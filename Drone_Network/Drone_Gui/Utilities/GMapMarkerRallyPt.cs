@@ -5,19 +5,19 @@ using System.Linq;
 using System.Text;
 using GMap.NET;
 using GMap.NET.WindowsForms;
-using Drone_Gui.Properties;
+using MissionPlanner.Properties;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     [Serializable]
     public class GMapMarkerRallyPt : GMapMarker
    {
       public float? Bearing;
 
-      static readonly System.Drawing.Size SizeSt = new System.Drawing.Size(Resources.marker_02.Width, Resources.marker_02.Height);
+      static readonly System.Drawing.Size SizeSt = new System.Drawing.Size(50,50);
 
       //static Bitmap localcache1 = Resources.shadow50;
-      static Bitmap localcache2 = Resources.marker_02;
+      //static Bitmap localcache2 = Resources.marker_02;
 
       public int Alt { get; set; }
 
@@ -44,7 +44,7 @@ namespace Drone_Gui.Utilities
       public override void OnRender(Graphics g)
       {
 #if !PocketPC      
-             g.DrawImageUnscaled(localcache2, LocalPosition.X, LocalPosition.Y);
+             //g.DrawImageUnscaled(localcache2, LocalPosition.X, LocalPosition.Y);
      
 #else
         //    DrawImageUnscaled(g, Resources.shadow50, LocalPosition.X, LocalPosition.Y);

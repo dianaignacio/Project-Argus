@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using Drone_Gui.Utilities;
+using MissionPlanner.Utilities;
 using MissionPlanner.Controls;
 using System.Collections;
-using Drone_Gui;
+using MissionPlanner;
 //using log4net;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public partial class DefaultSettings : UserControl, IActivate
     {
@@ -79,7 +79,7 @@ namespace Drone_Gui.Controls
                 Hashtable param2 = Utilities.ParamFile.loadParamFile(filepath);
 
                 
-                Form paramCompareForm = new ParamCompare(null, MainV2.comPort.MAV.param, param2);
+                Form paramCompareForm = new MissionPlanner.ParamCompare.ParamCompare(null, MainV2.comPort.MAV.param, param2);
 
                 ThemeManager.ApplyThemeTo(paramCompareForm);
                 if (paramCompareForm.ShowDialog() == DialogResult.OK)

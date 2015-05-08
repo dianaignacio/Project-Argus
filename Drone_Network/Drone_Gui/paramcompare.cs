@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Collections;
 using BrightIdeasSoftware;
 
-namespace Drone_Gui
+namespace MissionPlanner.ParamCompare
 {
     public partial class ParamCompare : Form
     {

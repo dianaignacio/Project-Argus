@@ -8,7 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
    public static class ParameterMetaDataRepository
    {

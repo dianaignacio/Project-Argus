@@ -15,7 +15,13 @@ using MissionPlanner;
 using System.Reflection;
 using MissionPlanner.Controls;
 using System.Drawing.Drawing2D;
+
 using MissionPlanner.HIL;
+using MissionPlanner.Utilities;
+using MissionPlanner.Controls;
+using MissionPlanner.Comms;
+using MissionPlanner;
+
 
 // Written by Michael Oborne
 namespace GCSViews
@@ -23,7 +29,7 @@ namespace GCSViews
     public partial class Simulation : MyUserControl
     {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        MAVLinkInterface comPort = MainV2.comPort;
+        MissionPlanner.MAVLinkInterface comPort = MainV2.comPort;
         UdpClient XplanesSEND;
         UdpClient MavLink;
         Socket SimulatorRECV;
@@ -288,7 +294,7 @@ namespace GCSViews
                 {
                     // reset/create
                     lastfdmdata = new FGNetFDM();
-                    quad = new HIL.MultiCopter();
+                    quad = new MultiCopter();
 
                     if (RAD_JSBSim.Checked)
                     {
@@ -1194,7 +1200,7 @@ namespace GCSViews
            // comPort.sendPacket(pres);
         }
 
-        HIL.MultiCopter quad = new HIL.MultiCopter();
+        MultiCopter quad = new MultiCopter();
 
         int packetcount = 0;
 
@@ -1212,6 +1218,8 @@ namespace GCSViews
         /// <param name="pitch_out">-1 to 1</param>
         /// <param name="rudder_out">-1 to 1</param>
         /// <param name="throttle_out">0 to 1</param>
+        
+        
         private void updateScreenDisplay(double lat, double lng, double alt, double roll, double pitch, double heading, double yaw, double roll_out, double pitch_out, double rudder_out, double throttle_out)
         {
             try
@@ -1242,7 +1250,7 @@ namespace GCSViews
             }
             catch { this.Invoke((MethodInvoker)delegate { OutputLog.AppendText("NO SIM data - exep\n"); }); }
         }
-
+        
         private void processArduPilot()
         {
 

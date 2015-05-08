@@ -10,6 +10,7 @@ using MissionPlanner.Controls.BackstageView;
 using System.Collections;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {

@@ -1,4 +1,4 @@
-﻿namespace Drone_Gui
+﻿namespace MissionPlanner
 {
     partial class MainWindow
     {
@@ -261,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.BackgroundImage = global::Drone_Gui.Properties.Resources.WCAPmoW;
+            this.BackgroundImage = global::MissionPlanner.Properties.Resources.WCAPmoW;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1904, 990);
             this.Controls.Add(this.button2);

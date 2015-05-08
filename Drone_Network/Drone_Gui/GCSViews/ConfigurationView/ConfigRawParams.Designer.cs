@@ -1,4 +1,4 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿namespace GCSViews.ConfigurationView
 {
     partial class ConfigRawParams
     {
@@ -231,22 +231,22 @@
 
         #endregion
 
-        private Controls.MyButton BUT_compare;
-        private Controls.MyButton BUT_rerequestparams;
-        private Controls.MyButton BUT_writePIDS;
-        private Controls.MyButton BUT_save;
-        private Controls.MyButton BUT_load;
+        private MissionPlanner.Controls.MyButton BUT_compare;
+        private MissionPlanner.Controls.MyButton BUT_rerequestparams;
+        private MissionPlanner.Controls.MyButton BUT_writePIDS;
+        private MissionPlanner.Controls.MyButton BUT_save;
+        private MissionPlanner.Controls.MyButton BUT_load;
         private System.Windows.Forms.DataGridView Params;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label1;
-        private Controls.MyButton BUT_find;
-        private Controls.MyButton BUT_paramfileload;
+        private MissionPlanner.Controls.MyButton BUT_find;
+        private MissionPlanner.Controls.MyButton BUT_paramfileload;
         private System.Windows.Forms.ComboBox CMB_paramfiles;
         private System.Windows.Forms.DataGridViewTextBoxColumn Command;
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
         private System.Windows.Forms.DataGridViewTextBoxColumn Units;
         private System.Windows.Forms.DataGridViewTextBoxColumn Options;
         private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
-        private Controls.MyButton BUT_reset_params;
+        private MissionPlanner.Controls.MyButton BUT_reset_params;
     }
 }

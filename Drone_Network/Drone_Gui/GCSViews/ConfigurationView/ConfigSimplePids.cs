@@ -14,6 +14,7 @@ using System.Reflection;
 using System.Globalization;
 using MissionPlanner.Controls;
 using System.Collections;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -190,7 +191,7 @@ namespace GCSViews.ConfigurationView
                 if (increment.Length > 0)
                     float.TryParse(increment,NumberStyles.Float, CultureInfo.InvariantCulture, out incrementf);
 
-                Controls.RangeControl RNG = new Controls.RangeControl(item.paramname, item.desc, item.title, incrementf, 1, item.min, item.max, value.ToString());
+                RangeControl RNG = new RangeControl(item.paramname, item.desc, item.title, incrementf, 1, item.min, item.max, value.ToString());
                 RNG.Tag = item;
 
                 RNG.Location = new Point(10, y);
@@ -217,7 +218,7 @@ namespace GCSViews.ConfigurationView
 
             float value = float.Parse(Value, System.Globalization.CultureInfo.InvariantCulture);
 
-            Controls.RangeControl rc = ((Controls.RangeControl)sender);
+            RangeControl rc = ((RangeControl)sender);
             log.Info(rc.Name + " " + rc.Value);
 
             List<relationitem> relitems = ((configitem)rc.Tag).relations;

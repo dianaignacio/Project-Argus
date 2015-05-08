@@ -6,9 +6,9 @@ using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Threading;
 using System.Windows.Forms;
-using Drone_Gui;
+using MissionPlanner;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public partial class ConnectionStats : UserControl
     {
@@ -36,13 +36,9 @@ namespace Drone_Gui.Controls
             var packetsReceivedCount = _mavlink.WhenPacketReceived.Scan(0, (x, y) => x + y);
             var packetsLostCount = _mavlink.WhenPacketLost.Scan(0, (x, y) => x + y);
 
-            var bytesReceivedEverySecond = _mavlink.BytesReceived
-                .Buffer(TimeSpan.FromSeconds(1))
-                .Select(bytes => bytes.Sum());
+            var bytesReceivedEverySecond = _mavlink.BytesReceived.Buffer(TimeSpan.FromSeconds(1)).Select(bytes => bytes.Sum());
 
-            var bytesSentEverySecond = _mavlink.BytesSent
-    .Buffer(TimeSpan.FromSeconds(1))
-    .Select(bytes => bytes.Sum());
+            var bytesSentEverySecond = _mavlink.BytesSent.Buffer(TimeSpan.FromSeconds(1)).Select(bytes => bytes.Sum());
 
             var subscriptions = new List<IDisposable>
                                     {
@@ -169,9 +165,7 @@ namespace Drone_Gui.Controls
     {
         public static IDisposable SubscribeForTextUpdates<T>(this IObservable<T> source, TextBox txtBox)
         {
-            return source
-                .ObserveOn(SynchronizationContext.Current)
-                .Subscribe(x => txtBox.Text = x.ToString());
+            return source.ObserveOn(SynchronizationContext.Current).Subscribe(x => txtBox.Text = x.ToString());
         }
     }
 }

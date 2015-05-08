@@ -4,11 +4,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using log4net;
-using Drone_Gui.HIL;
-using Drone_Gui.GCSViews;
+using MissionPlanner.HIL;
+using GCSViews;
 
 
-namespace Drone_Gui.HIL
+namespace MissionPlanner.HIL
 {
     public class Motor : Utils
     {

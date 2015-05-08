@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+namespace GCSViews
 {
     partial class SoftwareConfig
     {
@@ -55,6 +56,6 @@
 
         #endregion
 
-        private Controls.BackstageView.BackstageView backstageView;
+        private MissionPlanner.Controls.BackstageView.BackstageView backstageView;
     }
 }

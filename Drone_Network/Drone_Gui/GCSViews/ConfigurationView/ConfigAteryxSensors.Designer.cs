@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigAteryxSensors
     {
@@ -31,9 +32,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigAteryxSensors));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.BUT_zero_att = new Controls.MyButton();
-            this.BUT_zero_press = new Controls.MyButton();
-            this.hud1 = new Controls.HUD();
+            this.BUT_zero_att = new MyButton();
+            this.BUT_zero_press = new MyButton();
+            this.hud1 = new HUD();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -143,10 +144,10 @@
 
         #endregion
 
-        private Controls.MyButton BUT_zero_att;
+        private MyButton BUT_zero_att;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Controls.MyButton BUT_zero_press;
-        private Controls.HUD hud1;
+        private MyButton BUT_zero_press;
+        private HUD hud1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Timer timer1;
     }

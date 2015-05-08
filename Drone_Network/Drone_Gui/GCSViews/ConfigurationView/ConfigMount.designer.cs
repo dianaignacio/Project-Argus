@@ -1,7 +1,7 @@
 ﻿using MissionPlanner.Controls;
 using MissionPlanner.Presenter;
 
-namespace MissionPlanner.GCSViews.ConfigurationView
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigMount
     {
@@ -66,64 +66,64 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.CMB_inputch_pan = new Drone_Gui.Controls.MavlinkComboBox();
-            this.CMB_inputch_roll = new Drone_Gui.Controls.MavlinkComboBox();
-            this.CMB_inputch_tilt = new Drone_Gui.Controls.MavlinkComboBox();
-            this.mavlinkNumericUpDownTAM = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownTAMX = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownTSM = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownTSMX = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBoxTR = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.mavlinkNumericUpDownPAM = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownPAMX = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownPSM = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownPSMX = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBoxPR = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.mavlinkNumericUpDownRAM = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownRAMX = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownRSM = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownRSMX = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBoxRR = new Drone_Gui.Controls.MavlinkCheckBox();
+            this.CMB_inputch_pan = new MissionPlanner.Controls.MavlinkComboBox();
+            this.CMB_inputch_roll = new MissionPlanner.Controls.MavlinkComboBox();
+            this.CMB_inputch_tilt = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkNumericUpDownTAM = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownTAMX = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownTSM = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownTSMX = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBoxTR = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkNumericUpDownPAM = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownPAMX = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownPSM = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownPSMX = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBoxPR = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkNumericUpDownRAM = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownRAMX = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownRSM = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownRSMX = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBoxRR = new MissionPlanner.Controls.MavlinkCheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.NUD_RETRACT_z = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_RETRACT_z = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
-            this.NUD_RETRACT_y = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_RETRACT_y = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label25 = new System.Windows.Forms.Label();
-            this.NUD_RETRACT_x = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_RETRACT_x = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.NUD_NEUTRAL_z = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_NEUTRAL_z = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label29 = new System.Windows.Forms.Label();
-            this.NUD_NEUTRAL_y = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_NEUTRAL_y = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label30 = new System.Windows.Forms.Label();
-            this.NUD_NEUTRAL_x = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_NEUTRAL_x = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.NUD_CONTROL_z = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_CONTROL_z = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label32 = new System.Windows.Forms.Label();
-            this.NUD_CONTROL_y = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.NUD_CONTROL_y = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label33 = new System.Windows.Forms.Label();
-            this.NUD_CONTROL_x = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.CHK_stab_tilt = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.CHK_stab_roll = new Drone_Gui.Controls.MavlinkCheckBox();
-            this.CHK_stab_pan = new Drone_Gui.Controls.MavlinkCheckBox();
+            this.NUD_CONTROL_x = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.CHK_stab_tilt = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_stab_roll = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_stab_pan = new MissionPlanner.Controls.MavlinkCheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.mavlinkNumericUpDownshut_pushed = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownshut_notpushed = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownshut_pushed = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownshut_notpushed = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.mavlinkNumericUpDownShutM = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownShutMX = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownShutM = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownShutMX = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label41 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.mavlinkNumericUpDownshut_duration = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownshut_duration = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.label42 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -164,7 +164,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalPitch1;
+            //this.pictureBox1.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalPitch1;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -177,7 +177,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // pictureBox2
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalRoll1;
+            //this.pictureBox2.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalRoll1;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
@@ -220,7 +220,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // pictureBox3
             // 
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalYaw;
+            //this.pictureBox3.BackgroundImage = global::MissionPlanner.Properties.Resources.cameraGimalYaw;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
@@ -1248,7 +1248,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // pictureBox4
             // 
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.BackgroundImage = global::MissionPlanner.Properties.Resources.Shutter;
+            //this.pictureBox4.BackgroundImage = global::MissionPlanner.Properties.Resources.Shutter;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
@@ -1422,84 +1422,84 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRAM;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRAMX;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRAM;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRAMX;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRSM;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRSMX;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxRR;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRSM;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownRSMX;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxRR;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPAM;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPAMX;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPAM;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPAMX;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPSM;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPSMX;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxPR;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPSM;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownPSMX;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxPR;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTAM;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTAMX;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTAM;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTAMX;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTSM;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTSMX;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBoxTR;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTSM;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownTSMX;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBoxTR;
         private System.Windows.Forms.ComboBox mavlinkComboBoxTilt;
         private System.Windows.Forms.ComboBox mavlinkComboBoxRoll;
         private System.Windows.Forms.ComboBox mavlinkComboBoxPan;
-        private Drone_Gui.Controls.MavlinkComboBox CMB_inputch_tilt;
+        private MissionPlanner.Controls.MavlinkComboBox CMB_inputch_tilt;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private Drone_Gui.Controls.MavlinkComboBox CMB_inputch_roll;
+        private MissionPlanner.Controls.MavlinkComboBox CMB_inputch_roll;
         private System.Windows.Forms.Label label24;
-        private Drone_Gui.Controls.MavlinkComboBox CMB_inputch_pan;
+        private MissionPlanner.Controls.MavlinkComboBox CMB_inputch_pan;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label27;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_RETRACT_z;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_RETRACT_z;
         private System.Windows.Forms.Label label26;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_RETRACT_y;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_RETRACT_y;
         private System.Windows.Forms.Label label25;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_RETRACT_x;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_RETRACT_x;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label28;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_NEUTRAL_z;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_NEUTRAL_z;
         private System.Windows.Forms.Label label29;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_NEUTRAL_y;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_NEUTRAL_y;
         private System.Windows.Forms.Label label30;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_NEUTRAL_x;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_NEUTRAL_x;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label31;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_CONTROL_z;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_CONTROL_z;
         private System.Windows.Forms.Label label32;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_CONTROL_y;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_CONTROL_y;
         private System.Windows.Forms.Label label33;
-        private Drone_Gui.Controls.MavlinkNumericUpDown NUD_CONTROL_x;
-        private Drone_Gui.Controls.MavlinkCheckBox CHK_stab_tilt;
-        private Drone_Gui.Controls.MavlinkCheckBox CHK_stab_roll;
-        private Drone_Gui.Controls.MavlinkCheckBox CHK_stab_pan;
+        private MissionPlanner.Controls.MavlinkNumericUpDown NUD_CONTROL_x;
+        private MissionPlanner.Controls.MavlinkCheckBox CHK_stab_tilt;
+        private MissionPlanner.Controls.MavlinkCheckBox CHK_stab_roll;
+        private MissionPlanner.Controls.MavlinkCheckBox CHK_stab_pan;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownshut_pushed;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownshut_notpushed;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownshut_pushed;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownshut_notpushed;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownShutM;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownShutMX;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownShutM;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownShutMX;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label34;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDownshut_duration;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDownshut_duration;
         private System.Windows.Forms.Label label42;
 
     }

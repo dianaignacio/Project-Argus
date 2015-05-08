@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Drone_Gui.HIL;
+using MissionPlanner.HIL;
 using MissionPlanner.Utilities;
 
 using uint8_t = System.Byte;
 using uint32_t = System.UInt32;
 using int32_t = System.Int32;
 
-namespace Drone_Gui.Controls.Waypoints
+namespace MissionPlanner.Controls.Waypoints
 {
-    public class Spline2 : Drone_Gui.HIL.Utils
+    public class Spline2 : MissionPlanner.HIL.Utils
     {
         public Vector3 target_pos = new Vector3();
         public Vector3 target_vel = new Vector3();

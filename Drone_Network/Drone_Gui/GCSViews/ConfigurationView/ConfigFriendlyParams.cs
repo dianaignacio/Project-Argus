@@ -11,6 +11,7 @@ using MissionPlanner.Controls;
 using MissionPlanner.Controls.BackstageView;
 using MissionPlanner.Utilities;
 using log4net;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {
@@ -227,7 +228,7 @@ namespace GCSViews.ConfigurationView
             {
                 try
                 {
-                    Utilities.ParameterMetaDataParser.GetParameterInformation();
+                    ParameterMetaDataParser.GetParameterInformation();
 
                     ParameterMetaDataRepository.Reload();
 

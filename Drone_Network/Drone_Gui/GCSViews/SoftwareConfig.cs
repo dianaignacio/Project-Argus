@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls.BackstageView;
-using MissionPlanner.GCSViews.ConfigurationView;
+using GCSViews.ConfigurationView;
 using MissionPlanner.Utilities;
 using log4net;
 using System.Reflection;
 using MissionPlanner.Controls;
+using MissionPlanner;
 
 namespace GCSViews
 {

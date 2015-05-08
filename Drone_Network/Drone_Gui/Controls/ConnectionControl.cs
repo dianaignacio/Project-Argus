@@ -6,9 +6,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Drone_Gui.Comms;
+using MissionPlanner.Comms;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public partial class ConnectionControl : UserControl
     {

@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigArduplane
     {
@@ -986,8 +987,8 @@
         private System.Windows.Forms.NumericUpDown RLL2SRV_P;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Controls.MyButton BUT_writePIDS;
-        private Controls.MyButton BUT_rerequestparams;
+        private MyButton BUT_writePIDS;
+        private MyButton BUT_rerequestparams;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.NumericUpDown NAVL1_DAMPING;
         private System.Windows.Forms.Label label9;
@@ -1004,6 +1005,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown TECS_CLMB_MAX;
         private System.Windows.Forms.Label label12;
-        private Controls.MyButton BUT_refreshpart;
+        private MyButton BUT_refreshpart;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Drone_Gui.Controls
+﻿namespace MissionPlanner.Controls
 {
     partial class ThemeColors
     {

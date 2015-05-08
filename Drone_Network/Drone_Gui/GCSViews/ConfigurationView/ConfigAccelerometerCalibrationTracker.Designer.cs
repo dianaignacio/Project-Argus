@@ -1,6 +1,6 @@
 ﻿using MissionPlanner.Controls;
 
-namespace MissionPlanner.GCSViews.ConfigurationView
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigAccelerometerCalibrationTracker
     {

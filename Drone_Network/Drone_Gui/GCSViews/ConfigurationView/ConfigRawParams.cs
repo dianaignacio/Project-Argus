@@ -12,6 +12,9 @@ using System.Collections.Generic;
 using System.Net;
 using System.Globalization;
 
+using MissionPlanner;
+using MissionPlanner.ParamCompare;
+
 namespace GCSViews.ConfigurationView
 {
     public partial class ConfigRawParams : UserControl, IActivate
@@ -82,7 +85,7 @@ namespace GCSViews.ConfigurationView
 
         void loadparamsfromfile(string fn)
         {
-            Hashtable param2 = Utilities.ParamFile.loadParamFile(fn);
+            Hashtable param2 = ParamFile.loadParamFile(fn);
 
             foreach (string name in param2.Keys)
             {
@@ -147,7 +150,7 @@ namespace GCSViews.ConfigurationView
                     catch (Exception) { CustomMessageBox.Show(Strings.InvalidNumberEntered + " " + row.Cells[0].Value.ToString()); }
                 }
 
-                Utilities.ParamFile.SaveParamFile(sfd.FileName,data);
+                ParamFile.SaveParamFile(sfd.FileName,data);
 
             }
         }
@@ -215,7 +218,7 @@ namespace GCSViews.ConfigurationView
             var dr = ofd.ShowDialog();
             if (dr == DialogResult.OK)
             {
-                param2 = Utilities.ParamFile.loadParamFile(ofd.FileName);
+                param2 = ParamFile.loadParamFile(ofd.FileName);
 
                 Form paramCompareForm = new ParamCompare(Params, MainV2.comPort.MAV.param, param2);
                 
@@ -463,7 +466,7 @@ namespace GCSViews.ConfigurationView
 
                 File.WriteAllBytes(filepath, data);
 
-                Hashtable param2 = Utilities.ParamFile.loadParamFile(filepath);
+                Hashtable param2 = ParamFile.loadParamFile(filepath);
 
                 Form paramCompareForm = new ParamCompare(Params, MainV2.comPort.MAV.param, param2);
 

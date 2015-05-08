@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using MissionPlanner.Controls.BackstageView;
 using MissionPlanner.Controls;
 using netDxf;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {

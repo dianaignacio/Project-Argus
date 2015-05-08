@@ -7,7 +7,7 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Xml;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     class SignXML
     {

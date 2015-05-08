@@ -8,10 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls.BackstageView;
 using MissionPlanner.Utilities;
-using MissionPlanner.GCSViews.ConfigurationView;
+using GCSViews.ConfigurationView;
 using log4net;
 using System.Reflection;
 using MissionPlanner.Controls;
+using MissionPlanner;
 
 namespace GCSViews
 {

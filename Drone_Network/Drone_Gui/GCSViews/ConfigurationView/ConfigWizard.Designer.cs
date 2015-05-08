@@ -1,4 +1,4 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿namespace GCSViews.ConfigurationView
 {
     partial class ConfigWizard
     {
@@ -36,7 +36,7 @@
             // PIC_wizard
             // 
             resources.ApplyResources(this.PIC_wizard, "PIC_wizard");
-            this.PIC_wizard.Image = global::MissionPlanner.Properties.Resources.wizardicon;
+            //this.PIC_wizard.Image = global::MissionPlanner.Properties.Resources.wizardicon;
             this.PIC_wizard.Name = "PIC_wizard";
             this.PIC_wizard.TabStop = false;
             this.PIC_wizard.Click += new System.EventHandler(this.PIC_wizard_Click);

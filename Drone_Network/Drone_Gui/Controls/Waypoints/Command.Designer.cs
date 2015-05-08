@@ -1,4 +1,4 @@
-﻿namespace Drone_Gui.Controls.Waypoints
+﻿namespace MissionPlanner.Controls.Waypoints
 {
     partial class Command
     {
@@ -37,9 +37,9 @@
             this.txt_param4 = new System.Windows.Forms.TextBox();
             this.txt_param3 = new System.Windows.Forms.TextBox();
             this.txt_param2 = new System.Windows.Forms.TextBox();
-            //this.BUT_del = new Drone_Gui.Controls.MyButton();
-            //this.BUT_UP = new Drone_Gui.Controls.MyButton();
-            //this.BUT_DOWN = new Drone_Gui.Controls.MyButton();
+            //this.BUT_del = new MissionPlanner.Controls.MyButton();
+            //this.BUT_UP = new MissionPlanner.Controls.MyButton();
+            //this.BUT_DOWN = new MissionPlanner.Controls.MyButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 

@@ -9,6 +9,7 @@ using MissionPlanner.Controls.BackstageView;
 using MissionPlanner.Models;
 using MissionPlanner.Presenter;
 using Transitions;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {

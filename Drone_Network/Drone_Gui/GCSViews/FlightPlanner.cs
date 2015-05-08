@@ -26,7 +26,7 @@ using ProjNet.CoordinateSystems.Transformations;
 using ProjNet.CoordinateSystems;
 using ProjNet.Converters;
 using System.Xml.XPath;
-using com.codec.jpeg;
+//using com.codec.jpeg;
 using MissionPlanner;
 using GMap.NET.MapProviders;
 using MissionPlanner.Maps;
@@ -495,8 +495,8 @@ namespace GCSViews
 
             updateCMDParams();
 
-            Up.Image = global::MissionPlanner.Properties.Resources.up;
-            Down.Image = global::MissionPlanner.Properties.Resources.down;
+            //Up.Image = global::MissionPlanner.Properties.Resources.up;
+            //Down.Image = global::MissionPlanner.Properties.Resources.down;
         }
 
         void updateCMDParams()
@@ -639,7 +639,7 @@ namespace GCSViews
             POI.POIModified += POI_POIModified;
 
             if (MainV2.config["WMSserver"] != null)
-                Maps.WMSProvider.CustomWMSURL = MainV2.config["WMSserver"].ToString();
+                WMSProvider.CustomWMSURL = MainV2.config["WMSserver"].ToString();
 
             trackBar1.Value = (int)MainMap.Zoom;
 
@@ -1294,7 +1294,7 @@ namespace GCSViews
 
                         splinepnts.Add(fullpointlist[a]);
 
-                        MissionPlanner.Controls.Waypoints.Spline2 sp = new Controls.Waypoints.Spline2();
+                        MissionPlanner.Controls.Waypoints.Spline2 sp = new MissionPlanner.Controls.Waypoints.Spline2();
 
                         //sp._flags.segment_type = MissionPlanner.Controls.Waypoints.Spline2.SegmentType.SEGMENT_STRAIGHT;
                         //sp._flags.reached_destination = true;
@@ -1544,7 +1544,7 @@ namespace GCSViews
                 }
             }
 
-            Controls.ProgressReporterDialogue frmProgressReporter = new Controls.ProgressReporterDialogue
+            MissionPlanner.Controls.ProgressReporterDialogue frmProgressReporter = new MissionPlanner.Controls.ProgressReporterDialogue
             {
                 StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen,
                 Text = "Receiving WP's"
@@ -1558,7 +1558,7 @@ namespace GCSViews
             frmProgressReporter.RunBackgroundOperationAsync();
         }
 
-        void getWPs(object sender, Controls.ProgressWorkerEventArgs e, object passdata = null)
+        void getWPs(object sender, ProgressWorkerEventArgs e, object passdata = null)
         {
             List<Locationwp> cmds = new List<Locationwp>();
 
@@ -1577,26 +1577,26 @@ namespace GCSViews
 
                 log.Info("Getting WP #");
 
-                ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(0, "Getting WP count");
+                ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(0, "Getting WP count");
 
                 int cmdcount = port.getWPCount();
 
                 for (ushort a = 0; a < cmdcount; a++)
                 {
-                    if (((Controls.ProgressReporterDialogue)sender).doWorkArgs.CancelRequested)
+                    if (((ProgressReporterDialogue)sender).doWorkArgs.CancelRequested)
                     {
-                        ((Controls.ProgressReporterDialogue)sender).doWorkArgs.CancelAcknowledged = true;
+                        ((ProgressReporterDialogue)sender).doWorkArgs.CancelAcknowledged = true;
                         throw new Exception("Cancel Requested");
                     }
 
                     log.Info("Getting WP" + a);
-                    ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(a * 100 / cmdcount, "Getting WP " + a);
+                    ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(a * 100 / cmdcount, "Getting WP " + a);
                     cmds.Add(port.getWP(a));
                 }
 
                 port.setWPACK();
 
-                ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(100, "Done");
+                ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(100, "Done");
 
                 log.Info("Done");
             }
@@ -1687,7 +1687,7 @@ namespace GCSViews
                 }
             }
 
-            Controls.ProgressReporterDialogue frmProgressReporter = new Controls.ProgressReporterDialogue
+            ProgressReporterDialogue frmProgressReporter = new ProgressReporterDialogue
             {
                 StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen,
                 Text = "Sending WP's"
@@ -1743,7 +1743,7 @@ namespace GCSViews
             return commands;
         }
 
-        void saveWPs(object sender, Controls.ProgressWorkerEventArgs e, object passdata = null)
+        void saveWPs(object sender, ProgressWorkerEventArgs e, object passdata = null)
         {
             try
             {
@@ -1829,14 +1829,14 @@ namespace GCSViews
                 }
 
                 // set wp total
-                ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(0, "Set total wps ");
+                ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(0, "Set total wps ");
 
                 ushort totalwpcountforupload = (ushort)(Commands.Rows.Count + 1);
 
                 port.setWPTotal(totalwpcountforupload); // + home
 
                 // set home location - overwritten/ignored depending on firmware.
-                ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(0, "Set home");
+                ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(0, "Set home");
 
                 var homeans = port.setWP(home, (ushort)0, MAVLink.MAV_FRAME.GLOBAL, 0);
 
@@ -1860,7 +1860,7 @@ namespace GCSViews
                     // this code below fails
                     //a = commandlist.IndexOf(temp) + 1;
 
-                    ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(a * 100 / Commands.Rows.Count, "Setting WP " + a);
+                    ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(a * 100 / Commands.Rows.Count, "Setting WP " + a);
 
                     // make sure we are using the correct frame for these commands
                     if (temp.id < (byte)MAVLink.MAV_CMD.LAST || temp.id == (byte)MAVLink.MAV_CMD.DO_SET_HOME)
@@ -1921,7 +1921,7 @@ namespace GCSViews
 
                 port.setWPACK();
 
-                ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(95, "Setting params");
+                ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(95, "Setting params");
 
                 // m
                 port.setParam("WP_RADIUS", (byte)int.Parse(TXT_WPRad.Text) / CurrentState.multiplierdist);
@@ -1938,7 +1938,7 @@ namespace GCSViews
 
                 }
 
-                ((Controls.ProgressReporterDialogue)sender).UpdateProgressAndStatus(100, "Done.");
+                ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(100, "Done.");
             }
             catch (Exception ex) { log.Error(ex); MainV2.comPort.giveComport = false; throw; }
 
@@ -2275,8 +2275,8 @@ namespace GCSViews
         private void Commands_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
             e.Row.Cells[Delete.Index].Value = "X";
-            e.Row.Cells[Up.Index].Value = global::MissionPlanner.Properties.Resources.up;
-            e.Row.Cells[Down.Index].Value = global::MissionPlanner.Properties.Resources.down;
+            //e.Row.Cells[Up.Index].Value = global::MissionPlanner.Properties.Resources.up;
+            //e.Row.Cells[Down.Index].Value = global::MissionPlanner.Properties.Resources.down;
         }
 
         private void TXT_homelat_TextChanged(object sender, EventArgs e)
@@ -2752,7 +2752,7 @@ namespace GCSViews
                     iUserSelection = 0; //ignore all errors and default to first layer
                 }
 
-                Maps.WMSProvider.szWmsLayer = szListLayerName[iUserSelection];
+                WMSProvider.szWmsLayer = szListLayerName[iUserSelection];
             }
         }
 
@@ -3132,7 +3132,7 @@ namespace GCSViews
             //if (MainV2.ShowAirports)
             {
                 airportsoverlay.Clear();
-                foreach (var item in Utilities.Airports.getAirports(MainMap.Position))
+                foreach (var item in Airports.getAirports(MainMap.Position))
                 {
                     airportsoverlay.Markers.Add(new GMapMarkerAirport(item) { ToolTipText = item.Tag, ToolTipMode = MarkerTooltipMode.OnMouseOver });
                 }
@@ -4919,12 +4919,12 @@ namespace GCSViews
         }
 
         private void elevationGraphToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {/*
             writeKML();
             double homealt = MainV2.comPort.MAV.cs.HomeAlt;
             Form temp = new ElevationProfile(pointlist, homealt, (altmode)CMB_altmode.SelectedValue);
             ThemeManager.ApplyThemeTo(temp);
-            temp.ShowDialog();
+            temp.ShowDialog();*/
         }
 
         private void rTLToolStripMenuItem_Click(object sender, EventArgs e)

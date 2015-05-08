@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigRawParamsTree
     {
@@ -214,17 +215,17 @@
 
         #endregion
 
-        private Controls.MyButton BUT_compare;
-        private Controls.MyButton BUT_rerequestparams;
-        private Controls.MyButton BUT_writePIDS;
-        private Controls.MyButton BUT_save;
-        private Controls.MyButton BUT_load;
+        private MyButton BUT_compare;
+        private MyButton BUT_rerequestparams;
+        private MyButton BUT_writePIDS;
+        private MyButton BUT_save;
+        private MyButton BUT_load;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label1;
-        private Controls.MyButton BUT_find;
-        private Controls.MyButton BUT_paramfileload;
+        private MyButton BUT_find;
+        private MyButton BUT_paramfileload;
         private System.Windows.Forms.ComboBox CMB_paramfiles;
-        private Controls.MyButton BUT_reset_params;
+        private MyButton BUT_reset_params;
         private BrightIdeasSoftware.DataTreeListView Params;
         private BrightIdeasSoftware.OLVColumn olvColumn1;
         private BrightIdeasSoftware.OLVColumn olvColumn2;

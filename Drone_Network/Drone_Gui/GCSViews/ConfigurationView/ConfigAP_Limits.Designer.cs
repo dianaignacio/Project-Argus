@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigAP_Limits
     {
@@ -39,18 +40,18 @@
             this.LIM_ALT_REQ = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.LIM_REQUIRED = new System.Windows.Forms.CheckBox();
-            this.myLabel4 = new Controls.MyLabel();
+            this.myLabel4 = new MyLabel();
             this.LIM_CHANNEL = new System.Windows.Forms.NumericUpDown();
-            this.myLabel3 = new Controls.MyLabel();
+            this.myLabel3 = new MyLabel();
             this.LIM_FNC_RAD = new System.Windows.Forms.NumericUpDown();
             this.LIM_FNC_SMPL = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.LIM_GPSLCK_ON = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.LIM_ALT_ON = new System.Windows.Forms.CheckBox();
-            this.myLabel1 = new Controls.MyLabel();
+            this.myLabel1 = new MyLabel();
             this.LIM_ALT_MAX = new System.Windows.Forms.NumericUpDown();
-            this.myLabel2 = new Controls.MyLabel();
+            this.myLabel2 = new MyLabel();
             this.LIM_ALT_MIN = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -283,8 +284,8 @@
         private System.Windows.Forms.LinkLabel LNK_wiki;
         private System.Windows.Forms.CheckBox LIM_ENABLED;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Controls.MyLabel myLabel2;
-        private Controls.MyLabel myLabel1;
+        private MyLabel myLabel2;
+        private MyLabel myLabel1;
         private System.Windows.Forms.NumericUpDown LIM_ALT_MAX;
         private System.Windows.Forms.NumericUpDown LIM_ALT_MIN;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -292,10 +293,10 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox LIM_GPSLCK_ON;
         private System.Windows.Forms.GroupBox groupBox4;
-        private Controls.MyLabel myLabel3;
+        private MyLabel myLabel3;
         private System.Windows.Forms.NumericUpDown LIM_FNC_RAD;
         private System.Windows.Forms.CheckBox LIM_FNC_SMPL;
-        private Controls.MyLabel myLabel4;
+        private MyLabel myLabel4;
         private System.Windows.Forms.NumericUpDown LIM_CHANNEL;
         private System.Windows.Forms.CheckBox LIM_REQUIRED;
         private System.Windows.Forms.GroupBox groupBox5;

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Drone_Gui.Controls.Waypoints
+namespace MissionPlanner.Controls.Waypoints
 {
     public partial class Command : UserControl
     {

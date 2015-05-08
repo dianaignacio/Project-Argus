@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
+using MissionPlanner;
 
 namespace GCSViews
 {
@@ -41,7 +42,7 @@ namespace GCSViews
 
         private void Help_Load(object sender, EventArgs e)
         {
-            richTextBox1.Rtf = MissionPlanner.Properties.Resources.help_text;
+            //richTextBox1.Rtf = MissionPlanner.Properties.Resources.help_text;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -51,9 +52,9 @@ namespace GCSViews
 
         private void PIC_wizard_Click(object sender, EventArgs e)
         {
-            Wizard.Wizard cfg = new Wizard.Wizard();
+            //Wizard.Wizard cfg = new Wizard.Wizard();
 
-            cfg.ShowDialog(this);
+            //cfg.ShowDialog(this);
         }
 
         private void BUT_betaupdate_Click(object sender, EventArgs e)

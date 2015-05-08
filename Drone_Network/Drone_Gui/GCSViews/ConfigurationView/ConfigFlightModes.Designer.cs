@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigFlightModes
     {
@@ -388,7 +389,7 @@
         private System.Windows.Forms.ComboBox CMB_fmode2;
         private System.Windows.Forms.Label labelfm1;
         private System.Windows.Forms.ComboBox CMB_fmode1;
-        private Controls.MyButton BUT_SaveModes;
+        private MyButton BUT_SaveModes;
         private System.Windows.Forms.BindingSource currentStateBindingSource;
         private System.Windows.Forms.CheckBox chk_ss6;
         private System.Windows.Forms.CheckBox chk_ss5;

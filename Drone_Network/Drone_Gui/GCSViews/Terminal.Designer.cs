@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+namespace GCSViews
 {
     partial class Terminal
     {
@@ -133,13 +134,13 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox TXT_terminal;
-        private Controls.MyButton BUTsetupshow;
-        private Controls.MyButton BUTradiosetup;
-        private Controls.MyButton BUTtests;
-        private Controls.MyButton Logs;
-        private Controls.MyButton BUT_logbrowse;
-        private Controls.MyButton BUT_ConnectAPM;
-        private Controls.MyButton BUT_disconnect;
+        private MyButton BUTsetupshow;
+        private MyButton BUTradiosetup;
+        private MyButton BUTtests;
+        private MyButton Logs;
+        private MyButton BUT_logbrowse;
+        private MyButton BUT_ConnectAPM;
+        private MyButton BUT_disconnect;
         private System.Windows.Forms.ComboBox CMB_boardtype;
     }
 }

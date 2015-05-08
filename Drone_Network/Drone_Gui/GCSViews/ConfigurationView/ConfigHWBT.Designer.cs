@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigHWBT
     {
@@ -56,10 +57,10 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.BackgroundImage = global::MissionPlanner.Properties.Resources.MinimOSD;
+            //this.pictureBox5.BackgroundImage = global::MissionPlanner.Properties.Resources.MinimOSD;
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = global::MissionPlanner.Properties.Resources.BT_hc06;
+            //this.pictureBox5.Image = global::MissionPlanner.Properties.Resources.BT_hc06;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 
@@ -136,7 +137,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private Controls.MyButton BUT_btsettings;
+        private MyButton BUT_btsettings;
         private System.Windows.Forms.ComboBox cmb_baud;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.TextBox txt_pin;

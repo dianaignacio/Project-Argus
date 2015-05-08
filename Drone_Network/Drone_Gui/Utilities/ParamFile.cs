@@ -5,9 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using log4net;
-using Drone_Gui.Controls;
+using MissionPlanner.Controls;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     public class ParamFile
     {

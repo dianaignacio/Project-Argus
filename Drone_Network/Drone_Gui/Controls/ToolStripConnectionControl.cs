@@ -1,5 +1,5 @@
 ﻿﻿using System.Windows.Forms;
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public class ToolStripConnectionControl : ToolStripControlHost
     {

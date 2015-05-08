@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public partial class ModifyandSet : UserControl
     {

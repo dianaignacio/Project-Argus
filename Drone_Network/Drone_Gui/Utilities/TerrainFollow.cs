@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using MissionPlanner.Utilities;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     public class TerrainFollow
     {

@@ -25,6 +25,10 @@ using log4net;
 using System.Reflection;
 using MissionPlanner.Log;
 
+using MissionPlanner.Antenna;
+using MissionPlanner;
+using MissionPlanner.Comms;
+
 // written by michael oborne
 namespace GCSViews
 {
@@ -71,7 +75,8 @@ namespace GCSViews
         internal static GMapOverlay kmlpolygons;
         internal static GMapOverlay geofence;
 
-        Antenna.Tracker track = new Antenna.Tracker();
+
+        MissionPlanner.Antenna.Tracker track = new MissionPlanner.Antenna.Tracker();
 
         Dictionary<Guid, Form> formguids = new Dictionary<Guid, Form>();
 
@@ -925,7 +930,7 @@ namespace GCSViews
         private void BUT_RAWSensor_Click(object sender, EventArgs e)
         {
             Form temp = new RAW_Sensor();
-            ThemeManager.ApplyThemeTo(temp);
+            //ThemeManager.ApplyThemeTo(temp);
             temp.Show();
         }
 
@@ -1095,16 +1100,14 @@ namespace GCSViews
 
         private void BUT_log2kml_Click(object sender, EventArgs e)
         {
-            Form frm = new Log.MavlinkLog();
+            Form frm = new MavlinkLog();
             ThemeManager.ApplyThemeTo(frm);
             frm.ShowDialog();
         }
 
         private void BUT_joystick_Click(object sender, EventArgs e)
         {
-            Form joy = new Joystick.JoystickSetup();
-            ThemeManager.ApplyThemeTo(joy);
-            joy.Show();
+        
         }
 
 
@@ -1433,17 +1436,17 @@ namespace GCSViews
 
                 MainV2.config["mjpeg_url"] = url;
 
-                Utilities.CaptureMJPEG.Stop();
+                CaptureMJPEG.Stop();
 
-                Utilities.CaptureMJPEG.URL = url;
+                CaptureMJPEG.URL = url;
 
-                Utilities.CaptureMJPEG.OnNewImage += new EventHandler(CaptureMJPEG_OnNewImage);
+                CaptureMJPEG.OnNewImage += new EventHandler(CaptureMJPEG_OnNewImage);
 
-                Utilities.CaptureMJPEG.runAsync();
+                CaptureMJPEG.runAsync();
             }
             else
             {
-                Utilities.CaptureMJPEG.Stop();
+                CaptureMJPEG.Stop();
             }
         }
 
@@ -1682,11 +1685,11 @@ namespace GCSViews
 
         private void connectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Comms.CommsSerialScan.Scan(false);
+            CommsSerialScan.Scan(false);
 
             DateTime deadline = DateTime.Now.AddSeconds(50);
 
-            while (Comms.CommsSerialScan.foundport == false)
+            while (CommsSerialScan.foundport == false)
             {
                 System.Threading.Thread.Sleep(100);
 
@@ -1697,8 +1700,8 @@ namespace GCSViews
                 }
             }
 
-            MainV2.comPort.BaseStream.PortName = Comms.CommsSerialScan.portinterface.PortName;
-            MainV2.comPort.BaseStream.BaudRate = Comms.CommsSerialScan.portinterface.BaudRate;
+            MainV2.comPort.BaseStream.PortName = CommsSerialScan.portinterface.PortName;
+            MainV2.comPort.BaseStream.BaudRate = CommsSerialScan.portinterface.BaudRate;
 
             MainV2.comPort.Open(false);
 

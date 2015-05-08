@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using GMap.NET;
-using Drone_Gui.Utilities;
+//using MissionPlanner.Utilities;
 using MissionPlanner.Utilities;
 
-namespace Drone_Gui.HIL
+namespace MissionPlanner.HIL
 {
     public class Vector3
     {

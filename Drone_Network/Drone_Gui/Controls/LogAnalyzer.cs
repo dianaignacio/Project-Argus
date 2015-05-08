@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public partial class LogAnalyzer : Form
     {
-        public LogAnalyzer(Drone_Gui.Utilities.LogAnalyzer.analysis analysis)
+        public LogAnalyzer(MissionPlanner.Utilities.LogAnalyzer.analysis analysis)
         {
             InitializeComponent();
 

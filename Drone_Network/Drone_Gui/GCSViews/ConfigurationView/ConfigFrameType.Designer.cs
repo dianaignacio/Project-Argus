@@ -1,6 +1,6 @@
 ﻿using MissionPlanner.Controls;
 
-namespace MissionPlanner.GCSViews.ConfigurationView
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigFrameType
     {
@@ -70,7 +70,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.radioButton_Plus.Name = "radioButton_Plus";
             this.radioButton_Plus.TabStop = true;
             this.radioButton_Plus.UseVisualStyleBackColor = true;
-            this.radioButton_Plus.CheckedChanged += new System.EventHandler(this.radioButton_Plus_CheckedChanged);
+            //this.radioButton_Plus.CheckedChanged += new System.EventHandler(this.radioButton_Plus_CheckedChanged);
             // 
             // radioButton_X
             // 
@@ -78,7 +78,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.radioButton_X.Name = "radioButton_X";
             this.radioButton_X.TabStop = true;
             this.radioButton_X.UseVisualStyleBackColor = true;
-            this.radioButton_X.CheckedChanged += new System.EventHandler(this.radioButton_X_CheckedChanged);
+            //this.radioButton_X.CheckedChanged += new System.EventHandler(this.radioButton_X_CheckedChanged);
             // 
             // label2
             // 
@@ -94,19 +94,19 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             resources.ApplyResources(this.pictureBoxPlus, "pictureBoxPlus");
             this.pictureBoxPlus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPlus.Image = global::MissionPlanner.Properties.Resources.frames_plus;
+            //this.pictureBoxPlus.Image = global::MissionPlanner.Properties.Resources.frames_plus;
             this.pictureBoxPlus.Name = "pictureBoxPlus";
             this.pictureBoxPlus.TabStop = false;
-            this.pictureBoxPlus.Click += new System.EventHandler(this.pictureBoxPlus_Click);
+            //this.pictureBoxPlus.Click += new System.EventHandler(this.pictureBoxPlus_Click);
             // 
             // pictureBoxX
             // 
             resources.ApplyResources(this.pictureBoxX, "pictureBoxX");
             this.pictureBoxX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxX.Image = global::MissionPlanner.Properties.Resources.frames_x;
+            //this.pictureBoxX.Image = global::MissionPlanner.Properties.Resources.frames_x;
             this.pictureBoxX.Name = "pictureBoxX";
             this.pictureBoxX.TabStop = false;
-            this.pictureBoxX.Click += new System.EventHandler(this.pictureBoxX_Click);
+            //this.pictureBoxX.Click += new System.EventHandler(this.pictureBoxX_Click);
             // 
             // label6
             // 
@@ -119,16 +119,16 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.radioButton_V.Name = "radioButton_V";
             this.radioButton_V.TabStop = true;
             this.radioButton_V.UseVisualStyleBackColor = true;
-            this.radioButton_V.CheckedChanged += new System.EventHandler(this.radioButton_V_CheckedChanged);
+            //this.radioButton_V.CheckedChanged += new System.EventHandler(this.radioButton_V_CheckedChanged);
             // 
             // pictureBoxV
             // 
             resources.ApplyResources(this.pictureBoxV, "pictureBoxV");
             this.pictureBoxV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxV.Image = global::MissionPlanner.Properties.Resources.new_3DR_04;
+            //this.pictureBoxV.Image = global::MissionPlanner.Properties.Resources.new_3DR_04;
             this.pictureBoxV.Name = "pictureBoxV";
             this.pictureBoxV.TabStop = false;
-            this.pictureBoxV.Click += new System.EventHandler(this.pictureBoxV_Click);
+            //this.pictureBoxV.Click += new System.EventHandler(this.pictureBoxV_Click);
             // 
             // label1
             // 
@@ -141,16 +141,16 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.radioButton_H.Name = "radioButton_H";
             this.radioButton_H.TabStop = true;
             this.radioButton_H.UseVisualStyleBackColor = true;
-            this.radioButton_H.CheckedChanged += new System.EventHandler(this.radioButton_H_CheckedChanged);
+            //this.radioButton_H.CheckedChanged += new System.EventHandler(this.radioButton_H_CheckedChanged);
             // 
             // pictureBoxH
             // 
             resources.ApplyResources(this.pictureBoxH, "pictureBoxH");
             this.pictureBoxH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxH.Image = global::MissionPlanner.Properties.Resources.frames_h;
+            //this.pictureBoxH.Image = global::MissionPlanner.Properties.Resources.frames_h;
             this.pictureBoxH.Name = "pictureBoxH";
             this.pictureBoxH.TabStop = false;
-            this.pictureBoxH.Click += new System.EventHandler(this.pictureBoxH_Click);
+            //this.pictureBoxH.Click += new System.EventHandler(this.pictureBoxH_Click);
             // 
             // label4
             // 
@@ -168,16 +168,16 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.radioButton_Y.Name = "radioButton_Y";
             this.radioButton_Y.TabStop = true;
             this.radioButton_Y.UseVisualStyleBackColor = true;
-            this.radioButton_Y.CheckedChanged += new System.EventHandler(this.radioButton_Y_CheckedChanged);
+            //this.radioButton_Y.CheckedChanged += new System.EventHandler(this.radioButton_Y_CheckedChanged);
             // 
             // pictureBoxY
             // 
             resources.ApplyResources(this.pictureBoxY, "pictureBoxY");
             this.pictureBoxY.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxY.Image = global::MissionPlanner.Properties.Resources.y6b;
+            //this.pictureBoxY.Image = global::MissionPlanner.Properties.Resources.y6b;
             this.pictureBoxY.Name = "pictureBoxY";
             this.pictureBoxY.TabStop = false;
-            this.pictureBoxY.Click += new System.EventHandler(this.pictureBoxY_Click);
+            //this.pictureBoxY.Click += new System.EventHandler(this.pictureBoxY_Click);
             // 
             // label7
             // 
@@ -233,7 +233,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.radioButton_VTail.Name = "radioButton_VTail";
             this.radioButton_VTail.TabStop = true;
             this.radioButton_VTail.UseVisualStyleBackColor = true;
-            this.radioButton_VTail.CheckedChanged += new System.EventHandler(this.radioButton_VTail_CheckedChanged);
+            //this.radioButton_VTail.CheckedChanged += new System.EventHandler(this.radioButton_VTail_CheckedChanged);
             // 
             // pictureBoxVTail
             // 
@@ -241,15 +241,15 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.pictureBoxVTail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxVTail.Name = "pictureBoxVTail";
             this.pictureBoxVTail.TabStop = false;
-            this.pictureBoxVTail.Click += new System.EventHandler(this.pictureBoxVTail_Click);
+            //this.pictureBoxVTail.Click += new System.EventHandler(this.pictureBoxVTail_Click);
             // 
             // ConfigFrameType
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "ConfigFrameType";
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.Controls.Add(this.groupBox2);
+            //this.Controls.Add(this.groupBox1);
+            //this.Name = "ConfigFrameType";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxV)).EndInit();
@@ -282,7 +282,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private System.Windows.Forms.RadioButton radioButton_Y;
         private PictureBoxWithPseudoOpacity pictureBoxY;
         private System.Windows.Forms.Label label7;
-        private DefaultSettings configDefaultSettings1;
+        private MissionPlanner.Controls.DefaultSettings configDefaultSettings1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;

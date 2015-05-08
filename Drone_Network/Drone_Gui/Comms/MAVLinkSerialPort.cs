@@ -6,7 +6,9 @@ using System.Text;
 using log4net;
 using System.Threading;
 
-namespace Drone_Gui.Comms
+using MissionPlanner.Comms;
+
+namespace MissionPlanner.Comms
 {
     /// <summary>
     /// this is a proxy port for SERIAL_CONTROL messages

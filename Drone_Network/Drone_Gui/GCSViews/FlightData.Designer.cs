@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+namespace GCSViews
 {
     partial class FlightData
     {
@@ -37,8 +38,8 @@
             this.but_autotune = new MissionPlanner.Controls.MyButton();
             this.CMB_mountmode = new System.Windows.Forms.ComboBox();
             this.BUT_mountmode = new MissionPlanner.Controls.MyButton();
-            this.modifyandSetSpeed = new Drone_Gui.Controls.ModifyandSet();
-            this.modifyandSetAlt = new Drone_Gui.Controls.ModifyandSet();
+            this.modifyandSetSpeed = new MissionPlanner.Controls.ModifyandSet();
+            this.modifyandSetAlt = new MissionPlanner.Controls.ModifyandSet();
             this.BUT_ARM = new MissionPlanner.Controls.MyButton();
             this.BUT_joystick = new MissionPlanner.Controls.MyButton();
             this.BUT_quickmanual = new MissionPlanner.Controls.MyButton();
@@ -67,13 +68,13 @@
             this.tabStatus = new System.Windows.Forms.TabPage();
             this.tabServo = new System.Windows.Forms.TabPage();
             this.flowLayoutPanelServos = new System.Windows.Forms.FlowLayoutPanel();
-            this.servoOptions1 = new Drone_Gui.Controls.ServoOptions();
-            this.servoOptions2 = new Drone_Gui.Controls.ServoOptions();
-            this.servoOptions3 = new Drone_Gui.Controls.ServoOptions();
-            this.servoOptions4 = new Drone_Gui.Controls.ServoOptions();
-            this.servoOptions5 = new Drone_Gui.Controls.ServoOptions();
-            this.servoOptions6 = new Drone_Gui.Controls.ServoOptions();
-            this.servoOptions7 = new Drone_Gui.Controls.ServoOptions();
+            this.servoOptions1 = new MissionPlanner.Controls.ServoOptions();
+            this.servoOptions2 = new MissionPlanner.Controls.ServoOptions();
+            this.servoOptions3 = new MissionPlanner.Controls.ServoOptions();
+            this.servoOptions4 = new MissionPlanner.Controls.ServoOptions();
+            this.servoOptions5 = new MissionPlanner.Controls.ServoOptions();
+            this.servoOptions6 = new MissionPlanner.Controls.ServoOptions();
+            this.servoOptions7 = new MissionPlanner.Controls.ServoOptions();
             this.tabTLogs = new System.Windows.Forms.TabPage();
             this.tableLayoutPaneltlogs = new System.Windows.Forms.TableLayoutPanel();
             this.BUT_loadtelem = new MissionPlanner.Controls.MyButton();
@@ -122,7 +123,7 @@
             this.triggerCameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightPlannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setHomeHereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.distanceBar1 = new Drone_Gui.Controls.DistanceBar();
+            this.distanceBar1 = new MissionPlanner.Controls.DistanceBar();
             this.windDir1 = new MissionPlanner.Controls.WindDir();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
@@ -714,7 +715,7 @@
             // Gvspeed
             // 
             this.Gvspeed.BackColor = System.Drawing.Color.Transparent;
-            this.Gvspeed.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
+            //this.Gvspeed.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
             resources.ApplyResources(this.Gvspeed, "Gvspeed");
             this.Gvspeed.BaseArcColor = System.Drawing.Color.Transparent;
             this.Gvspeed.BaseArcRadius = 60;
@@ -861,7 +862,7 @@
             // Gheading
             // 
             this.Gheading.BackColor = System.Drawing.Color.Transparent;
-            this.Gheading.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
+            //this.Gheading.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
             resources.ApplyResources(this.Gheading, "Gheading");
             this.Gheading.DataBindings.Add(new System.Windows.Forms.Binding("Heading", this.bindingSourceGaugesTab, "yaw", true));
             this.Gheading.DataBindings.Add(new System.Windows.Forms.Binding("NavHeading", this.bindingSourceGaugesTab, "nav_bearing", true));
@@ -872,7 +873,7 @@
             // Galt
             // 
             this.Galt.BackColor = System.Drawing.Color.Transparent;
-            this.Galt.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
+            //this.Galt.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
             resources.ApplyResources(this.Galt, "Galt");
             this.Galt.BaseArcColor = System.Drawing.Color.Transparent;
             this.Galt.BaseArcRadius = 60;
@@ -1017,7 +1018,7 @@
             // Gspeed
             // 
             this.Gspeed.BackColor = System.Drawing.Color.Transparent;
-            this.Gspeed.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
+            //this.Gspeed.BackgroundImage = global::MissionPlanner.Properties.Resources.Gaugebg;
             resources.ApplyResources(this.Gspeed, "Gspeed");
             this.Gspeed.BaseArcColor = System.Drawing.Color.Transparent;
             this.Gspeed.BaseArcRadius = 70;
@@ -1808,7 +1809,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Image = global::MissionPlanner.Properties.Resources.up;
+            //this.dataGridViewImageColumn1.Image = global::MissionPlanner.Properties.Resources.up;
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
@@ -1817,7 +1818,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
-            this.dataGridViewImageColumn2.Image = global::MissionPlanner.Properties.Resources.down;
+            //this.dataGridViewImageColumn2.Image = global::MissionPlanner.Properties.Resources.down;
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
@@ -1905,26 +1906,26 @@
         private System.Windows.Forms.SplitContainer MainH;
         private System.Windows.Forms.SplitContainer SubMainLeft;
         private System.Windows.Forms.ToolStripMenuItem goHereToolStripMenuItem;
-        private Controls.HUD hud1;
-        private Controls.MyButton BUT_clear_track;
+        private HUD hud1;
+        private MyButton BUT_clear_track;
         private System.Windows.Forms.CheckBox CB_tuning;
-        private Controls.MyButton BUT_RAWSensor;
-        private Controls.MyButton BUTactiondo;
-        private Controls.MyButton BUTrestartmission;
+        private MyButton BUT_RAWSensor;
+        private MyButton BUTactiondo;
+        private MyButton BUTrestartmission;
         private System.Windows.Forms.ComboBox CMB_action;
-        private Controls.MyButton BUT_Homealt;
+        private MyButton BUT_Homealt;
         private System.Windows.Forms.TrackBar tracklog;
-        private Controls.MyButton BUT_playlog;
-        private Controls.MyButton BUT_loadtelem;
+        private MyButton BUT_playlog;
+        private MyButton BUT_loadtelem;
         private AGaugeApp.AGauge Galt;
         private AGaugeApp.AGauge Gspeed;
         private AGaugeApp.AGauge Gvspeed;
         private System.Windows.Forms.TableLayoutPanel tableMap;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown Zoomlevel;
-        private Controls.MyLabel label1;
+        private MyLabel label1;
         private System.Windows.Forms.CheckBox CHK_autopan;
-        private Controls.myGMAP gMapControl1;
+        private myGMAP gMapControl1;
         private ZedGraph.ZedGraphControl zg1;
         private System.Windows.Forms.TabControl tabControlactions;
         private System.Windows.Forms.TabPage tabGauges;
@@ -1932,77 +1933,77 @@
         private System.Windows.Forms.TabPage tabActions;
         private System.Windows.Forms.TabPage tabTLogs;
         private System.Windows.Forms.ComboBox CMB_modes;
-        private Controls.MyButton BUT_setmode;
+        private MyButton BUT_setmode;
         private System.Windows.Forms.ComboBox CMB_setwp;
-        private Controls.MyButton BUT_setwp;
-        private Controls.MyButton BUT_quickmanual;
-        private Controls.MyButton BUT_quickrtl;
-        private Controls.MyButton BUT_quickauto;
-        private Controls.MyButton BUT_log2kml;
-        private Controls.MyButton BUT_joystick;
+        private MyButton BUT_setwp;
+        private MyButton BUT_quickmanual;
+        private MyButton BUT_quickrtl;
+        private MyButton BUT_quickauto;
+        private MyButton BUT_log2kml;
+        private MyButton BUT_joystick;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem recordHudToAVIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stopRecordToolStripMenuItem;
-        private Controls.MyLabel lbl_logpercent;
+        private MyLabel lbl_logpercent;
         private System.Windows.Forms.ToolStripMenuItem pointCameraHereToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private Controls.MyLabel lbl_hdop;
-        private Controls.MyLabel lbl_sats;
-        private Controls.HSI Gheading;
-        private Controls.MyLabel lbl_playbackspeed;
+        private MyLabel lbl_hdop;
+        private MyLabel lbl_sats;
+        private HSI Gheading;
+        private MyLabel lbl_playbackspeed;
         private System.Windows.Forms.ToolStripMenuItem setMJPEGSourceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setAspectRatioToolStripMenuItem;
         private System.Windows.Forms.TabPage tabQuick;
-        private Controls.QuickView quickView3;
-        private Controls.QuickView quickView2;
-        private Controls.QuickView quickView1;
-        private Controls.QuickView quickView4;
-        private Controls.QuickView quickView6;
-        private Controls.QuickView quickView5;
+        private QuickView quickView3;
+        private QuickView quickView2;
+        private QuickView quickView1;
+        private QuickView quickView4;
+        private QuickView quickView6;
+        private QuickView quickView5;
         private System.Windows.Forms.ToolStripMenuItem flyToHereAltToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem flightPlannerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userItemsToolStripMenuItem;
         //private Crom.Controls.Docking.DockContainer dockContainer1;
-        private Controls.MyButton BUT_ARM;
-        private Controls.ModifyandSet modifyandSetAlt;
-        private Controls.ModifyandSet modifyandSetSpeed;
+        private MyButton BUT_ARM;
+        private MissionPlanner.Controls.ModifyandSet modifyandSetAlt;
+        private MissionPlanner.Controls.ModifyandSet modifyandSetSpeed;
         private System.Windows.Forms.ToolStripMenuItem triggerCameraToolStripMenuItem;
-        private Controls.MyTrackBar TRK_zoom;
-        private Controls.MyLabel LBL_logfn;
+        private MyTrackBar TRK_zoom;
+        private MyLabel LBL_logfn;
         private System.Windows.Forms.TabPage tabServo;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelServos;
-        private Drone_Gui.Controls.ServoOptions servoOptions1;
-        private Drone_Gui.Controls.ServoOptions servoOptions2;
-        private Drone_Gui.Controls.ServoOptions servoOptions3;
-        private Drone_Gui.Controls.ServoOptions servoOptions4;
+        private MissionPlanner.Controls.ServoOptions servoOptions1;
+        private MissionPlanner.Controls.ServoOptions servoOptions2;
+        private MissionPlanner.Controls.ServoOptions servoOptions3;
+        private MissionPlanner.Controls.ServoOptions servoOptions4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPaneltlogs;
-        private Drone_Gui.Controls.ServoOptions servoOptions5;
-        private Drone_Gui.Controls.ServoOptions servoOptions6;
-        private Drone_Gui.Controls.ServoOptions servoOptions7;
+        private MissionPlanner.Controls.ServoOptions servoOptions5;
+        private MissionPlanner.Controls.ServoOptions servoOptions6;
+        private MissionPlanner.Controls.ServoOptions servoOptions7;
         private System.Windows.Forms.BindingSource bindingSourceHud;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelQuick;
         private System.Windows.Forms.Panel panel2;
-        private Controls.MyButton BUT_speed10;
-        private Controls.MyButton BUT_speed5;
-        private Controls.MyButton BUT_speed2;
-        private Controls.MyButton BUT_speed1;
-        private Controls.MyButton BUT_speed1_2;
-        private Controls.MyButton BUT_speed1_4;
-        private Controls.MyButton BUT_speed1_10;
+        private MyButton BUT_speed10;
+        private MyButton BUT_speed5;
+        private MyButton BUT_speed2;
+        private MyButton BUT_speed1;
+        private MyButton BUT_speed1_2;
+        private MyButton BUT_speed1_4;
+        private MyButton BUT_speed1_10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tablogbrowse;
-        private Controls.MyButton BUT_logbrowse;
+        private MyButton BUT_logbrowse;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage tabScripts;
-        private Controls.MyButton BUT_edit_selected;
+        private MyButton BUT_edit_selected;
         private System.Windows.Forms.Label labelSelectedScript;
-        private Controls.MyButton BUT_run_script;
-        private Controls.MyButton BUT_abort_script;
+        private MyButton BUT_run_script;
+        private MyButton BUT_abort_script;
         private System.Windows.Forms.Label labelScriptStatus;
-        private Controls.MyButton BUT_select_script;
+        private MyButton BUT_select_script;
         private System.Windows.Forms.OpenFileDialog openScriptDialog;
         private System.Windows.Forms.Timer scriptChecker;
         private System.Windows.Forms.CheckBox checkBoxRedirectOutput;
@@ -2014,28 +2015,28 @@
         private System.Windows.Forms.BindingSource bindingSourceGaugesTab;
         private System.Windows.Forms.ToolStripMenuItem setHomeHereToolStripMenuItem;
         private MissionPlanner.Controls.Coords coords1;
-        private Controls.MyButton BUT_matlab;
+        private MyButton BUT_matlab;
         private System.Windows.Forms.ComboBox CMB_mountmode;
-        private Controls.MyButton BUT_mountmode;
-        private Controls.WindDir windDir1;
-        private Controls.MyButton but_bintolog;
-        private Controls.MyButton but_dflogtokml;
-        private Controls.MyButton BUT_DFMavlink;
+        private MyButton BUT_mountmode;
+        private WindDir windDir1;
+        private MyButton but_bintolog;
+        private MyButton but_dflogtokml;
+        private MyButton BUT_DFMavlink;
         private System.Windows.Forms.TabPage tabPagemessages;
         private System.Windows.Forms.TextBox txt_messagebox;
         private System.Windows.Forms.Timer Messagetabtimer;
         private System.Windows.Forms.TabPage tabActionsSimple;
-        private Controls.MyButton myButton1;
-        private Controls.MyButton myButton2;
-        private Controls.MyButton myButton3;
+        private MyButton myButton1;
+        private MyButton myButton2;
+        private MyButton myButton3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripactionstab;
         private System.Windows.Forms.ToolStripMenuItem dropOutToolStripMenuItem;
-        private Controls.MyButton BUT_loganalysis;
+        private MyButton BUT_loganalysis;
         private System.Windows.Forms.ToolStripMenuItem addPoiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
-        private Drone_Gui.Controls.DistanceBar distanceBar1;
-        private Controls.MyButton but_autotune;
+        private MissionPlanner.Controls.DistanceBar distanceBar1;
+        private MyButton but_autotune;
         private System.Windows.Forms.ToolStripMenuItem takeOffToolStripMenuItem;
 
     }

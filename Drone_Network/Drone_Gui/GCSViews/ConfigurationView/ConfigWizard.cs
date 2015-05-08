@@ -24,9 +24,9 @@ namespace GCSViews.ConfigurationView
 
         private void PIC_wizard_Click(object sender, EventArgs e)
         {
-            Wizard.Wizard cfg = new Wizard.Wizard();
+            //Wizard.Wizard cfg = new Wizard.Wizard();
 
-            cfg.ShowDialog(this);
+            //cfg.ShowDialog(this);
         }
     }
 }

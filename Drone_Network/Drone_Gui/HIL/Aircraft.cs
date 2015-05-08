@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Drone_Gui.HIL;
+using MissionPlanner.HIL;
 
-namespace Drone_Gui.HIL
+namespace MissionPlanner.HIL
 {
     public class Aircraft : Utils
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Drone_Gui.Properties {
+namespace MissionPlanner.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Drone_Gui.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Drone_Gui.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MissionPlanner.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,29 +63,9 @@ namespace Drone_Gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4Pl0Bjp {
-            get {
-                object obj = ResourceManager.GetObject("4Pl0Bjp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Argus_logo_shadow {
             get {
                 object obj = ResourceManager.GetObject("Argus_logo_shadow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap post_9_1275782704 {
-            get {
-                object obj = ResourceManager.GetObject("post-9-1275782704", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

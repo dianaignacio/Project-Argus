@@ -7,10 +7,10 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
-using Drone_Gui.Utilities;
+using MissionPlanner.Utilities;
 using log4net;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
    public static class ParameterMetaDataParser
    {
@@ -30,7 +30,7 @@ namespace Drone_Gui.Utilities
       {
          string parameterLocationsString = ConfigurationManager.AppSettings["ParameterLocations"];
 
-         if (Drone_Gui.Utilities.Update.dobeta)
+         if (MissionPlanner.Utilities.Update.dobeta)
             parameterLocationsString = ConfigurationManager.AppSettings["ParameterLocationsBleeding"];
 
          if(!String.IsNullOrEmpty(parameterLocationsString))

@@ -1,4 +1,8 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using MissionPlanner.Controls;
+using MissionPlanner.Antenna;
+using MissionPlanner;
+
+namespace GCSViews
 {
     partial class InitialSetup
     {
@@ -34,55 +38,55 @@
             this.backstageViewPagehwbt = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
             this.backstageViewPagefw = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
             this.initialSetupBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.configFirmware1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigFirmware();
+            this.configFirmware1 = new GCSViews.ConfigurationView.ConfigFirmware();
             this.backstageViewPagefwdisabled = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configFirmwareDisabled1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigFirmwareDisabled();
+            this.configFirmwareDisabled1 = new GCSViews.ConfigurationView.ConfigFirmwareDisabled();
             this.backstageViewPagewizard = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configWizard1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigWizard();
+            this.configWizard1 = new GCSViews.ConfigurationView.ConfigWizard();
             this.backstageViewPagemand = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configMandatory1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigMandatory();
+            this.configMandatory1 = new GCSViews.ConfigurationView.ConfigMandatory();
             this.backstageViewPagetradheli = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configTradHeli1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigTradHeli();
+            this.configTradHeli1 = new GCSViews.ConfigurationView.ConfigTradHeli();
             this.backstageViewPageframetype = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configFrameType1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigFrameType();
+            this.configFrameType1 = new GCSViews.ConfigurationView.ConfigFrameType();
             this.backstageViewPageaccelquad = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configAccelerometerCalibrationQuad1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibrationQuad();
+            this.configAccelerometerCalibrationQuad1 = new GCSViews.ConfigurationView.ConfigAccelerometerCalibrationQuad();
             this.backstageViewPageaccelplane = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configAccelerometerCalibrationPlane1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibrationPlane();
+            this.configAccelerometerCalibrationPlane1 = new GCSViews.ConfigurationView.ConfigAccelerometerCalibrationPlane();
             this.backstageViewPageacceltracker = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configAccelerometerCalibrationTracker1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibrationTracker();
+            this.configAccelerometerCalibrationTracker1 = new GCSViews.ConfigurationView.ConfigAccelerometerCalibrationTracker();
             this.backstageViewPagecompass = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configHWCompass1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass();
+            this.configHWCompass1 = new GCSViews.ConfigurationView.ConfigHWCompass();
             this.backstageViewPageradio = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configRadioInput1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigRadioInput();
+            this.configRadioInput1 = new GCSViews.ConfigurationView.ConfigRadioInput();
             this.backstageViewPageflmode = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configFlightModes1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes();
+            this.configFlightModes1 = new GCSViews.ConfigurationView.ConfigFlightModes();
             this.backstageViewPagefs = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configFailSafe1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigFailSafe();
+            this.configFailSafe1 = new GCSViews.ConfigurationView.ConfigFailSafe();
             this.backstageViewPageopt = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configOptional1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigOptional();
+            this.configOptional1 = new GCSViews.ConfigurationView.ConfigOptional();
             this.backstageViewPage3drradio = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
             this._3DRradio1 = new MissionPlanner._3DRradio();
             this.backstageViewPagebatmon = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configBatteryMonitoring1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigBatteryMonitoring();
+            this.configBatteryMonitoring1 = new GCSViews.ConfigurationView.ConfigBatteryMonitoring();
             this.backstageViewPagecompassmot = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configCompassMot1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigCompassMot();
+            this.configCompassMot1 = new GCSViews.ConfigurationView.ConfigCompassMot();
             this.backstageViewPagesonar = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configHWSonar1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigHWSonar();
+            this.configHWSonar1 = new GCSViews.ConfigurationView.ConfigHWSonar();
             this.backstageViewPageairspeed = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configHWAirspeed1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigHWAirspeed();
+            this.configHWAirspeed1 = new GCSViews.ConfigurationView.ConfigHWAirspeed();
             this.backstageViewPageoptflow = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configHWOptFlow1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigHWOptFlow();
+            this.configHWOptFlow1 = new GCSViews.ConfigurationView.ConfigHWOptFlow();
             this.backstageViewPageosd = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configHWOSD1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigHWOSD();
+            this.configHWOSD1 = new GCSViews.ConfigurationView.ConfigHWOSD();
             this.backstageViewPagegimbal = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configMount1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigMount();
+            this.configMount1 = new GCSViews.ConfigurationView.ConfigMount();
             this.backstageViewPageAntTrack = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
             this.tracker1 = new MissionPlanner.Antenna.Tracker();
             this.backstageViewPageMotorTest = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configMotor1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigMotorTest();
+            this.configMotor1 = new GCSViews.ConfigurationView.ConfigMotorTest();
             this.backstageViewPageinstfw = new MissionPlanner.Controls.BackstageView.BackstageViewPage();
-            this.configHWBT1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigHWBT();
+            this.configHWBT1 = new GCSViews.ConfigurationView.ConfigHWBT();
             ((System.ComponentModel.ISupportInitialize)(this.initialSetupBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,7 +146,7 @@
             // 
             // initialSetupBindingSource
             // 
-            this.initialSetupBindingSource.DataSource = typeof(MissionPlanner.GCSViews.InitialSetup);
+            this.initialSetupBindingSource.DataSource = typeof(GCSViews.InitialSetup);
             // 
             // configFirmware1
             // 
@@ -545,7 +549,7 @@
 
         #endregion
 
-        private Controls.BackstageView.BackstageView backstageView;
+        private MissionPlanner.Controls.BackstageView.BackstageView backstageView;
         private ConfigurationView.ConfigFirmware configFirmware1;
         private ConfigurationView.ConfigFirmwareDisabled configFirmwareDisabled1;
         private ConfigurationView.ConfigWizard configWizard1;
@@ -559,7 +563,7 @@
         private ConfigurationView.ConfigRadioInput configRadioInput1;
         private ConfigurationView.ConfigFlightModes configFlightModes1;
         private ConfigurationView.ConfigFailSafe configFailSafe1;
-        private _3DRradio _3DRradio1;
+        private MissionPlanner._3DRradio _3DRradio1;
         private ConfigurationView.ConfigBatteryMonitoring configBatteryMonitoring1;
         private ConfigurationView.ConfigHWSonar configHWSonar1;
         private ConfigurationView.ConfigHWAirspeed configHWAirspeed1;
@@ -567,36 +571,36 @@
         private ConfigurationView.ConfigHWOSD configHWOSD1;
         private ConfigurationView.ConfigMount configMount1;
         private ConfigurationView.ConfigMotorTest configMotor1;
-        private Antenna.Tracker tracker1;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageinstfw;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagewizard;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagemand;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageopt;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagetradheli;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageframetype;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagecompass;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageaccelquad;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageaccelplane;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageradio;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageflmode;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagefs;
-        private Controls.BackstageView.BackstageViewPage backstageViewPage3drradio;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagebatmon;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagesonar;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageairspeed;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageoptflow;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageosd;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagegimbal;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageAntTrack;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagefwdisabled;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagefw;
+        private MissionPlanner.Antenna.Tracker tracker1;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageinstfw;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagewizard;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagemand;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageopt;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagetradheli;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageframetype;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagecompass;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageaccelquad;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageaccelplane;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageradio;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageflmode;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagefs;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPage3drradio;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagebatmon;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagesonar;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageairspeed;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageoptflow;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageosd;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagegimbal;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageAntTrack;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagefwdisabled;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagefw;
         private System.Windows.Forms.BindingSource initialSetupBindingSource;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagecompassmot;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagecompassmot;
         private ConfigurationView.ConfigCompassMot configCompassMot1;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageMotorTest;
-        private Controls.BackstageView.BackstageViewPage backstageViewPageacceltracker;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageMotorTest;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPageacceltracker;
         private ConfigurationView.ConfigAccelerometerCalibrationTracker configAccelerometerCalibrationTracker1;
-        private Controls.BackstageView.BackstageViewPage backstageViewPagehwbt;
+        private MissionPlanner.Controls.BackstageView.BackstageViewPage backstageViewPagehwbt;
         private ConfigurationView.ConfigHWBT configHWBT1;
     }
 }

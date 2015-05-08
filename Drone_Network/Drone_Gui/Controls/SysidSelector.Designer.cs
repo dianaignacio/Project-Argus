@@ -1,4 +1,5 @@
-﻿namespace Drone_Gui.Controls
+﻿using MissionPlanner.Controls;
+namespace MissionPlanner.Controls
 {
     partial class SysidSelector
     {
@@ -30,7 +31,7 @@
         {
             this.cmb_sysid = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.myButton1 = new Drone_Gui.Controls.MyButton();
+            this.myButton1 = new MyButton();
             this.SuspendLayout();
             // 
             // cmb_sysid

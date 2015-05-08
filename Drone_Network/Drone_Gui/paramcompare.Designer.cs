@@ -1,4 +1,4 @@
-﻿namespace MissionPlanner
+﻿namespace MissionPlanner.ParamCompare
 {
     partial class ParamCompare
     {
@@ -125,7 +125,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView Params;
-        private Controls.MyButton BUT_save;
+        private MissionPlanner.Controls.MyButton BUT_save;
         private System.Windows.Forms.DataGridViewTextBoxColumn Command;
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
         private System.Windows.Forms.DataGridViewTextBoxColumn newvalue;

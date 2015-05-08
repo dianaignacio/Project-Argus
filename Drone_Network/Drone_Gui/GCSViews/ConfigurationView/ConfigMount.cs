@@ -9,6 +9,7 @@ using MissionPlanner.Presenter;
 using Transitions;
 using System.Collections;
 using MissionPlanner.Models;
+using MissionPlanner;
 
 namespace GCSViews.ConfigurationView
 {

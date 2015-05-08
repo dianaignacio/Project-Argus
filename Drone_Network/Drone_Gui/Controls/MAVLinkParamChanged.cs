@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Drone_Gui.Controls
+namespace MissionPlanner.Controls
 {
     public class MAVLinkParamChanged : EventArgs
     {

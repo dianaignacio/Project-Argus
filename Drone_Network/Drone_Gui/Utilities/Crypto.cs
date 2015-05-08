@@ -6,7 +6,7 @@ using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
         public sealed class Crypto : IDisposable
         {

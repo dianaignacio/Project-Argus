@@ -1,4 +1,5 @@
-﻿namespace MissionPlanner.GCSViews.ConfigurationView
+﻿using MissionPlanner.Controls;
+namespace GCSViews.ConfigurationView
 {
     partial class ConfigAC_Fence
     {
@@ -32,17 +33,17 @@
             this.label1gftitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2rtlalt = new System.Windows.Forms.Label();
-            this.mavlinkComboBox2 = new Drone_Gui.Controls.MavlinkComboBox();
-            this.mavlinkNumericUpDown1 = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDown2 = new Drone_Gui.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBox1 = new Drone_Gui.Controls.MavlinkCheckBox();
+            this.mavlinkComboBox2 = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkNumericUpDown1 = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDown2 = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBox1 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.label3enable = new System.Windows.Forms.Label();
-            this.mavlinkComboBox1 = new Drone_Gui.Controls.MavlinkComboBox();
+            this.mavlinkComboBox1 = new MissionPlanner.Controls.MavlinkComboBox();
             this.label4type = new System.Windows.Forms.Label();
             this.label5action = new System.Windows.Forms.Label();
             this.label6maxalt = new System.Windows.Forms.Label();
             this.label7maxrad = new System.Windows.Forms.Label();
-            this.mavlinkNumericUpDown3 = new Drone_Gui.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDown3 = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDown1)).BeginInit();
@@ -198,13 +199,13 @@
 
         #endregion
 
-        private Controls.LineSeparator lineSeparator2;
+        private LineSeparator lineSeparator2;
         private System.Windows.Forms.Label label1gftitle;
-        private Drone_Gui.Controls.MavlinkCheckBox mavlinkCheckBox1;
-        private Drone_Gui.Controls.MavlinkComboBox mavlinkComboBox1;
-        private Drone_Gui.Controls.MavlinkComboBox mavlinkComboBox2;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDown1;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDown2;
+        private MissionPlanner.Controls.MavlinkCheckBox mavlinkCheckBox1;
+        private MissionPlanner.Controls.MavlinkComboBox mavlinkComboBox1;
+        private MissionPlanner.Controls.MavlinkComboBox mavlinkComboBox2;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDown1;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDown2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label3enable;
         private System.Windows.Forms.Label label4type;
@@ -212,6 +213,6 @@
         private System.Windows.Forms.Label label6maxalt;
         private System.Windows.Forms.Label label7maxrad;
         private System.Windows.Forms.Label label2rtlalt;
-        private Drone_Gui.Controls.MavlinkNumericUpDown mavlinkNumericUpDown3;
+        private MissionPlanner.Controls.MavlinkNumericUpDown mavlinkNumericUpDown3;
     }
 }

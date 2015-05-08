@@ -7,7 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 
-namespace Drone_Gui.Utilities
+namespace MissionPlanner.Utilities
 {
     [Serializable]
     public class GMapMarkerAirport: GMapMarker
